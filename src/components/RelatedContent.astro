@@ -1,0 +1,35 @@
+---
+import type { ContentCollection, ContentRecord } from '../utils/content';
+import { collectionLabels, contentCollections } from '../utils/content';
+import ContentCard from './ContentCard.astro';
+
+type Props = {
+  items: ContentRecord[];
+};
+
+const { items } = Astro.props;
+const groups = contentCollections
+  .map((collection) => ({
+    collection,
+    items: items.filter((item) => item.collection === collection),
+  }))
+  .filter((group) => group.items.length > 0) as Array<{
+    collection: ContentCollection;
+    items: ContentRecord[];
+  }>;
+---
+
+{groups.length > 0 && (
+  <section class="related-content" aria-labelledby="related-heading" data-pagefind-ignore>
+    <h2 id="related-heading">Related content</h2>
+    {groups.map((group) => (
+      <div class="related-group">
+        <h3>Related {collectionLabels[group.collection]}</h3>
+        <div class="card-list compact">
+          {group.items.map((item) => <ContentCard item={item} />)}
+        </div>
+      </div>
+    ))}
+  </section>
+)}
+

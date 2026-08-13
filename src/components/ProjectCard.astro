@@ -1,0 +1,22 @@
+---
+import type { ContentRecord } from '../utils/content';
+import StatusBadge from './StatusBadge.astro';
+import TagList from './TagList.astro';
+
+type Props = {
+  item: ContentRecord;
+};
+
+const { item } = Astro.props;
+---
+
+<article class="project-card">
+  <div class="card-meta">
+    <StatusBadge status={item.status} />
+    {item.draft && <span class="draft-label">Draft</span>}
+  </div>
+  <h3><a href={item.path}>{item.title}</a></h3>
+  <p>{item.description}</p>
+  <TagList tags={item.tags} />
+</article>
+

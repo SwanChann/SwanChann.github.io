@@ -1,0 +1,30 @@
+---
+import type { ContentRecord } from '../utils/content';
+import { collectionLabels } from '../utils/content';
+import { formatDate } from '../utils/dates';
+import StatusBadge from './StatusBadge.astro';
+import TagList from './TagList.astro';
+
+type Props = {
+  item: ContentRecord;
+  showCollection?: boolean;
+};
+
+const { item, showCollection = false } = Astro.props;
+const date = item.updated ?? item.date;
+const subtype = item.type ?? item.topic ?? item.category;
+---
+
+<article class="content-card">
+  <div class="card-meta">
+    {showCollection && <span>{collectionLabels[item.collection]}</span>}
+    {subtype && <span>{subtype}</span>}
+    {date && <time datetime={date.toISOString()}>{formatDate(date)}</time>}
+    <StatusBadge status={item.status} />
+    {item.draft && <span class="draft-label">Draft</span>}
+  </div>
+  <h2><a href={item.path}>{item.title}</a></h2>
+  <p>{item.description}</p>
+  <TagList tags={item.tags} />
+</article>
+

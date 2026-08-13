@@ -1,0 +1,41 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getAllVisibleContent, getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
+import { entrySlug } from '../../utils/paths';
+import { findRelatedContent } from '../../utils/related';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('experience', ({ data }) => import.meta.env.DEV || !data.draft);
+  return entries.map((entry) => ({ params: { slug: entrySlug(entry.id) }, props: { entry } }));
+}
+
+type Props = { entry: CollectionEntry<'experience'> };
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const allContent = await getAllVisibleContent();
+const related = findRelatedContent(allContent, { collection: 'experience', id: entry.id, tags: entry.data.tags });
+const ordered = sortByRecent(await getVisibleEntries('experience'));
+const index = ordered.findIndex((item) => item.id === entry.id);
+const previous = index < ordered.length - 1 ? toContentRecord('experience', ordered[index + 1]) : undefined;
+const next = index > 0 ? toContentRecord('experience', ordered[index - 1]) : undefined;
+---
+
+<ContentLayout
+  collection="experience"
+  title={entry.data.title}
+  description={entry.data.description}
+  date={entry.data.date}
+  updated={entry.data.updated}
+  tags={entry.data.tags}
+  status={entry.data.status}
+  draft={entry.data.draft}
+  subtype={entry.data.category}
+  body={entry.body ?? ''}
+  headings={headings}
+  related={related}
+  previous={previous}
+  next={next}
+>
+  <Content />
+</ContentLayout>

@@ -1,0 +1,54 @@
+---
+title: Why I Am Building a Personal Research OS
+description: A sample essay about treating research tools, notes, and decisions as one maintainable system.
+date: 2026-08-13
+updated: 2026-08-13
+tags:
+  - Research OS
+  - AI Agent
+  - Workflow
+status: growing
+draft: false
+featured: true
+---
+
+import ExperimentResult from '../../components/ExperimentResult.astro';
+
+> **Sample / Placeholder:** This page demonstrates the Writing schema and MDX support. Replace it with your own verified argument; the numbers below are illustrative UI data, not research results.
+
+Research work rarely fails because there is nowhere to type. It becomes fragile when questions, sources, experiments, code, decisions, and conclusions live in separate places with no durable relationship.
+
+## The problem is continuity
+
+A research notebook is useful for recording the day. A reference manager is useful for storing papers. A repository is useful for code. None of them alone preserves why an experiment was chosen, which evidence changed a decision, or what remains uncertain.
+
+A personal Research OS is a working convention across those tools. Its job is to preserve continuity:
+
+- a question can lead to sources;
+- sources can lead to a testable claim;
+- a claim can lead to an experiment;
+- an experiment can update the project state;
+- a stable lesson can become public writing.
+
+## Markdown as the durable layer
+
+Markdown is not the entire system. It is the smallest durable layer that both a person and an AI agent can inspect, diff, and maintain without a proprietary database.
+
+```text
+capture → organize → connect → refine → publish
+```
+
+This website follows that same path. Notes are allowed to stay small. Experience records solved problems. Research pages hold evolving questions. Projects preserve complete project stories. Writing is where a more complete view emerges.
+
+## MDX is an escape hatch
+
+Most pages should remain plain Markdown. MDX is reserved for the rare case where a content-native component materially improves the explanation. This sample component proves that path works:
+
+<ExperimentResult label="Illustrative experiment card" successRate={0.87} fps={12.4} sample={true} />
+
+The component explicitly labels these values as sample data. A real research page should name the dataset, denominator, evaluation protocol, date, and evidence path before presenting a result.
+
+## What would make this page mature
+
+This sample is only a scaffold. A mature version would need concrete workflow boundaries, examples from real projects, failure cases, and evidence that the system improves retrieval or decision continuity.
+

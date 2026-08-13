@@ -1,0 +1,26 @@
+---
+import { giscusConfig, isGiscusEnabled } from '../config/giscus';
+---
+
+{isGiscusEnabled && (
+  <section class="comments" aria-labelledby="comments-heading" data-pagefind-ignore>
+    <h2 id="comments-heading">Discussion</h2>
+    <script
+      is:inline
+      src="https://giscus.app/client.js"
+      data-repo={giscusConfig.repo}
+      data-repo-id={giscusConfig.repoId}
+      data-category={giscusConfig.category}
+      data-category-id={giscusConfig.categoryId}
+      data-mapping={giscusConfig.mapping}
+      data-strict="0"
+      data-reactions-enabled={giscusConfig.reactionsEnabled ? '1' : '0'}
+      data-emit-metadata={giscusConfig.emitMetadata ? '1' : '0'}
+      data-input-position={giscusConfig.inputPosition}
+      data-theme="preferred_color_scheme"
+      data-lang={giscusConfig.lang}
+      crossorigin="anonymous"
+      async
+    ></script>
+  </section>
+)}

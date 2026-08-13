@@ -1,0 +1,36 @@
+<label class="theme-control">
+  <span class="sr-only">Color theme</span>
+  <select data-theme-select aria-label="Color theme">
+    <option value="system">System</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+</label>
+
+<script is:inline>
+  (() => {
+    const storageKey = 'personal-web-theme';
+
+    const applyTheme = (theme) => {
+      if (theme === 'light' || theme === 'dark') {
+        document.documentElement.dataset.theme = theme;
+      } else {
+        delete document.documentElement.dataset.theme;
+      }
+      document.querySelectorAll('[data-theme-select]').forEach((select) => {
+        select.value = theme;
+      });
+    };
+
+    applyTheme(localStorage.getItem(storageKey) || 'system');
+
+    document.querySelectorAll('[data-theme-select]').forEach((select) => {
+      select.addEventListener('change', (event) => {
+        const theme = event.currentTarget.value;
+        localStorage.setItem(storageKey, theme);
+        applyTheme(theme);
+      });
+    });
+  })();
+</script>
+

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllVisibleContent } from '../../utils/content';
+import { tagSlug, withBase } from '../../utils/paths';
+
+const items = await getAllVisibleContent();
+const counts = new Map<string, { label: string; count: number }>();
+for (const item of items) {
+  for (const tag of item.tags) {
+    const slug = tagSlug(tag);
+    const current = counts.get(slug);
+    counts.set(slug, { label: current?.label ?? tag, count: (current?.count ?? 0) + 1 });
+  }
+}
+const tags = [...counts.entries()]
+  .map(([slug, value]) => ({ slug, ...value }))
+  .sort((a, b) => a.label.localeCompare(b.label, 'en'));
+---
+
+<BaseLayout title="Tags" description="Browse writing, notes, projects, research, and experience by shared tags.">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Across the garden</p>
+      <h1>Tags</h1>
+      <p>Shared tags connect every content type. Counts include all public Writing, Notes, Projects, Research, and Experience.</p>
+    </header>
+    <ul class="tag-index">
+      {tags.map((tag) => (
+        <li><a href={withBase(`/tags/${tag.slug}/`)}><span>{tag.label}</span><small>{tag.count}</small></a></li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .tag-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0; border-top: 1px solid var(--border); list-style: none; }
+  .tag-index li { border-bottom: 1px solid var(--border); }
+  .tag-index a { display: flex; padding: .9rem 1rem .9rem 0; justify-content: space-between; gap: 1rem; color: var(--text); text-decoration: none; }
+  .tag-index a:hover span { color: var(--accent); }
+  .tag-index small { color: var(--text-muted); }
+  @media (max-width: 720px) { .tag-index { grid-template-columns: 1fr 1fr; } }
+</style>
+

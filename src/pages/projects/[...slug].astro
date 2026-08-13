@@ -1,0 +1,47 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getAllVisibleContent, getVisibleEntries, sortProjects, toContentRecord } from '../../utils/content';
+import { entrySlug } from '../../utils/paths';
+import { findRelatedContent } from '../../utils/related';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('projects', ({ data }) => import.meta.env.DEV || !data.draft);
+  return entries.map((entry) => ({ params: { slug: entrySlug(entry.id) }, props: { entry } }));
+}
+
+type Props = { entry: CollectionEntry<'projects'> };
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const allContent = await getAllVisibleContent();
+const related = findRelatedContent(allContent, { collection: 'projects', id: entry.id, tags: entry.data.tags });
+const ordered = sortProjects(await getVisibleEntries('projects'));
+const index = ordered.findIndex((item) => item.id === entry.id);
+const previous = index < ordered.length - 1 ? toContentRecord('projects', ordered[index + 1]) : undefined;
+const next = index > 0 ? toContentRecord('projects', ordered[index - 1]) : undefined;
+const externalLinks = [
+  entry.data.github && { label: 'GitHub', href: entry.data.github },
+  entry.data.demo && { label: 'Demo', href: entry.data.demo },
+  entry.data.paper && { label: 'Paper', href: entry.data.paper },
+].filter((link): link is { label: string; href: string } => Boolean(link));
+---
+
+<ContentLayout
+  collection="projects"
+  title={entry.data.title}
+  description={entry.data.description}
+  date={entry.data.startDate}
+  updated={entry.data.updated}
+  tags={entry.data.tags}
+  status={entry.data.status}
+  draft={entry.data.draft}
+  body={entry.body ?? ''}
+  headings={headings}
+  related={related}
+  previous={previous}
+  next={next}
+  externalLinks={externalLinks}
+>
+  <Content />
+</ContentLayout>
+

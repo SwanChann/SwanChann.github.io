@@ -1,0 +1,18 @@
+---
+import { tagSlug, withBase } from '../utils/paths';
+
+type Props = {
+  tags: string[];
+};
+
+const { tags } = Astro.props;
+---
+
+{tags.length > 0 && (
+  <ul class="tag-list" aria-label="Tags">
+    {tags.map((tag) => (
+      <li><a href={withBase(`/tags/${tagSlug(tag)}/`)}>{tag}</a></li>
+    ))}
+  </ul>
+)}
+

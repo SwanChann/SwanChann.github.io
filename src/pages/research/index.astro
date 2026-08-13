@@ -1,0 +1,24 @@
+---
+import CollectionList from '../../components/CollectionList.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
+
+const items = sortByRecent(await getVisibleEntries('research'))
+  .map((entry) => toContentRecord('research', entry));
+const topics = [...new Set(items.map((item) => item.topic).filter(Boolean))];
+---
+
+<BaseLayout title="Research" description="Research questions, topic notes, experiments, ideas, and reading paths.">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Questions in motion</p>
+      <h1>Research</h1>
+      <p>A growing knowledge space for research interests, questions, paper notes, experiments, ideas, and reading paths.</p>
+      {topics.length > 0 && <p class="index-facets">Topics: {topics.join(' · ')}</p>}
+    </header>
+    <CollectionList items={items} />
+  </div>
+</BaseLayout>
+
+<style>.index-facets { font-size: .85rem !important; }</style>
+

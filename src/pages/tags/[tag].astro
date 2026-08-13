@@ -1,0 +1,31 @@
+---
+import CollectionList from '../../components/CollectionList.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllVisibleContent, type ContentRecord } from '../../utils/content';
+import { tagSlug, withBase } from '../../utils/paths';
+
+export async function getStaticPaths() {
+  const content = await getAllVisibleContent();
+  const tagMap = new Map<string, string>();
+  for (const item of content) {
+    for (const tag of item.tags) tagMap.set(tagSlug(tag), tagMap.get(tagSlug(tag)) ?? tag);
+  }
+  return [...tagMap].map(([slug, tag]) => ({ params: { tag: slug }, props: { tag, content } }));
+}
+
+type Props = { tag: string; content: ContentRecord[] };
+const { tag, content } = Astro.props;
+const items = content.filter((item) => item.tags.some((value) => tagSlug(value) === tagSlug(tag)));
+---
+
+<BaseLayout title={`Tag: ${tag}`} description={`Content tagged ${tag} across the personal knowledge garden.`}>
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow"><a href={withBase('/tags/')}>All tags</a></p>
+      <h1>#{tag}</h1>
+      <p>{items.length} public {items.length === 1 ? 'entry' : 'entries'} across all content types.</p>
+    </header>
+    <CollectionList items={items} />
+  </div>
+</BaseLayout>
+

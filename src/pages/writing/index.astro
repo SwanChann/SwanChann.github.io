@@ -1,0 +1,20 @@
+---
+import CollectionList from '../../components/CollectionList.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
+
+const items = sortByRecent(await getVisibleEntries('writing'))
+  .map((entry) => toContentRecord('writing', entry));
+---
+
+<BaseLayout title="Writing" description="Long-form technical, research, and workflow writing.">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Developed ideas</p>
+      <h1>Writing</h1>
+      <p>Long-form essays where notes, experience, and research develop into a coherent point of view.</p>
+    </header>
+    <CollectionList items={items} />
+  </div>
+</BaseLayout>
+

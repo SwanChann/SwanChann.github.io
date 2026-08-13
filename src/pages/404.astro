@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils/paths';
+---
+
+<BaseLayout title="Page not found" description="The requested page could not be found." noindex>
+  <div class="page-shell error-page">
+    <p class="eyebrow">404</p>
+    <h1>Page not found.</h1>
+    <p>The page may have moved, or the link may be incomplete.</p>
+    <nav aria-label="404 actions">
+      <a href={withBase('/')}>Back home</a>
+      <a href={withBase('/search/')}>Search the site</a>
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  .error-page { min-height: 55vh; display: flex; flex-direction: column; justify-content: center; }
+  .error-page p:not(.eyebrow) { color: var(--text-muted); }
+  .error-page nav { display: flex; gap: 1.5rem; }
+</style>
+

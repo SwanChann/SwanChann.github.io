@@ -1,0 +1,20 @@
+---
+import ProjectCard from '../../components/ProjectCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getVisibleEntries, sortProjects, toContentRecord } from '../../utils/content';
+
+const items = sortProjects(await getVisibleEntries('projects'))
+  .map((entry) => toContentRecord('projects', entry));
+---
+
+<BaseLayout title="Projects" description="Projects described as problems, systems, results, and lessons.">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Work in context</p>
+      <h1>Projects</h1>
+      <p>Project stories that preserve the problem, architecture, implementation decisions, results, and lessons—not résumé fragments.</p>
+    </header>
+    {items.length > 0 ? <div class="project-grid">{items.map((item) => <ProjectCard item={item} />)}</div> : <p class="empty-state">No published projects yet.</p>}
+  </div>
+</BaseLayout>
+

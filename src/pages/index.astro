@@ -1,0 +1,134 @@
+---
+import CollectionList from '../components/CollectionList.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
+import { now } from '../data/now';
+import {
+  getVisibleEntries,
+  sortByRecent,
+  sortProjects,
+  toContentRecord,
+} from '../utils/content';
+import { withBase } from '../utils/paths';
+
+const [writingEntries, noteEntries, projectEntries] = await Promise.all([
+  getVisibleEntries('writing'),
+  getVisibleEntries('notes'),
+  getVisibleEntries('projects'),
+]);
+
+const latestWriting = sortByRecent(writingEntries)
+  .slice(0, 3)
+  .map((entry) => toContentRecord('writing', entry));
+const recentNotes = sortByRecent(noteEntries)
+  .slice(0, 3)
+  .map((entry) => toContentRecord('notes', entry));
+const selectedProjects = sortProjects(projectEntries)
+  .filter((entry) => entry.data.featured)
+  .slice(0, 3)
+  .map((entry) => toContentRecord('projects', entry));
+---
+
+<BaseLayout>
+  <div class="page-shell home-page">
+    <section class="home-intro" aria-labelledby="home-title">
+      <p class="eyebrow">Personal Web · Digital Garden</p>
+      <h1 id="home-title">{siteConfig.name}</h1>
+      <p class="home-tagline">{siteConfig.tagline}</p>
+      <p class="home-lede">{siteConfig.introduction}</p>
+      <nav class="identity-links" aria-label="External profiles">
+        {siteConfig.socialLinks.map((link) => <a href={link.href}>{link.label} ↗</a>)}
+      </nav>
+    </section>
+
+    <section class="home-section now-section" aria-labelledby="now-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">{now.updated}</p>
+          <h2 id="now-heading">Now</h2>
+        </div>
+      </div>
+      <div class="now-grid">
+        {now.groups.map((group) => (
+          <div>
+            <h3>{group.label}</h3>
+            <ul>{group.items.map((item) => <li>→ {item}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="home-section" aria-labelledby="projects-heading">
+      <div class="section-heading">
+        <h2 id="projects-heading">Selected projects</h2>
+        <a href={withBase('/projects/')}>All projects →</a>
+      </div>
+      {selectedProjects.length > 0 ? (
+        <div class="project-grid">{selectedProjects.map((item) => <ProjectCard item={item} />)}</div>
+      ) : (
+        <p class="empty-state">Mark a published project as featured to show it here.</p>
+      )}
+    </section>
+
+    <section class="home-section" aria-labelledby="writing-heading">
+      <div class="section-heading">
+        <h2 id="writing-heading">Latest writing</h2>
+        <a href={withBase('/writing/')}>All writing →</a>
+      </div>
+      <CollectionList items={latestWriting} />
+    </section>
+
+    <section class="home-section" aria-labelledby="notes-heading">
+      <div class="section-heading">
+        <h2 id="notes-heading">Recent notes</h2>
+        <a href={withBase('/notes/')}>All notes →</a>
+      </div>
+      <CollectionList items={recentNotes} />
+    </section>
+
+    <section class="home-section explore-section" aria-labelledby="explore-heading">
+      <h2 id="explore-heading">Explore</h2>
+      <nav aria-label="Explore the site">
+        <a href={withBase('/research/')}><strong>Research</strong><span>Questions, topics, experiments</span></a>
+        <a href={withBase('/projects/')}><strong>Projects</strong><span>Problems, systems, lessons</span></a>
+        <a href={withBase('/writing/')}><strong>Writing</strong><span>Developed ideas and essays</span></a>
+        <a href={withBase('/notes/')}><strong>Notes</strong><span>Small findings and working knowledge</span></a>
+        <a href={withBase('/experience/')}><strong>Experience</strong><span>Problems solved in practice</span></a>
+        <a href={withBase('/about/')}><strong>About</strong><span>Interests and current direction</span></a>
+      </nav>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .home-intro {
+    max-width: 50rem;
+    padding-block: clamp(2rem, 5vw, 5rem) clamp(4rem, 9vw, 8rem);
+  }
+
+  .home-intro h1 { margin: 0.25rem 0; }
+  .home-tagline { margin: 0; color: var(--text-muted); font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .home-lede { max-width: 38rem; margin: 2rem 0; font-family: var(--font-serif); font-size: clamp(1.35rem, 3vw, 2.05rem); line-height: 1.45; }
+  .identity-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+  .identity-links a { font-size: 0.92rem; }
+
+  .home-section { padding-block: clamp(3rem, 7vw, 6rem); border-top: 1px solid var(--border); }
+  .now-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+  .now-grid h3 { color: var(--text-muted); font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; }
+  .now-grid ul { padding: 0; margin: 0; list-style: none; }
+  .now-grid li { margin-bottom: 0.45rem; }
+
+  .explore-section nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--border); }
+  .explore-section a { display: flex; padding: 1.25rem 1rem 1.25rem 0; flex-direction: column; color: var(--text); border-bottom: 1px solid var(--border); text-decoration: none; }
+  .explore-section a:hover strong { color: var(--accent); }
+  .explore-section span { color: var(--text-muted); font-size: 0.82rem; }
+
+  @media (max-width: 720px) {
+    .now-grid,
+    .explore-section nav { grid-template-columns: 1fr; }
+    .now-grid { gap: 1.25rem; }
+    .home-section { padding-block: 3.5rem; }
+  }
+</style>
+

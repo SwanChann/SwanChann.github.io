@@ -1,0 +1,55 @@
+---
+import { siteConfig } from '../config/site';
+import { withBase } from '../utils/paths';
+import ThemeToggle from './ThemeToggle.astro';
+
+const navigation = [
+  ['Writing', '/writing/'],
+  ['Notes', '/notes/'],
+  ['Projects', '/projects/'],
+  ['Research', '/research/'],
+  ['Experience', '/experience/'],
+  ['About', '/about/'],
+] as const;
+
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => {
+  const target = withBase(path);
+  return path === '/' ? currentPath === target : currentPath.startsWith(target);
+};
+---
+
+<header class="site-header" data-pagefind-ignore>
+  <div class="header-inner">
+    <a class="site-mark" href={withBase('/')} aria-label={`${siteConfig.name} home`}>
+      {siteConfig.shortName}
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {navigation.map(([label, path]) => (
+        <a href={withBase(path)} aria-current={isActive(path) ? 'page' : undefined}>{label}</a>
+      ))}
+    </nav>
+
+    <div class="header-actions">
+      <a class="search-link" href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}>
+        Search
+      </a>
+      <div class="desktop-theme"><ThemeToggle /></div>
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation">Menu</summary>
+        <div class="mobile-panel">
+          <nav aria-label="Mobile navigation">
+            {navigation.map(([label, path]) => (
+              <a href={withBase(path)} aria-current={isActive(path) ? 'page' : undefined}>{label}</a>
+            ))}
+            <a href={withBase('/search/')}>Search</a>
+            <a href={withBase('/links/')}>Links</a>
+          </nav>
+          <ThemeToggle />
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+

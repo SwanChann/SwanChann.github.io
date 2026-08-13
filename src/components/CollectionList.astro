@@ -1,0 +1,20 @@
+---
+import type { ContentRecord } from '../utils/content';
+import ContentCard from './ContentCard.astro';
+
+type Props = {
+  items: ContentRecord[];
+  emptyMessage?: string;
+};
+
+const { items, emptyMessage = 'No published content yet.' } = Astro.props;
+---
+
+{items.length > 0 ? (
+  <div class="card-list">
+    {items.map((item) => <ContentCard item={item} />)}
+  </div>
+) : (
+  <p class="empty-state">{emptyMessage}</p>
+)}
+

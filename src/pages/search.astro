@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils/paths';
+
+const pagefindCss = withBase('/pagefind/pagefind-component-ui.css');
+const pagefindScript = withBase('/pagefind/pagefind-component-ui.js');
+const bundlePath = withBase('/pagefind/');
+const baseUrl = withBase('/');
+---
+
+<BaseLayout title="Search" description="Search all public writing, notes, projects, research, and experience.">
+  <div class="page-shell search-page" data-pagefind-ignore>
+    <header class="page-header">
+      <p class="eyebrow">Static full-text index</p>
+      <h1>Search</h1>
+      <p>Search all public Writing, Notes, Projects, Research, and Experience. The index is generated after the Astro production build.</p>
+    </header>
+    <noscript><p class="empty-state">Search requires JavaScript. The rest of the site remains fully readable without it.</p></noscript>
+    {import.meta.env.DEV && (
+      <p class="empty-state">Search is available after <code>npm run build</code>. Run <code>npm run preview</code> to test the generated index locally.</p>
+    )}
+    <div class="search-interface">
+      <pagefind-config bundle-path={bundlePath} base-url={baseUrl}></pagefind-config>
+      <pagefind-input placeholder="Search the garden…"></pagefind-input>
+      <pagefind-filter-dropdown filter="section" label="Section"></pagefind-filter-dropdown>
+      <pagefind-summary></pagefind-summary>
+      <pagefind-results></pagefind-results>
+    </div>
+  </div>
+  <link slot="head" rel="stylesheet" href={pagefindCss} />
+  <script is:inline type="module" src={pagefindScript}></script>
+</BaseLayout>
+
+<style is:global>
+  .search-page { max-width: 52rem; }
+  .search-interface { color: var(--text); font-family: var(--font-sans); }
+  pagefind-input,
+  pagefind-filter-dropdown,
+  pagefind-summary,
+  pagefind-results { display: block; }
+  pagefind-filter-dropdown { max-width: 15rem; margin-block: 1rem; }
+</style>

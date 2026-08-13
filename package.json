@@ -1,0 +1,35 @@
+{
+  "name": "personal-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "check": "astro check",
+    "build": "astro check && astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "new:writing": "node scripts/new-content.mjs writing",
+    "new:note": "node scripts/new-content.mjs notes",
+    "new:project": "node scripts/new-content.mjs projects",
+    "new:research": "node scripts/new-content.mjs research",
+    "new:experience": "node scripts/new-content.mjs experience"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "4.3.9",
+    "@astrojs/rss": "4.0.13",
+    "@astrojs/sitemap": "3.6.1",
+    "astro": "5.15.9"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.5",
+    "pagefind": "1.5.2",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20.3.0"
+  },
+  "overrides": {
+    "unstorage": "1.17.3"
+  }
+}

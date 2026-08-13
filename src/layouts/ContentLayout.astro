@@ -1,0 +1,119 @@
+---
+import type { MarkdownHeading } from 'astro';
+import Giscus from '../components/Giscus.astro';
+import RelatedContent from '../components/RelatedContent.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import TagList from '../components/TagList.astro';
+import type { ContentCollection, ContentRecord } from '../utils/content';
+import { collectionLabels, estimateReadingTime } from '../utils/content';
+import { formatDate, sameDay } from '../utils/dates';
+import { withBase } from '../utils/paths';
+import BaseLayout from './BaseLayout.astro';
+
+type ExternalLink = {
+  label: string;
+  href: string;
+};
+
+type Props = {
+  collection: ContentCollection;
+  title: string;
+  description: string;
+  date?: Date;
+  updated?: Date;
+  tags: string[];
+  status: ContentRecord['status'];
+  draft: boolean;
+  subtype?: string;
+  body: string;
+  headings: MarkdownHeading[];
+  related: ContentRecord[];
+  previous?: ContentRecord;
+  next?: ContentRecord;
+  externalLinks?: ExternalLink[];
+};
+
+const {
+  collection,
+  title,
+  description,
+  date,
+  updated,
+  tags,
+  status,
+  draft,
+  subtype,
+  body,
+  headings,
+  related,
+  previous,
+  next,
+  externalLinks = [],
+} = Astro.props;
+
+const label = collectionLabels[collection];
+const readingTime = estimateReadingTime(body);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="article"
+  publishedTime={date}
+  modifiedTime={updated}
+  noindex={draft}
+>
+  <div class="content-page">
+    <article
+      class="article"
+      data-pagefind-body
+      data-pagefind-filter={`section:${label}`}
+    >
+      <a class="back-link" href={withBase(`/${collection}/`)}>← Back to {label}</a>
+      <header class="article-header">
+        <div class="article-kicker">
+          <span>{label}</span>
+          {subtype && <span>{subtype}</span>}
+          <StatusBadge status={status} />
+          {draft && <span class="draft-label">Draft · local only</span>}
+        </div>
+        <h1 data-pagefind-meta="title">{title}</h1>
+        <p class="article-description">{description}</p>
+        <div class="article-dates">
+          {date && <span>Published <time datetime={date.toISOString()}>{formatDate(date)}</time></span>}
+          {updated && !sameDay(date, updated) && (
+            <span>Updated <time datetime={updated.toISOString()}>{formatDate(updated)}</time></span>
+          )}
+          <span>{readingTime} min read</span>
+        </div>
+        <TagList tags={tags} />
+        {externalLinks.length > 0 && (
+          <nav class="external-links" aria-label="Project links">
+            {externalLinks.map((link) => <a href={link.href}>{link.label} ↗</a>)}
+          </nav>
+        )}
+      </header>
+
+      <div class="article-grid">
+        <div class="prose">
+          <slot />
+        </div>
+        <TableOfContents headings={headings} />
+      </div>
+
+      <nav class="article-pagination" aria-label="Content pagination" data-pagefind-ignore>
+        <div>
+          {previous && <a href={previous.path}><span>Previous</span>{previous.title}</a>}
+        </div>
+        <div>
+          {next && <a href={next.path}><span>Next</span>{next.title}</a>}
+        </div>
+      </nav>
+    </article>
+
+    <RelatedContent items={related} />
+    {collection === 'writing' && <Giscus />}
+  </div>
+</BaseLayout>
+

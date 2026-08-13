@@ -1,0 +1,19 @@
+---
+type Props = {
+  label?: string;
+  successRate: number;
+  fps: number;
+  sample?: boolean;
+};
+
+const { label = 'Experiment result', successRate, fps, sample = true } = Astro.props;
+---
+
+<aside class="experiment-result" aria-label={label}>
+  <strong>{label}</strong>
+  {sample && <span class="sample-mark">Sample data</span>}
+  <dl>
+    <div><dt>Success rate</dt><dd>{(successRate * 100).toFixed(1)}%</dd></div>
+    <div><dt>Throughput</dt><dd>{fps.toFixed(1)} FPS</dd></div>
+  </dl>
+</aside>

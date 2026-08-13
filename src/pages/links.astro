@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
+---
+
+<BaseLayout title="Links" description={`Internet identity links for ${siteConfig.name}.`}>
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Find me elsewhere</p>
+      <h1>Links</h1>
+      <p>This site is the source of truth. External platforms are distribution and identity endpoints.</p>
+    </header>
+    <ul class="identity-index">
+      {siteConfig.socialLinks.map((link) => (
+        <li>
+          <a href={link.href}>
+            <span><strong>{link.label}</strong>{link.placeholder && <small>Configure this placeholder</small>}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .identity-index { max-width: 44rem; padding: 0; border-top: 1px solid var(--border); list-style: none; }
+  .identity-index li { border-bottom: 1px solid var(--border); }
+  .identity-index a { display: flex; padding: 1.2rem 0; align-items: center; justify-content: space-between; color: var(--text); text-decoration: none; }
+  .identity-index a:hover strong { color: var(--accent); }
+  .identity-index strong,
+  .identity-index small { display: block; }
+  .identity-index small { margin-top: .2rem; color: var(--text-muted); font-size: .75rem; font-weight: 400; }
+</style>
+

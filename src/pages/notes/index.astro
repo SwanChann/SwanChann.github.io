@@ -1,0 +1,24 @@
+---
+import CollectionList from '../../components/CollectionList.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
+
+const items = sortByRecent(await getVisibleEntries('notes'))
+  .map((entry) => toContentRecord('notes', entry));
+const types = [...new Set(items.map((item) => item.type).filter(Boolean))];
+---
+
+<BaseLayout title="Notes" description="Small technical notes, paper notes, concepts, and things learned.">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Small units of knowledge</p>
+      <h1>Notes</h1>
+      <p>Things learned, commands worth keeping, debugging traces, paper notes, and concepts still taking shape.</p>
+      {types.length > 0 && <p class="index-facets">Types: {types.join(' · ')}</p>}
+    </header>
+    <CollectionList items={items} />
+  </div>
+</BaseLayout>
+
+<style>.index-facets { font-size: .85rem !important; }</style>
+

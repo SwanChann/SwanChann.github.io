@@ -1,0 +1,19 @@
+---
+import CollectionList from '../../components/CollectionList.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
+
+const items = sortByRecent(await getVisibleEntries('experience'))
+  .map((entry) => toContentRecord('experience', entry));
+---
+
+<BaseLayout title="Experience" description="Problems encountered in practice and the complete path to a working resolution.">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Solved in practice</p>
+      <h1>Experience</h1>
+      <p>Complete records of problems encountered, evidence collected, solutions implemented, and lessons retained.</p>
+    </header>
+    <CollectionList items={items} />
+  </div>
+</BaseLayout>
