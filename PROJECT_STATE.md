@@ -4,9 +4,9 @@
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: PersonalWeb V1 foundation
-- current_milestone: Add and publish a responsive starry-ocean visual background
-- current_task: Commit the locally verified background asset and theme integration, then verify the GitHub Pages deployment.
-- status: in_progress
+- current_milestone: Responsive starry-ocean visual background published
+- current_task: Replace the remaining identity placeholders and sample content when verified personal information is available.
+- status: verified
 
 ## Milestones
 
@@ -17,7 +17,7 @@
 5. [verified] Added explicitly labeled sample content, authoring templates, a content generator, and maintenance documentation.
 6. [verified] Verified types, production output, root and project-repository base paths, links, search, theme persistence, and responsive rendering.
 7. [verified] Published the site through GitHub Actions to `https://swanchann.github.io/`.
-8. [in_progress] Add a responsive starry-ocean background with light/dark readability overlays and publish it.
+8. [verified] Added a responsive starry-ocean background with light/dark readability overlays and published it.
 
 ## Verified Facts
 
@@ -31,6 +31,8 @@
 - Live verification returned HTTP 200 for the homepage, Pagefind JavaScript, and RSS; the homepage contains the expected title, GitHub profile, and canonical site URL.
 - The generated starry-ocean background was saved as a 1536x1024 WebP at `public/images/star-sea-background.webp` and compressed to 158,728 bytes.
 - Local production build and browser screenshots verified the background in light, dark, and 600px narrow layouts; text remained readable and the narrow layout did not show horizontal clipping.
+- GitHub Actions run `31662851401` completed both build and deploy jobs successfully for commit `5e49378`.
+- Live verification returned HTTP 200 for the updated homepage and background; the public asset was served as `image/webp` with the expected 158,728-byte size, and a live dark-theme screenshot showed the new background behind readable content.
 - Installed baseline: Astro 5.15.9, TypeScript 5.9.3, Pagefind 1.5.2, `@astrojs/mdx` 4.3.9, `@astrojs/rss` 4.0.13, `@astrojs/sitemap` 3.6.1.
 - `npm run check` completed with 0 errors, 0 warnings, and 0 hints; `npm run build` generated 28 static pages plus RSS, sitemap, and a Pagefind index for 7 public content pages.
 - The production build excludes `src/content/notes/draft-example.md`; the route, tags, relations, RSS, sitemap, and search index contain no draft entry.
@@ -56,5 +58,5 @@
 
 ## Next Step And User Decision
 
-- Next step: push the verified background change and confirm the updated public asset and homepage.
-- No user decision is currently required. CSDN, email, real content, custom domain, and Giscus remain separate optional follow-up work.
+- Next step: replace the CSDN and email placeholders in `src/config/site.ts`, update `src/data/now.ts`, and replace or remove the sample entries under `src/content/`.
+- User decision: provide only the personal links and content that should be public. A custom domain and Giscus are optional and remain unconfigured.
