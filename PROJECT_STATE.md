@@ -3,9 +3,9 @@
 - last_verified: 2026-08-13
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
-- active_workstream: PersonalWeb V1 foundation
-- current_milestone: Chinese-only public site published
-- current_task: Replace the remaining identity placeholders and sample content when verified personal information is available.
+- active_workstream: Evidence-backed Chinese content
+- current_milestone: Eight CSV-defined writing topics completed and locally verified
+- current_task: Review the new writing layer and decide whether to publish it; other collections and identity placeholders remain separate follow-up work.
 - status: verified
 
 ## Milestones
@@ -19,6 +19,7 @@
 7. [verified] Published the site through GitHub Actions to `https://swanchann.github.io/`.
 8. [verified] Added a responsive starry-ocean background with light/dark readability overlays and published it.
 9. [verified] Converted the complete public interface and all sample content to Chinese, removed any language-switching scope, and published the verified build.
+10. [verified] Reconstructed all eight projects in the supplied 102-task CSV from local Codex conversations and project evidence, then added one chronological, multi-Part Chinese Writing article per project.
 
 ## Verified Facts
 
@@ -45,6 +46,13 @@
 - Local Pagefind queries returned Chinese results for `导航`, `具身`, and `研究`; browser screenshots verified the Chinese homepage and search interface against the starry-ocean background.
 - GitHub Actions run `31663941525` completed both build and deploy jobs successfully for commit `77429f1`.
 - Live verification returned HTTP 200 for the homepage, Chinese search page, Pagefind JavaScript, and starry-ocean WebP. The homepage declares `zh-CN`, contains the expected Chinese introduction, exposes no English navigation labels, and a live browser screenshot confirmed the rendered Chinese page.
+- The supplied UTF-8 BOM CSV has SHA-256 `1DC10FD691F77861490F5AA973C29968C42F5C126B205349B99D738880FEA419`, 102 task rows, and eight distinct projects spanning recorded creation dates from 2026-05-25 through 2026-08-12; two power-grid tasks have no creation date.
+- The new Writing layer contains eight public articles and 38 chronological Parts: AIResearchOS, AI 工作流研究, 毕业设计, DP4Robots, 学业必做, 扬州电网缺陷检测, 追热点, and 做计划 with AI.
+- Article claims were cross-checked against selected local Codex sessions and current evidence in `ResearchOS`, `AI工作流研究`, `VLM-defect`, `visualnav-transformer`, and `F:\实验室\计划`. Missing, Doing, Inbox, Waiting, mock, smoke, and NO-GO states remain explicitly bounded in the prose.
+- The task CSV is a user-provided untracked source file and remains untouched. The articles do not expose its private Notion URLs or unnecessary personal administrative details.
+- After the content change, `npm run check` completed with 0 errors, 0 warnings, and 0 hints. `npm run build` generated 60 pages; Pagefind indexed 14 public content pages in one `zh-cn` index.
+- RSS contains all eight Writing entries, the draft example remains absent from production output, and local Pagefind queries returned results for `电网缺陷` (2), `ResearchFlow` (1), `周报` (2), and `视觉导航` (1).
+- This content batch is local only. No commit, push, GitHub Actions run, or public-site deployment was performed because the current request did not authorize publication.
 
 ## Decisions
 
@@ -55,15 +63,20 @@
 - Use Pagefind 1.5 Component UI so the search interface is accessible, filterable by content section, and explicitly aware of the deployment base path.
 - Treat the starry-ocean image as a fixed decorative layer, resolve it through `withBase()`, and use separate light/dark tint tokens rather than altering content markup.
 - Keep the public experience Chinese-only for now. Preserve existing English URL paths and schema enum identifiers as stable code contracts, while rendering their labels in Chinese.
+- Treat the CSV as a chronological index, not sufficient scientific evidence. Use local conversations to recover decisions and current project artifacts to verify metrics and status.
+- Map each CSV project to one Writing article, and split that article into chronological Parts according to research phase rather than creating one page per task.
+- Preserve incomplete topics as incomplete public retrospectives instead of filling gaps with inferred research content; sanitize the academic-transition topic to avoid exposing unnecessary personal records.
 
 ## Risks And Unknowns
 
-- GitHub username, CSDN URL, email, final public URL, custom domain, and Giscus IDs are unknown and must remain placeholders or disabled.
+- CSDN URL, email, custom domain, and Giscus IDs are unknown and must remain placeholders or disabled. The GitHub account and public site URL have been verified separately.
 - Astro build emits one upstream Vite unused-import warning from Astro's `remotePattern.js`; it does not originate in project code and does not affect the successful static build.
 - CSDN and email still use visibly labeled placeholders; Giscus remains safely disabled because no repository/category IDs have been configured.
-- Published writing, notes, projects, research, and experience entries are explicitly labeled sample content rather than verified personal claims.
+- Notes, Projects, Research, Experience, and the About biography still include explicit sample or placeholder content; the eight Writing entries are now evidence-bounded personal project retrospectives.
+- The two power-grid tasks without creation dates can only be placed by experiment phase, not by an exact day.
+- The hotspot-tracking project remains an Inbox item with no completed paper analysis; its article records that boundary rather than supplying a retrospective result.
 
 ## Next Step And User Decision
 
-- Next step: replace the CSDN and email placeholders in `src/config/site.ts`, update `src/data/now.ts`, and replace or remove the sample entries under `src/content/`.
-- User decision: provide only the personal links and content that should be public. A custom domain and Giscus are optional and remain unconfigured.
+- Next step: review the eight local Writing articles, then publish them only after explicit authorization. Replacing the remaining sample Projects, Research, Notes, Experience, About text, CSDN, and email is a separate content pass.
+- User decision: decide whether this evidence-bounded article batch should be committed and deployed as written. A custom domain and Giscus remain optional and unconfigured.

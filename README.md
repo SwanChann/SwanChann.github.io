@@ -2,7 +2,7 @@
 
 这是一个可长期维护的 **Personal Web + Digital Garden + Research / Engineering Notebook**。内容以 Markdown / MDX 为主库，Astro 在构建时自动生成页面、标签、关联内容、RSS、Sitemap 和 Pagefind 全文索引；不需要数据库、后台或手工登记文章。
 
-当前仓库中的个人链接和正文是明确标注的 placeholder。发布前先完成[首次配置](#首次配置)，再删除或改写样例内容。
+`writing` 已收录根据本地任务台账、Codex 对话和项目证据整理的 8 个中文专题；其他 collection 中尚未替换的页面仍明确标注为示例或占位。个人链接也只公开已经确认的项目，待补项保持可见占位或关闭状态。
 
 ## 技术栈
 
@@ -180,7 +180,7 @@ import ExperimentResult from '../../components/ExperimentResult.astro';
 />
 ```
 
-示例 Writing 已证明 MDX 可以构建。真实指标必须同时说明数据集、分母、评估协议和证据路径。
+构建管线支持 MDX，但普通内容继续优先使用 Markdown。真实指标必须同时说明数据集、分母、评估协议和证据边界。
 
 ## Draft、排序与关联内容
 
