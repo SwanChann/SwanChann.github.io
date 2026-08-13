@@ -12,6 +12,8 @@
   --code-bg: #161a18;
   --code-text: #f1f3ee;
   --focus: #c25435;
+  --backdrop-tint-top: rgb(246 245 240 / 66%);
+  --backdrop-tint-bottom: rgb(246 245 240 / 84%);
   --content-width: 72rem;
   --reading-width: 44rem;
   --radius: 0.45rem;
@@ -32,6 +34,8 @@
     --accent-strong: #9cd2c0;
     --accent-soft: #203c33;
     --focus: #ef9b7d;
+    --backdrop-tint-top: rgb(17 19 18 / 54%);
+    --backdrop-tint-bottom: rgb(17 19 18 / 74%);
   }
 }
 
@@ -46,6 +50,8 @@
   --accent-strong: #9cd2c0;
   --accent-soft: #203c33;
   --focus: #ef9b7d;
+  --backdrop-tint-top: rgb(17 19 18 / 54%);
+  --backdrop-tint-bottom: rgb(17 19 18 / 74%);
 }
 
 :root[data-theme='light'] {
@@ -59,6 +65,8 @@
   --accent-strong: #164b3f;
   --accent-soft: #dceae4;
   --focus: #c25435;
+  --backdrop-tint-top: rgb(246 245 240 / 66%);
+  --backdrop-tint-bottom: rgb(246 245 240 / 84%);
 }
 
 *,
@@ -74,6 +82,8 @@ html {
 }
 
 body {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
   margin: 0;
   color: var(--text);
@@ -82,6 +92,17 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   text-rendering: optimizeLegibility;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, var(--backdrop-tint-top), var(--backdrop-tint-bottom)),
+    var(--site-background-image) center / cover no-repeat;
 }
 
 body,

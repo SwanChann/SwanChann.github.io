@@ -88,7 +88,8 @@ Pagefind 扫描最终 HTML，将索引和 UI bundle 写入 `dist/pagefind/`。�
 - `src/config/giscus.ts`：评论参数；四个标识不全时完全禁用。
 - `src/data/now.ts`：首页 Now 数据。
 - `.env.example`：本地或非 GitHub 环境的公开 origin / base 示例，不含 secret。
-- `src/styles/global.css`：light/dark/system tokens、排版、布局、可访问性和响应式规则。
+- `src/styles/global.css`：light/dark/system tokens、星海背景遮罩、排版、布局、可访问性和响应式规则。
+- `public/images/star-sea-background.webp`：全站装饰背景；`BaseLayout` 通过 `withBase()` 生成兼容 GitHub Pages 子路径的 URL 并预加载。
 
 ## Related Content
 
@@ -107,6 +108,7 @@ Pagefind 扫描最终 HTML，将索引和 UI bundle 写入 `dist/pagefind/`。�
 - 不引入 React / Vue / Svelte；页面保持 Astro 静态 HTML。
 - 浏览器 JavaScript 仅用于 theme、Pagefind 和启用后的 Giscus。
 - theme 在 `<head>` 中先应用已保存值，减少首屏颜色闪烁；选择支持 `system`, `light`, `dark`。
+- 星海背景使用固定的非交互装饰层；light/dark 分别使用不同遮罩强度，避免背景纹理降低正文可读性。
 - TOC 使用 Astro 渲染得到的 headings；desktop sticky，窄屏回到正文前的折叠块。
 - 系统字体保证离线可用和中英文覆盖，不依赖第三方字体 CDN。
 - 不实现复杂 backlinks、知识图谱、analytics、CMS 或同步；这些属于未来独立决策。

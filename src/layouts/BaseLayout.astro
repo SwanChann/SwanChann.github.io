@@ -17,6 +17,7 @@ type Props = {
 };
 
 const props = Astro.props;
+const backgroundImage = withBase('/images/star-sea-background.webp');
 ---
 
 <!doctype html>
@@ -28,6 +29,7 @@ const props = Astro.props;
     <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#111312" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <link rel="preload" href={backgroundImage} as="image" type="image/webp" />
     <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} Writing`} href={withBase('/rss.xml')} />
     <SEO {...props} />
     <slot name="head" />
@@ -40,7 +42,7 @@ const props = Astro.props;
       })();
     </script>
   </head>
-  <body>
+  <body style={`--site-background-image: url("${backgroundImage}")`}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <Header />
     <main id="main-content">

@@ -217,6 +217,14 @@ BASE_PATH=/personal-site
 
 因此添加内容不需要修改 `src/pages/index.astro`。
 
+## 站点背景
+
+- 背景资产：`public/images/star-sea-background.webp`
+- 路径与预加载：`src/layouts/BaseLayout.astro`
+- 浅色 / 深色遮罩：`src/styles/global.css` 中的 `--backdrop-tint-*` tokens
+
+替换背景时可以保留同一文件名；推荐使用经过压缩的 WebP，并在浅色、深色和窄屏视口下重新检查文字可读性。背景是装饰层，不承载需要辅助技术读取的信息。
+
 ## Search
 
 Pagefind 在 `npm run build` 的最后一步扫描 `dist/`。搜索页为 `/search/`，索引范围包括公开的 Writing、Notes、Projects、Research 和 Experience。页面通过构建后的 `pagefind/pagefind-component-ui.js` 加载真实静态索引，并可按内容类型过滤；没有假的前端过滤器。
