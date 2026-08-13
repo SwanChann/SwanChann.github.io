@@ -4,9 +4,9 @@
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: PersonalWeb V1 foundation
-- current_milestone: Publish V1 as the SwanChann GitHub user site
-- current_task: Create `SwanChann/SwanChann.github.io`, push the verified build source, and confirm the GitHub Pages deployment.
-- status: in_progress
+- current_milestone: V1 published as the SwanChann GitHub user site
+- current_task: Replace the remaining identity placeholders and sample content when verified personal information is available.
+- status: verified
 
 ## Milestones
 
@@ -16,7 +16,7 @@
 4. [verified] Integrated Pagefind, RSS, sitemap, optional Giscus, and GitHub Pages deployment.
 5. [verified] Added explicitly labeled sample content, authoring templates, a content generator, and maintenance documentation.
 6. [verified] Verified types, production output, root and project-repository base paths, links, search, theme persistence, and responsive rendering.
-7. [in_progress] Publish the site through GitHub Actions to `https://swanchann.github.io/`.
+7. [verified] Published the site through GitHub Actions to `https://swanchann.github.io/`.
 
 ## Verified Facts
 
@@ -25,6 +25,9 @@
 - Local runtimes: Node v20.15.1, npm 10.7.0, Git 2.44.0.windows.1.
 - The user authorized using the active local GitHub account `SwanChann` to create and publish this website repository on 2026-08-13.
 - `SwanChann/SwanChann.github.io` did not exist when checked immediately before publication.
+- The public repository is `https://github.com/SwanChann/SwanChann.github.io`; local `main` tracks `origin/main` over HTTPS.
+- GitHub Actions run `31662024315` completed both the build and deploy jobs successfully.
+- Live verification returned HTTP 200 for the homepage, Pagefind JavaScript, and RSS; the homepage contains the expected title, GitHub profile, and canonical site URL.
 - Installed baseline: Astro 5.15.9, TypeScript 5.9.3, Pagefind 1.5.2, `@astrojs/mdx` 4.3.9, `@astrojs/rss` 4.0.13, `@astrojs/sitemap` 3.6.1.
 - `npm run check` completed with 0 errors, 0 warnings, and 0 hints; `npm run build` generated 28 static pages plus RSS, sitemap, and a Pagefind index for 7 public content pages.
 - The production build excludes `src/content/notes/draft-example.md`; the route, tags, relations, RSS, sitemap, and search index contain no draft entry.
@@ -44,9 +47,10 @@
 
 - GitHub username, CSDN URL, email, final public URL, custom domain, and Giscus IDs are unknown and must remain placeholders or disabled.
 - Astro build emits one upstream Vite unused-import warning from Astro's `remotePattern.js`; it does not originate in project code and does not affect the successful static build.
-- GitHub Actions cannot be executed locally; the workflow YAML parses successfully, but the first remote run remains an external verification step.
+- CSDN and email still use visibly labeled placeholders; Giscus remains safely disabled because no repository/category IDs have been configured.
+- Published writing, notes, projects, research, and experience entries are explicitly labeled sample content rather than verified personal claims.
 
 ## Next Step And User Decision
 
-- Next step: create and push `SwanChann/SwanChann.github.io`, enable GitHub Pages through Actions if necessary, and verify the public URL.
-- No user decision is currently required. CSDN, email, real content, custom domain, and Giscus remain intentionally unconfigured.
+- Next step: replace the CSDN and email placeholders in `src/config/site.ts`, update `src/data/now.ts`, and replace or remove the sample entries under `src/content/`.
+- User decision: provide only the personal links and content that should be public. A custom domain and Giscus are optional and remain unconfigured.
