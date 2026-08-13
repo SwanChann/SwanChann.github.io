@@ -45,12 +45,32 @@ type SharedData = {
 };
 
 export const collectionLabels: Record<ContentCollection, string> = {
-  writing: 'Writing',
-  notes: 'Notes',
-  projects: 'Projects',
-  research: 'Research',
-  experience: 'Experience',
+  writing: '文章',
+  notes: '笔记',
+  projects: '项目',
+  research: '研究',
+  experience: '经验',
 };
+
+const subtypeLabels: Record<string, string> = {
+  til: '今日所学',
+  debug: '调试',
+  paper: '论文',
+  tool: '工具',
+  concept: '概念',
+  learning: '学习',
+  setup: '配置',
+  debugging: '调试',
+  deployment: '部署',
+  environment: '环境',
+  workflow: '工作流',
+  tooling: '工具',
+  infrastructure: '基础设施',
+};
+
+export function formatSubtype(value?: string): string | undefined {
+  return value ? subtypeLabels[value] ?? value : undefined;
+}
 
 export function isVisible(data: { draft: boolean }): boolean {
   return import.meta.env.DEV || !data.draft;
@@ -125,4 +145,3 @@ export function estimateReadingTime(body: string): number {
   const cjkCharacters = body.match(/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/gu)?.length ?? 0;
   return Math.max(1, Math.ceil((latinWords + cjkCharacters / 2) / 220));
 }
-

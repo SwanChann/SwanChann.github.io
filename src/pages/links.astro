@@ -3,18 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../config/site';
 ---
 
-<BaseLayout title="Links" description={`Internet identity links for ${siteConfig.name}.`}>
+<BaseLayout title="链接" description={`${siteConfig.name} 的互联网身份与站外入口。`}>
   <div class="page-shell">
     <header class="page-header">
-      <p class="eyebrow">Find me elsewhere</p>
-      <h1>Links</h1>
-      <p>This site is the source of truth. External platforms are distribution and identity endpoints.</p>
+      <p class="eyebrow">站外入口</p>
+      <h1>链接</h1>
+      <p>本站是内容的主要来源，其他平台用于分发内容与确认身份。</p>
     </header>
     <ul class="identity-index">
       {siteConfig.socialLinks.map((link) => (
         <li>
           <a href={link.href}>
-            <span><strong>{link.label}</strong>{link.placeholder && <small>Configure this placeholder</small>}</span>
+            <span><strong>{link.label}</strong>{link.placeholder && <small>待配置</small>}</span>
             <span aria-hidden="true">↗</span>
           </a>
         </li>
@@ -32,4 +32,3 @@ import { siteConfig } from '../config/site';
   .identity-index small { display: block; }
   .identity-index small { margin-top: .2rem; color: var(--text-muted); font-size: .75rem; font-weight: 400; }
 </style>
-

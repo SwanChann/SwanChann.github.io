@@ -7,12 +7,12 @@ const items = sortByRecent(await getVisibleEntries('experience'))
   .map((entry) => toContentRecord('experience', entry));
 ---
 
-<BaseLayout title="Experience" description="Problems encountered in practice and the complete path to a working resolution.">
+<BaseLayout title="经验" description="记录实践中遇到的问题及其完整解决路径。">
   <div class="page-shell">
     <header class="page-header">
-      <p class="eyebrow">Solved in practice</p>
-      <h1>Experience</h1>
-      <p>Complete records of problems encountered, evidence collected, solutions implemented, and lessons retained.</p>
+      <p class="eyebrow">实践中解决</p>
+      <h1>经验</h1>
+      <p>完整记录遇到的问题、收集的证据、实施的解决方案，以及最终留下的经验。</p>
     </header>
     <CollectionList items={items} />
   </div>

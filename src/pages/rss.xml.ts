@@ -8,7 +8,7 @@ export async function GET(context: { site?: URL }) {
   const base = import.meta.env.BASE_URL === '/' ? '/' : `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 
   return rss({
-    title: `${siteConfig.name} — Writing`,
+    title: `${siteConfig.name} — 文章`,
     description: siteConfig.description,
     site: context.site ?? new URL(siteConfig.siteUrl),
     items: writing.map((entry) => ({
@@ -21,4 +21,3 @@ export async function GET(context: { site?: URL }) {
     customData: `<language>${siteConfig.language}</language>`,
   });
 }
-

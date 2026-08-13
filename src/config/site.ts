@@ -7,14 +7,14 @@ export type SocialLink = {
 export const siteConfig = {
   name: 'Swan Chan',
   shortName: 'Swan',
-  siteTitle: 'Swan Chan — Personal Web',
-  description: 'A personal web, digital garden, and research and engineering notebook.',
-  tagline: 'AI · Robotics · Research Tools',
-  introduction: 'I explore embodied intelligence, AI agents, and research workflows.',
+  siteTitle: 'Swan Chan — 个人网站',
+  description: '一个记录研究、工程实践与持续思考的个人网站和数字花园。',
+  tagline: '人工智能 · 机器人 · 科研工具',
+  introduction: '我关注具身智能、AI Agent 与科研工作流。',
   author: 'Swan Chan',
   siteUrl: 'https://swanchann.github.io',
-  language: 'en',
-  locale: 'en_US',
+  language: 'zh-CN',
+  locale: 'zh_CN',
   socialLinks: [
     {
       label: 'GitHub',
@@ -26,7 +26,7 @@ export const siteConfig = {
       placeholder: true,
     },
     {
-      label: 'Email',
+      label: '邮箱',
       href: 'mailto:YOUR_EMAIL@example.com',
       placeholder: true,
     },

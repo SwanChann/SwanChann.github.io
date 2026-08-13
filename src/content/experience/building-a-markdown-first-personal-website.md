@@ -1,39 +1,39 @@
 ---
-title: Building a Markdown-First Personal Website
-description: A sample experience record about the decisions and compatibility checks behind this Astro foundation.
+title: 搭建一个 Markdown-first 的个人网站
+description: 一份示例经验记录，介绍这个 Astro 网站基础中的技术决策与兼容性检查。
 date: 2026-08-13
 updated: 2026-08-13
 category: tooling
 tags:
   - Astro
-  - Deployment
-  - Workflow
+  - 部署
+  - 工作流
 status: mature
 draft: false
 featured: false
 ---
 
-> **Sample / Placeholder:** This page documents the scaffold itself. Keep only the parts that remain true after you customize the repository.
+> **示例 / 占位内容：** 本页记录的是网站脚手架本身。完成仓库定制后，只保留仍然符合实际情况的内容。
 
-## Situation
+## 背景
 
-The site needed to remain static, Markdown-first, compatible with GitHub Pages subpaths, and maintainable without registering every new page manually.
+这个网站需要保持静态、以 Markdown 为内容源、兼容 GitHub Pages 子路径，并且新增内容时无需手动注册每一个页面。
 
-## Constraint
+## 约束
 
-The local runtime was Node 20.15.1. The current Astro 7 release required a newer Node version, so installing the registry latest version would not have produced a reliable local baseline.
+本地运行环境是 Node 20.15.1，而当时的 Astro 7 需要更新版本的 Node。因此，直接安装软件源中的最新版无法形成可靠的本地基线。
 
-## Resolution
+## 解决方案
 
-The project pinned an Astro 5 release whose declared engine supports the installed runtime. Compatible MDX, sitemap, RSS, and check packages were selected together. Content uses Astro's Content Layer API with glob loaders rather than the legacy implicit collection configuration.
+项目固定使用其运行环境声明支持当前 Node 版本的 Astro 5，并配套选择兼容的 MDX、站点地图、RSS 与检查工具。内容层使用 Astro Content Layer API 与 glob 加载器，而不是旧版的隐式集合配置。
 
-## Verification
+## 验证
 
-The repository's final build report should be treated as the current verification evidence. This paragraph alone is not proof that a later checkout still builds.
+仓库最近一次构建报告才是当前有效的验证证据。本段文字本身不能证明未来检出的版本仍然能够构建。
 
-## Lessons learned
+## 经验
 
-- Inspect actual package engines before scaffolding.
-- Treat a successful install with engine warnings as a risk, not a clean baseline.
-- Keep deployment base-path behavior centralized in Astro configuration.
-- Make samples label themselves so scaffolding cannot be mistaken for personal history or research evidence.
+- 搭建脚手架之前，先检查依赖包真实的运行环境要求。
+- 即使安装成功，只要出现运行环境警告，就应视为风险，而不是干净基线。
+- 在 Astro 配置中集中管理部署基础路径。
+- 明确标注示例内容，避免把脚手架误当成个人经历或研究证据。

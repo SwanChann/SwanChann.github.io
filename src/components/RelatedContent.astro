@@ -21,10 +21,10 @@ const groups = contentCollections
 
 {groups.length > 0 && (
   <section class="related-content" aria-labelledby="related-heading" data-pagefind-ignore>
-    <h2 id="related-heading">Related content</h2>
+    <h2 id="related-heading">相关内容</h2>
     {groups.map((group) => (
       <div class="related-group">
-        <h3>Related {collectionLabels[group.collection]}</h3>
+        <h3>相关{collectionLabels[group.collection]}</h3>
         <div class="card-list compact">
           {group.items.map((item) => <ContentCard item={item} />)}
         </div>
@@ -32,4 +32,3 @@ const groups = contentCollections
     ))}
   </section>
 )}
-

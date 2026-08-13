@@ -7,14 +7,13 @@ type Props = {
 
 const { status } = Astro.props;
 const labels: Record<Status, string> = {
-  seed: 'Seed',
-  growing: 'Growing',
-  mature: 'Mature',
-  evergreen: 'Evergreen',
+  seed: '萌芽',
+  growing: '生长中',
+  mature: '成熟',
+  evergreen: '常青',
 };
 ---
 
-<span class={`status status-${status}`} title={`Digital garden status: ${labels[status]}`}>
+<span class={`status status-${status}`} title={`数字花园状态：${labels[status]}`}>
   <span aria-hidden="true">●</span> {labels[status]}
 </span>
-

@@ -4,12 +4,12 @@ import { withBase } from '../utils/paths';
 import ThemeToggle from './ThemeToggle.astro';
 
 const navigation = [
-  ['Writing', '/writing/'],
-  ['Notes', '/notes/'],
-  ['Projects', '/projects/'],
-  ['Research', '/research/'],
-  ['Experience', '/experience/'],
-  ['About', '/about/'],
+  ['文章', '/writing/'],
+  ['笔记', '/notes/'],
+  ['项目', '/projects/'],
+  ['研究', '/research/'],
+  ['经验', '/experience/'],
+  ['关于', '/about/'],
 ] as const;
 
 const currentPath = Astro.url.pathname;
@@ -21,11 +21,11 @@ const isActive = (path: string) => {
 
 <header class="site-header" data-pagefind-ignore>
   <div class="header-inner">
-    <a class="site-mark" href={withBase('/')} aria-label={`${siteConfig.name} home`}>
+    <a class="site-mark" href={withBase('/')} aria-label={`${siteConfig.name} 首页`}>
       {siteConfig.shortName}
     </a>
 
-    <nav class="desktop-nav" aria-label="Primary navigation">
+    <nav class="desktop-nav" aria-label="主要导航">
       {navigation.map(([label, path]) => (
         <a href={withBase(path)} aria-current={isActive(path) ? 'page' : undefined}>{label}</a>
       ))}
@@ -33,18 +33,18 @@ const isActive = (path: string) => {
 
     <div class="header-actions">
       <a class="search-link" href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}>
-        Search
+        搜索
       </a>
       <div class="desktop-theme"><ThemeToggle /></div>
       <details class="mobile-menu">
-        <summary aria-label="Open navigation">Menu</summary>
+        <summary aria-label="打开导航">菜单</summary>
         <div class="mobile-panel">
-          <nav aria-label="Mobile navigation">
+          <nav aria-label="移动端导航">
             {navigation.map(([label, path]) => (
               <a href={withBase(path)} aria-current={isActive(path) ? 'page' : undefined}>{label}</a>
             ))}
-            <a href={withBase('/search/')}>Search</a>
-            <a href={withBase('/links/')}>Links</a>
+            <a href={withBase('/search/')}>搜索</a>
+            <a href={withBase('/links/')}>链接</a>
           </nav>
           <ThemeToggle />
         </div>
@@ -52,4 +52,3 @@ const isActive = (path: string) => {
     </div>
   </div>
 </header>
-

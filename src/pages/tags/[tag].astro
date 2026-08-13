@@ -18,14 +18,13 @@ const { tag, content } = Astro.props;
 const items = content.filter((item) => item.tags.some((value) => tagSlug(value) === tagSlug(tag)));
 ---
 
-<BaseLayout title={`Tag: ${tag}`} description={`Content tagged ${tag} across the personal knowledge garden.`}>
+<BaseLayout title={`标签：${tag}`} description={`个人知识花园中标记为“${tag}”的内容。`}>
   <div class="page-shell">
     <header class="page-header">
-      <p class="eyebrow"><a href={withBase('/tags/')}>All tags</a></p>
+      <p class="eyebrow"><a href={withBase('/tags/')}>全部标签</a></p>
       <h1>#{tag}</h1>
-      <p>{items.length} public {items.length === 1 ? 'entry' : 'entries'} across all content types.</p>
+      <p>共 {items.length} 条公开内容，覆盖所有内容类型。</p>
     </header>
     <CollectionList items={items} />
   </div>
 </BaseLayout>
-

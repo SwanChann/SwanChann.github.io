@@ -1,12 +1,12 @@
 ---
-title: Why I Am Building a Personal Research OS
-description: A sample essay about treating research tools, notes, and decisions as one maintainable system.
+title: 为什么我要构建个人科研操作系统
+description: 一篇示例文章，讨论如何把科研工具、笔记与决策组织成一个可维护的系统。
 date: 2026-08-13
 updated: 2026-08-13
 tags:
-  - Research OS
+  - 科研操作系统
   - AI Agent
-  - Workflow
+  - 工作流
 status: growing
 draft: false
 featured: true
@@ -14,41 +14,40 @@ featured: true
 
 import ExperimentResult from '../../components/ExperimentResult.astro';
 
-> **Sample / Placeholder:** This page demonstrates the Writing schema and MDX support. Replace it with your own verified argument; the numbers below are illustrative UI data, not research results.
+> **示例 / 占位内容：** 本页用于演示文章结构与 MDX 支持。请用经过验证的个人论述替换它；下方数字只是界面示例数据，不是研究结果。
 
-Research work rarely fails because there is nowhere to type. It becomes fragile when questions, sources, experiments, code, decisions, and conclusions live in separate places with no durable relationship.
+研究工作很少因为无处输入文字而失败。真正让它变得脆弱的，是问题、来源、实验、代码、决策与结论散落各处，彼此之间没有可长期维护的关系。
 
-## The problem is continuity
+## 问题在于连续性
 
-A research notebook is useful for recording the day. A reference manager is useful for storing papers. A repository is useful for code. None of them alone preserves why an experiment was chosen, which evidence changed a decision, or what remains uncertain.
+研究笔记适合记录当天进展，文献管理器适合保存论文，代码仓库适合管理代码。但任何一种工具单独使用时，都难以完整保存为什么选择某个实验、哪条证据改变了决策，以及哪些问题仍不确定。
 
-A personal Research OS is a working convention across those tools. Its job is to preserve continuity:
+个人科研操作系统是一套跨工具的工作约定，目标是保持研究连续性：
 
-- a question can lead to sources;
-- sources can lead to a testable claim;
-- a claim can lead to an experiment;
-- an experiment can update the project state;
-- a stable lesson can become public writing.
+- 问题可以指向来源；
+- 来源可以形成可检验的主张；
+- 主张可以导向实验；
+- 实验可以更新项目状态；
+- 稳定的经验可以沉淀成公开文章。
 
-## Markdown as the durable layer
+## 以 Markdown 作为持久层
 
-Markdown is not the entire system. It is the smallest durable layer that both a person and an AI agent can inspect, diff, and maintain without a proprietary database.
+Markdown 并不是整个系统，但它是最小的持久层：人和 AI Agent 都能检查、比较和维护它，而且不依赖专有数据库。
 
 ```text
-capture → organize → connect → refine → publish
+记录 → 组织 → 连接 → 完善 → 发布
 ```
 
-This website follows that same path. Notes are allowed to stay small. Experience records solved problems. Research pages hold evolving questions. Projects preserve complete project stories. Writing is where a more complete view emerges.
+这个网站也遵循同样的路径。笔记可以保持小而具体；经验记录已解决的问题；研究页面承载持续演化的问题；项目保存完整的工作过程；文章则用于形成更完整的观点。
 
-## MDX is an escape hatch
+## MDX 是必要时的扩展出口
 
-Most pages should remain plain Markdown. MDX is reserved for the rare case where a content-native component materially improves the explanation. This sample component proves that path works:
+大多数页面都应保持为纯 Markdown。只有当内容组件能显著改善表达时，才使用 MDX。下面的示例组件用于证明这条路径可用：
 
-<ExperimentResult label="Illustrative experiment card" successRate={0.87} fps={12.4} sample={true} />
+<ExperimentResult label="示例实验卡片" successRate={0.87} fps={12.4} sample={true} />
 
-The component explicitly labels these values as sample data. A real research page should name the dataset, denominator, evaluation protocol, date, and evidence path before presenting a result.
+组件明确把这些数值标记为示例数据。真实研究页面在展示结果之前，应注明数据集、分母、评估协议、日期与证据路径。
 
-## What would make this page mature
+## 这篇文章怎样才算成熟
 
-This sample is only a scaffold. A mature version would need concrete workflow boundaries, examples from real projects, failure cases, and evidence that the system improves retrieval or decision continuity.
-
+这篇示例只是脚手架。成熟版本还需要明确的工作流边界、真实项目案例、失败情形，以及能够证明系统改善了信息检索或决策连续性的证据。

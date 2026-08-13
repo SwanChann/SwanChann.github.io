@@ -4,29 +4,29 @@ import { siteConfig } from '../config/site';
 import { withBase } from '../utils/paths';
 ---
 
-<BaseLayout title="About" description={`About ${siteConfig.name}, current interests, and this personal knowledge space.`}>
+<BaseLayout title="关于" description={`关于 ${siteConfig.name}、当前关注方向与这个个人知识空间。`}>
   <div class="page-shell narrow-page">
     <header class="page-header">
-      <p class="eyebrow">About</p>
+      <p class="eyebrow">关于</p>
       <h1>{siteConfig.name}</h1>
       <p>{siteConfig.introduction}</p>
     </header>
 
     <section>
-      <h2>Current focus</h2>
-      <p>This starter is intentionally concise. Replace this paragraph with a verified description of your current work or study direction.</p>
+      <h2>当前关注</h2>
+      <p>这里暂时保留简洁占位。请用经过确认的工作或学习方向替换本段。</p>
     </section>
     <section>
-      <h2>Research interests</h2>
-      <p>Embodied intelligence, navigation, AI agents, and research workflows. Edit this list so it represents your actual interests.</p>
+      <h2>研究兴趣</h2>
+      <p>具身智能、导航、AI Agent 与科研工作流。请继续调整这份列表，使其准确代表你的实际兴趣。</p>
     </section>
     <section>
-      <h2>Engineering interests</h2>
-      <p>Research tooling, maintainable AI workflows, robotics systems, and knowledge infrastructure.</p>
+      <h2>工程兴趣</h2>
+      <p>科研工具、可维护的 AI 工作流、机器人系统与知识基础设施。</p>
     </section>
     <section>
-      <h2>Elsewhere</h2>
-      <p>All current and future identity links are maintained on the <a href={withBase('/links/')}>Links page</a>.</p>
+      <h2>其他平台</h2>
+      <p>当前及未来的个人主页入口都维护在<a href={withBase('/links/')}>链接页面</a>。</p>
     </section>
   </div>
 </BaseLayout>
@@ -36,4 +36,3 @@ import { withBase } from '../utils/paths';
   section { margin-top: 3rem; }
   section p { color: var(--text-muted); }
 </style>
-

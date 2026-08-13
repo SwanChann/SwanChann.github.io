@@ -1,39 +1,38 @@
 ---
-title: Quadruped Visual Navigation
-description: A placeholder project story for visual-goal navigation research on quadruped robots.
+title: 四足机器人视觉导航
+description: 一个关于四足机器人视觉目标导航研究的项目占位页。
 updated: 2026-08-13
 status: seed
 featured: true
 tags:
-  - Robotics
-  - Embodied AI
-  - Navigation
+  - 机器人
+  - 具身智能
+  - 导航
 draft: false
 ---
 
-> **Sample / Placeholder:** No experiment, robot deployment, metric, dataset, or publication is claimed here.
+> **示例 / 占位内容：** 本页不声称完成了任何实验、机器人部署、指标、数据集或论文发表。
 
-## Problem
+## 问题
 
-Describe the navigation problem precisely: observations, goal representation, action space, environment, and evaluation protocol.
+准确描述导航问题：观测、目标表示、动作空间、环境与评估协议。
 
-## Background
+## 背景
 
-Add only sources and prior work that have been verified.
+只添加经过核验的来源与已有工作。
 
-## Architecture
+## 架构
 
-Document the actual perception, policy, planning, and robot-control boundaries when they exist.
+在真实边界明确后，记录感知、策略、规划与机器人控制之间的实际分工。
 
-## Results
+## 结果
 
-No result is reported in this sample.
+此示例不报告任何结果。
 
-## Lessons learned
+## 经验
 
-Separate simulator plumbing, offline proxies, and real closed-loop evidence when this page is replaced with real project material.
+用真实项目材料替换本页时，应明确区分仿真器工程连通、离线代理指标与真实闭环证据。
 
-## Current status
+## 当前状态
 
-Placeholder awaiting verified project content.
-
+占位页，等待补充经过核验的项目内容。

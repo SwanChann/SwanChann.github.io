@@ -10,9 +10,9 @@ const visibleHeadings = headings.filter((heading) => heading.depth === 2 || head
 ---
 
 {visibleHeadings.length > 1 && (
-  <aside class="toc" aria-label="Table of contents" data-pagefind-ignore>
+  <aside class="toc" aria-label="目录" data-pagefind-ignore>
     <details open>
-      <summary>On this page</summary>
+      <summary>本页目录</summary>
       <ol>
         {visibleHeadings.map((heading) => (
           <li class={`toc-depth-${heading.depth}`}>
@@ -23,4 +23,3 @@ const visibleHeadings = headings.filter((heading) => heading.depth === 2 || head
     </details>
   </aside>
 )}
-

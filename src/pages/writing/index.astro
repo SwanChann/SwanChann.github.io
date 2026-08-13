@@ -7,14 +7,13 @@ const items = sortByRecent(await getVisibleEntries('writing'))
   .map((entry) => toContentRecord('writing', entry));
 ---
 
-<BaseLayout title="Writing" description="Long-form technical, research, and workflow writing.">
+<BaseLayout title="文章" description="关于技术、研究与工作流的长文。">
   <div class="page-shell">
     <header class="page-header">
-      <p class="eyebrow">Developed ideas</p>
-      <h1>Writing</h1>
-      <p>Long-form essays where notes, experience, and research develop into a coherent point of view.</p>
+      <p class="eyebrow">形成中的观点</p>
+      <h1>文章</h1>
+      <p>在长文中，把笔记、经验与研究逐步发展成完整观点。</p>
     </header>
     <CollectionList items={items} />
   </div>
 </BaseLayout>
-

@@ -1,24 +1,23 @@
 ---
 import CollectionList from '../../components/CollectionList.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
+import { formatSubtype, getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
 
 const items = sortByRecent(await getVisibleEntries('notes'))
   .map((entry) => toContentRecord('notes', entry));
-const types = [...new Set(items.map((item) => item.type).filter(Boolean))];
+const types = [...new Set(items.map((item) => formatSubtype(item.type)).filter(Boolean))];
 ---
 
-<BaseLayout title="Notes" description="Small technical notes, paper notes, concepts, and things learned.">
+<BaseLayout title="笔记" description="技术记录、论文笔记、概念与学习所得。">
   <div class="page-shell">
     <header class="page-header">
-      <p class="eyebrow">Small units of knowledge</p>
-      <h1>Notes</h1>
-      <p>Things learned, commands worth keeping, debugging traces, paper notes, and concepts still taking shape.</p>
-      {types.length > 0 && <p class="index-facets">Types: {types.join(' · ')}</p>}
+      <p class="eyebrow">小块知识</p>
+      <h1>笔记</h1>
+      <p>记录学习所得、值得保存的命令、调试线索、论文笔记，以及仍在成形的概念。</p>
+      {types.length > 0 && <p class="index-facets">类型：{types.join(' · ')}</p>}
     </header>
     <CollectionList items={items} />
   </div>
 </BaseLayout>
 
 <style>.index-facets { font-size: .85rem !important; }</style>
-

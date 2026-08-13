@@ -14,15 +14,15 @@ for (const item of items) {
 }
 const tags = [...counts.entries()]
   .map(([slug, value]) => ({ slug, ...value }))
-  .sort((a, b) => a.label.localeCompare(b.label, 'en'));
+  .sort((a, b) => a.label.localeCompare(b.label, 'zh-CN'));
 ---
 
-<BaseLayout title="Tags" description="Browse writing, notes, projects, research, and experience by shared tags.">
+<BaseLayout title="标签" description="通过共同标签浏览文章、笔记、项目、研究与经验。">
   <div class="page-shell">
     <header class="page-header">
-      <p class="eyebrow">Across the garden</p>
-      <h1>Tags</h1>
-      <p>Shared tags connect every content type. Counts include all public Writing, Notes, Projects, Research, and Experience.</p>
+      <p class="eyebrow">连接整个花园</p>
+      <h1>标签</h1>
+      <p>共同标签把不同内容连接起来。数量统计包含所有公开文章、笔记、项目、研究与经验。</p>
     </header>
     <ul class="tag-index">
       {tags.map((tag) => (
@@ -40,4 +40,3 @@ const tags = [...counts.entries()]
   .tag-index small { color: var(--text-muted); }
   @media (max-width: 720px) { .tag-index { grid-template-columns: 1fr 1fr; } }
 </style>
-

@@ -7,7 +7,7 @@ export const giscusConfig = {
   reactionsEnabled: true,
   emitMetadata: false,
   inputPosition: 'top',
-  lang: 'en',
+  lang: 'zh-CN',
 } as const;
 
 export const isGiscusEnabled = Boolean(
@@ -16,4 +16,3 @@ export const isGiscusEnabled = Boolean(
   && giscusConfig.category
   && giscusConfig.categoryId,
 );
-

@@ -1,39 +1,38 @@
 ---
-title: Power Grid VLM
-description: A placeholder project page for vision-language-model work in power-grid inspection.
+title: 电网巡检 VLM
+description: 一个关于视觉语言模型用于电网巡检的项目占位页。
 updated: 2026-08-13
 status: seed
 featured: true
 tags:
   - AI Agent
-  - Engineering
+  - 工程
   - VLM
 draft: false
 ---
 
-> **Sample / Placeholder:** This page demonstrates the project structure only. It makes no claim about models, customers, datasets, deployments, or achieved metrics.
+> **示例 / 占位内容：** 本页只演示项目结构，不对模型、客户、数据集、部署或已取得指标作任何声明。
 
-## Problem
+## 问题
 
-Define the real inspection task, label space, input conditions, and operational constraints here.
+在这里定义真实的巡检任务、标签空间、输入条件与运行约束。
 
-## What I built
+## 构建内容
 
-Replace this placeholder with an evidence-bounded description of the implemented pipeline.
+请用有证据边界的描述替换本段，准确说明已经实现的流程。
 
-## Results
+## 结果
 
-No result is reported in this sample. Future metrics should preserve their workbook, denominator, review protocol, and evaluation version.
+此示例不报告任何结果。未来填写指标时，应保留其工作簿、分母、复核协议与评估版本。
 
-## What worked
+## 有效做法
 
-To be completed from verified project evidence.
+待根据经过核验的项目证据补充。
 
-## What did not work
+## 无效做法
 
-To be completed from verified failures.
+待根据经过核验的失败记录补充。
 
-## Current status
+## 当前状态
 
-Placeholder awaiting verified project content.
-
+占位页，等待补充经过核验的项目内容。

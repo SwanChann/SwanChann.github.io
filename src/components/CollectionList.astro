@@ -7,7 +7,7 @@ type Props = {
   emptyMessage?: string;
 };
 
-const { items, emptyMessage = 'No published content yet.' } = Astro.props;
+const { items, emptyMessage = '暂无已发布内容。' } = Astro.props;
 ---
 
 {items.length > 0 ? (
@@ -17,4 +17,3 @@ const { items, emptyMessage = 'No published content yet.' } = Astro.props;
 ) : (
   <p class="empty-state">{emptyMessage}</p>
 )}
-

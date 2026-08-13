@@ -21,8 +21,8 @@ const previous = index < ordered.length - 1 ? toContentRecord('projects', ordere
 const next = index > 0 ? toContentRecord('projects', ordered[index - 1]) : undefined;
 const externalLinks = [
   entry.data.github && { label: 'GitHub', href: entry.data.github },
-  entry.data.demo && { label: 'Demo', href: entry.data.demo },
-  entry.data.paper && { label: 'Paper', href: entry.data.paper },
+  entry.data.demo && { label: '演示', href: entry.data.demo },
+  entry.data.paper && { label: '论文', href: entry.data.paper },
 ].filter((link): link is { label: string; href: string } => Boolean(link));
 ---
 
@@ -44,4 +44,3 @@ const externalLinks = [
 >
   <Content />
 </ContentLayout>
-

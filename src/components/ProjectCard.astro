@@ -13,10 +13,9 @@ const { item } = Astro.props;
 <article class="project-card">
   <div class="card-meta">
     <StatusBadge status={item.status} />
-    {item.draft && <span class="draft-label">Draft</span>}
+    {item.draft && <span class="draft-label">草稿</span>}
   </div>
   <h3><a href={item.path}>{item.title}</a></h3>
   <p>{item.description}</p>
   <TagList tags={item.tags} />
 </article>
-

@@ -70,26 +70,26 @@ const readingTime = estimateReadingTime(body);
       data-pagefind-body
       data-pagefind-filter={`section:${label}`}
     >
-      <a class="back-link" href={withBase(`/${collection}/`)}>← Back to {label}</a>
+      <a class="back-link" href={withBase(`/${collection}/`)}>← 返回{label}</a>
       <header class="article-header">
         <div class="article-kicker">
           <span>{label}</span>
           {subtype && <span>{subtype}</span>}
           <StatusBadge status={status} />
-          {draft && <span class="draft-label">Draft · local only</span>}
+          {draft && <span class="draft-label">草稿 · 仅本地可见</span>}
         </div>
         <h1 data-pagefind-meta="title">{title}</h1>
         <p class="article-description">{description}</p>
         <div class="article-dates">
-          {date && <span>Published <time datetime={date.toISOString()}>{formatDate(date)}</time></span>}
+          {date && <span>发布于 <time datetime={date.toISOString()}>{formatDate(date)}</time></span>}
           {updated && !sameDay(date, updated) && (
-            <span>Updated <time datetime={updated.toISOString()}>{formatDate(updated)}</time></span>
+            <span>更新于 <time datetime={updated.toISOString()}>{formatDate(updated)}</time></span>
           )}
-          <span>{readingTime} min read</span>
+          <span>约 {readingTime} 分钟</span>
         </div>
         <TagList tags={tags} />
         {externalLinks.length > 0 && (
-          <nav class="external-links" aria-label="Project links">
+          <nav class="external-links" aria-label="项目链接">
             {externalLinks.map((link) => <a href={link.href}>{link.label} ↗</a>)}
           </nav>
         )}
@@ -102,12 +102,12 @@ const readingTime = estimateReadingTime(body);
         <TableOfContents headings={headings} />
       </div>
 
-      <nav class="article-pagination" aria-label="Content pagination" data-pagefind-ignore>
+      <nav class="article-pagination" aria-label="内容翻页" data-pagefind-ignore>
         <div>
-          {previous && <a href={previous.path}><span>Previous</span>{previous.title}</a>}
+          {previous && <a href={previous.path}><span>上一篇</span>{previous.title}</a>}
         </div>
         <div>
-          {next && <a href={next.path}><span>Next</span>{next.title}</a>}
+          {next && <a href={next.path}><span>下一篇</span>{next.title}</a>}
         </div>
       </nav>
     </article>
@@ -116,4 +116,3 @@ const readingTime = estimateReadingTime(body);
     {collection === 'writing' && <Giscus />}
   </div>
 </BaseLayout>
-

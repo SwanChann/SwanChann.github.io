@@ -1,7 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
-import { getAllVisibleContent, getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
+import { formatSubtype, getAllVisibleContent, getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
 import { entrySlug } from '../../utils/paths';
 import { findRelatedContent } from '../../utils/related';
 
@@ -30,7 +30,7 @@ const next = index > 0 ? toContentRecord('notes', ordered[index - 1]) : undefine
   tags={entry.data.tags}
   status={entry.data.status}
   draft={entry.data.draft}
-  subtype={entry.data.type}
+  subtype={formatSubtype(entry.data.type)}
   body={entry.body ?? ''}
   headings={headings}
   related={related}
@@ -39,4 +39,3 @@ const next = index > 0 ? toContentRecord('notes', ordered[index - 1]) : undefine
 >
   <Content />
 </ContentLayout>
-

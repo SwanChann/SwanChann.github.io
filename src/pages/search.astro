@@ -8,21 +8,21 @@ const bundlePath = withBase('/pagefind/');
 const baseUrl = withBase('/');
 ---
 
-<BaseLayout title="Search" description="Search all public writing, notes, projects, research, and experience.">
+<BaseLayout title="搜索" description="搜索所有公开文章、笔记、项目、研究与经验。">
   <div class="page-shell search-page" data-pagefind-ignore>
     <header class="page-header">
-      <p class="eyebrow">Static full-text index</p>
-      <h1>Search</h1>
-      <p>Search all public Writing, Notes, Projects, Research, and Experience. The index is generated after the Astro production build.</p>
+      <p class="eyebrow">静态全文索引</p>
+      <h1>搜索</h1>
+      <p>搜索所有公开文章、笔记、项目、研究与经验。索引会在 Astro 生产构建完成后生成。</p>
     </header>
-    <noscript><p class="empty-state">Search requires JavaScript. The rest of the site remains fully readable without it.</p></noscript>
+    <noscript><p class="empty-state">搜索需要启用 JavaScript；未启用时，网站其他内容仍可正常阅读。</p></noscript>
     {import.meta.env.DEV && (
-      <p class="empty-state">Search is available after <code>npm run build</code>. Run <code>npm run preview</code> to test the generated index locally.</p>
+      <p class="empty-state">执行 <code>npm run build</code> 后搜索才可用；可再运行 <code>npm run preview</code> 在本地测试生成的索引。</p>
     )}
     <div class="search-interface">
-      <pagefind-config bundle-path={bundlePath} base-url={baseUrl}></pagefind-config>
-      <pagefind-input placeholder="Search the garden…"></pagefind-input>
-      <pagefind-filter-dropdown filter="section" label="Section"></pagefind-filter-dropdown>
+      <pagefind-config bundle-path={bundlePath} base-url={baseUrl} lang="zh-cn"></pagefind-config>
+      <pagefind-input placeholder="搜索这个数字花园……"></pagefind-input>
+      <pagefind-filter-dropdown filter="section" label="栏目"></pagefind-filter-dropdown>
       <pagefind-summary></pagefind-summary>
       <pagefind-results></pagefind-results>
     </div>

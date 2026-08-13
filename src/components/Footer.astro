@@ -8,12 +8,11 @@ const [github, csdn] = siteConfig.socialLinks;
 <footer class="site-footer" data-pagefind-ignore>
   <div class="footer-inner">
     <p>© {new Date().getFullYear()} {siteConfig.name}</p>
-    <p class="footer-note">Built with Astro.</p>
-    <nav aria-label="Footer navigation">
+    <p class="footer-note">基于 Astro 构建。</p>
+    <nav aria-label="页脚导航">
       <a href={github.href}>GitHub</a>
       <a href={csdn.href}>CSDN</a>
       <a href={withBase('/rss.xml')}>RSS</a>
     </nav>
   </div>
 </footer>
-

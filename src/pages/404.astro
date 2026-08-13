@@ -3,14 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { withBase } from '../utils/paths';
 ---
 
-<BaseLayout title="Page not found" description="The requested page could not be found." noindex>
+<BaseLayout title="页面未找到" description="无法找到请求的页面。" noindex>
   <div class="page-shell error-page">
     <p class="eyebrow">404</p>
-    <h1>Page not found.</h1>
-    <p>The page may have moved, or the link may be incomplete.</p>
-    <nav aria-label="404 actions">
-      <a href={withBase('/')}>Back home</a>
-      <a href={withBase('/search/')}>Search the site</a>
+    <h1>页面未找到。</h1>
+    <p>页面可能已移动，也可能是链接不完整。</p>
+    <nav aria-label="404 页面操作">
+      <a href={withBase('/')}>返回首页</a>
+      <a href={withBase('/search/')}>搜索网站</a>
     </nav>
   </div>
 </BaseLayout>
@@ -20,4 +20,3 @@ import { withBase } from '../utils/paths';
   .error-page p:not(.eyebrow) { color: var(--text-muted); }
   .error-page nav { display: flex; gap: 1.5rem; }
 </style>
-

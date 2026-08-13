@@ -8,17 +8,16 @@ const items = sortByRecent(await getVisibleEntries('research'))
 const topics = [...new Set(items.map((item) => item.topic).filter(Boolean))];
 ---
 
-<BaseLayout title="Research" description="Research questions, topic notes, experiments, ideas, and reading paths.">
+<BaseLayout title="研究" description="研究问题、主题笔记、实验、想法与阅读路径。">
   <div class="page-shell">
     <header class="page-header">
-      <p class="eyebrow">Questions in motion</p>
-      <h1>Research</h1>
-      <p>A growing knowledge space for research interests, questions, paper notes, experiments, ideas, and reading paths.</p>
-      {topics.length > 0 && <p class="index-facets">Topics: {topics.join(' · ')}</p>}
+      <p class="eyebrow">持续推进的问题</p>
+      <h1>研究</h1>
+      <p>一个持续生长的知识空间，用于整理研究兴趣、问题、论文笔记、实验、想法与阅读路径。</p>
+      {topics.length > 0 && <p class="index-facets">主题：{topics.join(' · ')}</p>}
     </header>
     <CollectionList items={items} />
   </div>
 </BaseLayout>
 
 <style>.index-facets { font-size: .85rem !important; }</style>
-

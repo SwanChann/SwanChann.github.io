@@ -1,40 +1,39 @@
 ---
-title: Embodied Navigation
-description: A sample research topic page that separates open questions, evidence, experiments, and working ideas.
-topic: Navigation
+title: 具身导航
+description: 一个示例研究主题页，用于分别记录开放问题、证据、实验与工作想法。
+topic: 导航
 date: 2026-08-13
 updated: 2026-08-13
 tags:
-  - Embodied AI
-  - Navigation
-  - Robotics
+  - 具身智能
+  - 导航
+  - 机器人
 status: growing
 draft: false
 featured: false
 ---
 
-> **Sample / Placeholder:** The questions below are organizational examples, not a validated literature synthesis or proposed contribution.
+> **示例 / 占位内容：** 以下问题只用于演示内容组织方式，并非经过验证的文献综合或创新贡献。
 
-## Research interest
+## 研究兴趣
 
-Embodied navigation studies how an agent uses perception, memory, reasoning, and action to reach goals in an environment.
+具身导航研究智能体如何利用感知、记忆、推理与行动，在环境中到达目标。
 
-## Questions
+## 问题
 
-- Which observations are available at test time?
-- What knowledge is assumed during training?
-- Does evaluation measure offline prediction or closed-loop navigation?
-- Which changes improve robustness rather than only benchmark fit?
+- 测试阶段能够获得哪些观测？
+- 训练阶段预设了哪些知识？
+- 评估衡量的是离线预测，还是闭环导航？
+- 哪些改动真正提升了鲁棒性，而不只是更贴合基准？
 
-## Reading path
+## 阅读路径
 
-Add verified primary sources here. A title or abstract alone is not enough to support a detailed method or limitation claim.
+在这里添加经过核验的一手来源。仅凭标题或摘要，不足以支撑关于方法细节或局限性的判断。
 
-## Experiment ideas
+## 实验想法
 
-Record an idea together with its falsifiable hypothesis, required data, baseline, metric, and feasibility constraint.
+记录想法时，同时写明可证伪假设、所需数据、基线、指标与可行性约束。
 
-## Related projects
+## 相关项目
 
-The shared tags below automatically connect this page with relevant projects, notes, writing, and experience.
-
+下方的共同标签会自动把本页与相关项目、笔记、文章和经验连接起来。

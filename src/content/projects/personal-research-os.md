@@ -1,59 +1,58 @@
 ---
-title: Personal Research OS
-description: A sample project page for a local-first system that preserves research questions, evidence, experiments, and decisions.
+title: 个人科研操作系统
+description: 一个本地优先系统的示例项目页，用于保存研究问题、证据、实验与决策。
 updated: 2026-08-13
 status: growing
 featured: true
 tags:
-  - Research OS
+  - 科研操作系统
   - AI Agent
-  - Workflow
+  - 工作流
 draft: false
 startDate: 2026-01-01
 ---
 
-> **Sample / Placeholder:** This is an information-architecture example, not a claim that the described system or results already exist.
+> **示例 / 占位内容：** 这是信息架构示例，并不表示所描述的系统或结果已经存在。
 
-## Problem
+## 问题
 
-Research context is often fragmented across papers, chat threads, repositories, experiment folders, and weekly reports.
+研究上下文经常散落在论文、对话、代码仓库、实验文件夹与周报中。
 
-## Why
+## 为什么
 
-A durable system should make current questions, decisions, evidence, and next actions recoverable across tools and sessions.
+一个可长期维护的系统，应当让当前问题、决策、证据与下一步行动能够跨工具、跨会话恢复。
 
-## Architecture
+## 架构
 
-The proposed architecture is local-first and human-readable: Markdown records, version control, explicit evidence links, and small automation scripts.
+这里提出的架构强调本地优先和人类可读：使用 Markdown 记录、版本控制、明确的证据链接，以及小型自动化脚本。
 
-## What I built
+## 构建内容
 
-Replace this section with verified implementation details and links. Do not describe planned modules as completed work.
+请用经过核验的实现细节与链接替换本节，不要把计划中的模块写成已完成工作。
 
-## Technology stack
+## 技术栈
 
 - Markdown
 - Git
-- Small task-specific automation
-- Optional AI-agent assistance
+- 面向具体任务的小型自动化
+- 可选的 AI Agent 辅助
 
-## Results
+## 结果
 
-No research or productivity result is claimed by this sample.
+此示例不声称取得了任何研究结果或效率提升。
 
-## What worked
+## 有效做法
 
-To be completed from actual use.
+待根据实际使用情况补充。
 
-## What did not work
+## 无效做法
 
-To be completed from actual failures.
+待根据真实失败记录补充。
 
-## Lessons learned
+## 经验
 
-Keep evidence and project state readable without requiring a proprietary interface.
+让证据和项目状态保持可读，不依赖专有界面。
 
-## Current status
+## 当前状态
 
-Sample page. Replace this status with a verified project state.
-
+当前为示例页面，请用经过核验的项目状态替换本段。

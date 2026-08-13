@@ -7,14 +7,13 @@ const items = sortProjects(await getVisibleEntries('projects'))
   .map((entry) => toContentRecord('projects', entry));
 ---
 
-<BaseLayout title="Projects" description="Projects described as problems, systems, results, and lessons.">
+<BaseLayout title="项目" description="从问题、系统、结果与经验几个方面记录项目。">
   <div class="page-shell">
     <header class="page-header">
-      <p class="eyebrow">Work in context</p>
-      <h1>Projects</h1>
-      <p>Project stories that preserve the problem, architecture, implementation decisions, results, and lessons—not résumé fragments.</p>
+      <p class="eyebrow">工作全貌</p>
+      <h1>项目</h1>
+      <p>保留项目的问题、架构、实现决策、结果与经验，而不只是简历式片段。</p>
     </header>
-    {items.length > 0 ? <div class="project-grid">{items.map((item) => <ProjectCard item={item} />)}</div> : <p class="empty-state">No published projects yet.</p>}
+    {items.length > 0 ? <div class="project-grid">{items.map((item) => <ProjectCard item={item} />)}</div> : <p class="empty-state">暂无已发布项目。</p>}
   </div>
 </BaseLayout>
-

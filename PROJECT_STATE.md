@@ -4,9 +4,9 @@
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: PersonalWeb V1 foundation
-- current_milestone: Responsive starry-ocean visual background published
-- current_task: Replace the remaining identity placeholders and sample content when verified personal information is available.
-- status: verified
+- current_milestone: Chinese-only public experience and redeployment
+- current_task: Publish the verified Chinese production build and confirm the live GitHub Pages output.
+- status: in_progress
 
 ## Milestones
 
@@ -18,6 +18,7 @@
 6. [verified] Verified types, production output, root and project-repository base paths, links, search, theme persistence, and responsive rendering.
 7. [verified] Published the site through GitHub Actions to `https://swanchann.github.io/`.
 8. [verified] Added a responsive starry-ocean background with light/dark readability overlays and published it.
+9. [in_progress] Converted the complete public interface and all sample content to Chinese, removed any language-switching scope, and prepared the verified build for deployment.
 
 ## Verified Facts
 
@@ -39,6 +40,9 @@
 - GitHub Pages project-repository simulation generated `/personal-site/` links, canonical URLs, sitemap URLs, and Pagefind bundle/base configuration correctly.
 - Browser verification at 375, 768, and 1440 CSS pixels found no document-level horizontal overflow; mobile navigation, light/dark/system behavior, theme persistence, and Pagefind results were exercised.
 - Generated-site link checks covered 830 internal references in both root and project-base builds with 0 missing targets.
+- The public HTML language, Open Graph locale, Giscus locale, navigation, status labels, dates, search controls, page metadata, RSS title, and all seven public sample entries now use Chinese; technical names such as Astro, Markdown, GitHub, CSDN, Pagefind, VLM, and AI Agent remain as product or domain terms.
+- The latest local `npm run check` completed with 0 errors, 0 warnings, and 0 hints; `npm run build` generated 28 pages and a single `zh-cn` Pagefind index covering 7 public pages while excluding the draft route.
+- Local Pagefind queries returned Chinese results for `导航`, `具身`, and `研究`; browser screenshots verified the Chinese homepage and search interface against the starry-ocean background.
 
 ## Decisions
 
@@ -48,6 +52,7 @@
 - Pin Astro 5 rather than installing Astro 7 because the verified local Node 20.15.1 runtime does not meet Astro 7's Node requirement.
 - Use Pagefind 1.5 Component UI so the search interface is accessible, filterable by content section, and explicitly aware of the deployment base path.
 - Treat the starry-ocean image as a fixed decorative layer, resolve it through `withBase()`, and use separate light/dark tint tokens rather than altering content markup.
+- Keep the public experience Chinese-only for now. Preserve existing English URL paths and schema enum identifiers as stable code contracts, while rendering their labels in Chinese.
 
 ## Risks And Unknowns
 
@@ -58,5 +63,5 @@
 
 ## Next Step And User Decision
 
-- Next step: replace the CSDN and email placeholders in `src/config/site.ts`, update `src/data/now.ts`, and replace or remove the sample entries under `src/content/`.
-- User decision: provide only the personal links and content that should be public. A custom domain and Giscus are optional and remain unconfigured.
+- Next step: push the Chinese build to `main`, wait for GitHub Pages deployment, verify the live Chinese homepage and search assets, then return to replacing placeholders with verified personal content.
+- User decision: after this deployment, provide only the personal links and content that should be public. A custom domain and Giscus are optional and remain unconfigured.

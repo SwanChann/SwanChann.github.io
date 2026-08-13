@@ -30,7 +30,7 @@ const backgroundImage = withBase('/images/star-sea-background.webp');
     <meta name="theme-color" content="#111312" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <link rel="preload" href={backgroundImage} as="image" type="image/webp" />
-    <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} Writing`} href={withBase('/rss.xml')} />
+    <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} 文章`} href={withBase('/rss.xml')} />
     <SEO {...props} />
     <slot name="head" />
     <script is:inline>
@@ -43,7 +43,7 @@ const backgroundImage = withBase('/images/star-sea-background.webp');
     </script>
   </head>
   <body style={`--site-background-image: url("${backgroundImage}")`}>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <Header />
     <main id="main-content">
       <slot />

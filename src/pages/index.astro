@@ -33,11 +33,11 @@ const selectedProjects = sortProjects(projectEntries)
 <BaseLayout>
   <div class="page-shell home-page">
     <section class="home-intro" aria-labelledby="home-title">
-      <p class="eyebrow">Personal Web · Digital Garden</p>
+      <p class="eyebrow">个人网站 · 数字花园</p>
       <h1 id="home-title">{siteConfig.name}</h1>
       <p class="home-tagline">{siteConfig.tagline}</p>
       <p class="home-lede">{siteConfig.introduction}</p>
-      <nav class="identity-links" aria-label="External profiles">
+      <nav class="identity-links" aria-label="外部主页">
         {siteConfig.socialLinks.map((link) => <a href={link.href}>{link.label} ↗</a>)}
       </nav>
     </section>
@@ -46,7 +46,7 @@ const selectedProjects = sortProjects(projectEntries)
       <div class="section-heading">
         <div>
           <p class="eyebrow">{now.updated}</p>
-          <h2 id="now-heading">Now</h2>
+          <h2 id="now-heading">此刻</h2>
         </div>
       </div>
       <div class="now-grid">
@@ -61,41 +61,41 @@ const selectedProjects = sortProjects(projectEntries)
 
     <section class="home-section" aria-labelledby="projects-heading">
       <div class="section-heading">
-        <h2 id="projects-heading">Selected projects</h2>
-        <a href={withBase('/projects/')}>All projects →</a>
+        <h2 id="projects-heading">精选项目</h2>
+        <a href={withBase('/projects/')}>全部项目 →</a>
       </div>
       {selectedProjects.length > 0 ? (
         <div class="project-grid">{selectedProjects.map((item) => <ProjectCard item={item} />)}</div>
       ) : (
-        <p class="empty-state">Mark a published project as featured to show it here.</p>
+        <p class="empty-state">将已发布项目标记为精选后，它会显示在这里。</p>
       )}
     </section>
 
     <section class="home-section" aria-labelledby="writing-heading">
       <div class="section-heading">
-        <h2 id="writing-heading">Latest writing</h2>
-        <a href={withBase('/writing/')}>All writing →</a>
+        <h2 id="writing-heading">最新文章</h2>
+        <a href={withBase('/writing/')}>全部文章 →</a>
       </div>
       <CollectionList items={latestWriting} />
     </section>
 
     <section class="home-section" aria-labelledby="notes-heading">
       <div class="section-heading">
-        <h2 id="notes-heading">Recent notes</h2>
-        <a href={withBase('/notes/')}>All notes →</a>
+        <h2 id="notes-heading">最近笔记</h2>
+        <a href={withBase('/notes/')}>全部笔记 →</a>
       </div>
       <CollectionList items={recentNotes} />
     </section>
 
     <section class="home-section explore-section" aria-labelledby="explore-heading">
-      <h2 id="explore-heading">Explore</h2>
-      <nav aria-label="Explore the site">
-        <a href={withBase('/research/')}><strong>Research</strong><span>Questions, topics, experiments</span></a>
-        <a href={withBase('/projects/')}><strong>Projects</strong><span>Problems, systems, lessons</span></a>
-        <a href={withBase('/writing/')}><strong>Writing</strong><span>Developed ideas and essays</span></a>
-        <a href={withBase('/notes/')}><strong>Notes</strong><span>Small findings and working knowledge</span></a>
-        <a href={withBase('/experience/')}><strong>Experience</strong><span>Problems solved in practice</span></a>
-        <a href={withBase('/about/')}><strong>About</strong><span>Interests and current direction</span></a>
+      <h2 id="explore-heading">探索</h2>
+      <nav aria-label="探索网站">
+        <a href={withBase('/research/')}><strong>研究</strong><span>研究问题、主题与实验</span></a>
+        <a href={withBase('/projects/')}><strong>项目</strong><span>问题、系统与经验</span></a>
+        <a href={withBase('/writing/')}><strong>文章</strong><span>完整观点与长文</span></a>
+        <a href={withBase('/notes/')}><strong>笔记</strong><span>小发现与工作知识</span></a>
+        <a href={withBase('/experience/')}><strong>经验</strong><span>实践中解决的问题</span></a>
+        <a href={withBase('/about/')}><strong>关于</strong><span>关注方向与个人介绍</span></a>
       </nav>
     </section>
   </div>
@@ -131,4 +131,3 @@ const selectedProjects = sortProjects(projectEntries)
     .home-section { padding-block: 3.5rem; }
   }
 </style>
-
