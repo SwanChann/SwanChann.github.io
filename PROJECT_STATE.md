@@ -4,8 +4,8 @@
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: Evidence-backed Chinese content
-- current_milestone: Eight CSV-defined writing topics completed and locally verified
-- current_task: Review the new writing layer and decide whether to publish it; other collections and identity placeholders remain separate follow-up work.
+- current_milestone: Eight evidence-backed Chinese writing topics published
+- current_task: Replace or remove the remaining sample content in Projects, Research, Notes, Experience, and About when verified material is available.
 - status: verified
 
 ## Milestones
@@ -19,7 +19,7 @@
 7. [verified] Published the site through GitHub Actions to `https://swanchann.github.io/`.
 8. [verified] Added a responsive starry-ocean background with light/dark readability overlays and published it.
 9. [verified] Converted the complete public interface and all sample content to Chinese, removed any language-switching scope, and published the verified build.
-10. [verified] Reconstructed all eight projects in the supplied 102-task CSV from local Codex conversations and project evidence, then added one chronological, multi-Part Chinese Writing article per project.
+10. [verified] Reconstructed all eight projects in the supplied 102-task CSV from local Codex conversations and project evidence, added one chronological multi-Part Chinese Writing article per project, and published the complete Writing layer.
 
 ## Verified Facts
 
@@ -52,7 +52,8 @@
 - The task CSV is a user-provided untracked source file and remains untouched. The articles do not expose its private Notion URLs or unnecessary personal administrative details.
 - After the content change, `npm run check` completed with 0 errors, 0 warnings, and 0 hints. `npm run build` generated 60 pages; Pagefind indexed 14 public content pages in one `zh-cn` index.
 - RSS contains all eight Writing entries, the draft example remains absent from production output, and local Pagefind queries returned results for `电网缺陷` (2), `ResearchFlow` (1), `周报` (2), and `视觉导航` (1).
-- This content batch is local only. No commit, push, GitHub Actions run, or public-site deployment was performed because the current request did not authorize publication.
+- Pull request `#1` merged the article batch into `main` as commit `9b4dbf36e9ea2564262241a341d1517ef2dc0a60`; GitHub Actions run `31673604992` completed both build and deploy successfully.
+- Live checks returned HTTP 200 for the Writing index, all eight article routes, RSS, and Pagefind JavaScript. The index linked all eight slugs, the power-grid article contained its title and Part 8, and the live RSS contained eight items.
 
 ## Decisions
 
@@ -78,5 +79,5 @@
 
 ## Next Step And User Decision
 
-- Next step: review the eight local Writing articles, then publish them only after explicit authorization. Replacing the remaining sample Projects, Research, Notes, Experience, About text, CSDN, and email is a separate content pass.
-- User decision: decide whether this evidence-bounded article batch should be committed and deployed as written. A custom domain and Giscus remain optional and unconfigured.
+- Next step: replace or remove the remaining sample Projects, Research, Notes, Experience, and About text, then configure CSDN or email only after those public details are provided.
+- User decision: provide the next verified content or identity fields that should become public. A custom domain and Giscus remain optional and unconfigured.
