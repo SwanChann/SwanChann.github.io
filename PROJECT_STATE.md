@@ -5,8 +5,8 @@
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: VLM Knowledge Hub integrated locally
 - current_milestone: VLM navigation, 20 topic/source pages, coverage matrix, and static build verified locally
-- current_task: Review and refine the locally implemented VLM hub before any separate publication decision.
-- status: locally verified; not published
+- current_task: Maintain the published VLM Knowledge Hub and add evidence-backed topics as research progresses.
+- status: published and live-verified
 
 ## Milestones
 
@@ -20,14 +20,15 @@
 8. [verified] Added a responsive starry-ocean background with light/dark readability overlays and published it.
 9. [verified] Converted the complete public interface and all sample content to Chinese, removed any language-switching scope, and published the verified build.
 10. [verified] Reconstructed all eight projects in the supplied 102-task CSV from local Codex conversations and project evidence, added one chronological multi-Part Chinese Writing article per project, and published the complete Writing layer.
-11. [locally verified] Added an Astro Content Collection based VLM Knowledge Hub with a map page, 19 knowledge pages plus one source index, cross-links, glossary, independent personal research observations, coverage matrix, and link checks. No commit, push, or deployment was performed for this milestone.
+11. [published and live-verified] Added an Astro Content Collection based VLM Knowledge Hub with a map page, 19 knowledge pages plus one source index, cross-links, glossary, independent personal research observations, coverage matrix, and link checks. Published from commit `fc37fa0` through GitHub Pages run `36333636814`.
 
 ## Verified Facts
 
 - On 2026-09-28 the VLM Knowledge Hub was implemented in the existing `F:\codespace\PersonalWeb` Astro repository; the conversation started in `F:\codespace\VLM`, which contains the prior Markdown and chat workbook rather than site source.
 - The new `/vlm/` index is a navigation page; `src/content/vlm/` contains 20 Markdown entries, including four secondary visual-capability pages. The personal research page labels its directional observation unverified because the original image and model output are unavailable.
 - Local Astro check reported 0 errors, 0 warnings, and 0 hints. A root and simulated `/personal-site/` build each generated 81 pages; Pagefind indexed 34 public content pages. The VLM link checker found 20 detail routes and 583 valid VLM internal links in each base path.
-- Headless Edge visual inspection covered the VLM index at 1440px and 500px widths, and the Evaluation detail at 500px after the TOC change. The existing site colors and responsive single-column cards rendered; the VLM detail TOC is initially collapsed to keep the first screen focused. A live GitHub Pages deployment was not run.
+- Headless Edge visual inspection covered the VLM index at 1440px and 500px widths, and the Evaluation detail at 500px after the TOC change. The existing site colors and responsive single-column cards rendered; the VLM detail TOC is initially collapsed to keep the first screen focused.
+- GitHub Pages run `36333636814` completed its build and deploy jobs successfully for `fc37fa0`. Live GET requests returned HTTP 200 for `/vlm/` and `/vlm/evaluation/`, and both responses contained the expected VLM page content.
 
 - `F:\codespace\PersonalWeb` was empty when inspected on 2026-08-13.
 - The directory was not a Git repository when inspected.
