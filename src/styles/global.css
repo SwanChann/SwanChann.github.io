@@ -505,7 +505,38 @@ video {
   border-radius: var(--radius);
 }
 
+/* VLM knowledge hub: uses the site's existing colors, type and card language. */
+.vlm-home > section { padding-block: 2.4rem; border-top: 1px solid var(--border); }
+.vlm-home > section > p { max-width: 52rem; }
+.vlm-home h2 { margin-bottom: 1.2rem; }
+.vlm-area { margin-top: 2rem; }
+.vlm-area h3 { color: var(--text-muted); font-size: 0.9rem; letter-spacing: 0.04em; }
+.vlm-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; }
+.vlm-card { display: flex; min-height: 9.5rem; padding: 1.15rem; flex-direction: column; gap: 0.4rem; color: var(--text); text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.vlm-card:hover { color: var(--text); border-color: var(--accent); }
+.vlm-card strong { font-size: 1.1rem; line-height: 1.35; }
+.vlm-card > span:last-child { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; }
+.vlm-card-meta { color: var(--accent) !important; font-size: 0.72rem !important; font-weight: 700; letter-spacing: 0.03em; }
+.vlm-system-map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.7rem; padding: 0; list-style: none; }
+.vlm-system-map a { display: flex; min-height: 4.6rem; padding: 0.9rem; align-items: center; justify-content: space-between; gap: 0.5rem; color: var(--text); text-decoration: none; border-left: 3px solid var(--accent); background: var(--surface); }
+.vlm-system-map a:hover { background: var(--accent-soft); }
+.vlm-system-map a span { color: var(--accent); }
+.vlm-path-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.vlm-path { padding: 1.2rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.vlm-path h3 { font-size: 1rem; }
+.vlm-path ol { padding-left: 1.3rem; margin-bottom: 0; font-size: 0.9rem; }
+.vlm-path li { margin-bottom: 0.4rem; }
+.vlm-path ul { padding-left: 1.2rem; margin-bottom: 0; font-size: 0.9rem; }
+.vlm-term-map { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.vlm-term-map a { padding: 0.35rem 0.65rem; color: var(--text); text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); font-size: 0.83rem; }
+.vlm-term-map a:hover { color: var(--accent); border-color: var(--accent); }
+.vlm-breadcrumb { display: flex; max-width: 64rem; margin: 0 auto 2rem; gap: 0.6rem; color: var(--text-muted); font-size: 0.85rem; }
+.vlm-detail .article-kicker { margin-bottom: 1rem; }
+.vlm-related { max-width: 64rem; margin: 4rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); }
+.vlm-related h2 { font-size: 1.4rem; }
+
 @media (max-width: 960px) {
+  .vlm-card-grid, .vlm-path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .desktop-nav { display: none; }
   .header-actions { margin-left: auto; }
   .mobile-menu { display: block; position: relative; }
@@ -518,6 +549,8 @@ video {
 }
 
 @media (max-width: 720px) {
+  .vlm-card-grid, .vlm-path-grid, .vlm-system-map { grid-template-columns: 1fr; }
+  .vlm-card { min-height: auto; }
   .header-inner,
   .footer-inner,
   .page-shell,

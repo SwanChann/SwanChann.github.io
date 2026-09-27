@@ -11,13 +11,14 @@
 
 ## Content Model
 
-`src/content.config.ts` 使用 Astro 5 Content Layer API 和 `glob()` loader 定义五个 collection：
+`src/content.config.ts` 使用 Astro 5 Content Layer API 和 `glob()` loader 定义六个 collection：
 
 - `writing`：完整观点和长文。
 - `notes`：低门槛知识单元，有有限的 `type` 枚举。
 - `projects`：完整项目故事，外部链接均可选。
 - `research`：按 `topic` 组织的研究问题、证据、实验和想法。
 - `experience`：按 `category` 组织的已解决实践问题。
+- `vlm`：按 `area`, `level`, `order` 组织的专题和资料索引，`related` 显式连接专题。
 
 共享 schema 提供 `title`, `description`, `updated`, `tags`, `status`, `draft`, `featured`, `aliases`。内容模型是稳定接口；修改它时需同步模板、样例、页面和 README。
 
@@ -45,6 +46,7 @@ Astro 文件路由生成：
 /notes/               /notes/[...slug]/
 /projects/            /projects/[...slug]/
 /research/            /research/[...slug]/
+/vlm/                 /vlm/[...slug]/
 /experience/          /experience/[...slug]/
 /tags/                /tags/[tag]/
 /about/               /links/
@@ -53,6 +55,8 @@ Astro 文件路由生成：
 ```
 
 动态详情页的 `getStaticPaths()` 直接读取 collection，因此新增 Markdown 后自动生成 URL。`src/utils/paths.ts` 集中处理 `import.meta.env.BASE_URL`，确保 GitHub Pages 项目子路径可用。
+
+VLM 有独立知识导航而不是时间线索引：`src/pages/vlm/index.astro` 从 collection 读取专题卡片，`src/pages/vlm/[...slug].astro` 渲染 Markdown、目录、前后页和 `related` 链接。导航路径和系统链是少量稳定的学习路线数据；专题清单不硬编码在页面。Markdown 正文使用同级相对链接，Astro 构建后的根路径和 Pages 子路径均由 `scripts/check-vlm-links.py` 验证。VLM 暂不并入全站按日期排序的 `ContentRecord`，也不进入 Writing RSS；Pagefind 直接索引其详情正文。
 
 ## Search
 

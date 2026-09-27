@@ -3,15 +3,16 @@ import type { MarkdownHeading } from 'astro';
 
 type Props = {
   headings: MarkdownHeading[];
+  defaultOpen?: boolean;
 };
 
-const { headings } = Astro.props;
+const { headings, defaultOpen = true } = Astro.props;
 const visibleHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 ---
 
 {visibleHeadings.length > 1 && (
   <aside class="toc" aria-label="目录" data-pagefind-ignore>
-    <details open>
+    <details open={defaultOpen}>
       <summary>本页目录</summary>
       <ol>
         {visibleHeadings.map((heading) => (

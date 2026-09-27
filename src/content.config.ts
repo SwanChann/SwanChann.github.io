@@ -67,4 +67,15 @@ const experience = defineCollection({
   }),
 });
 
-export const collections = { writing, notes, projects, research, experience };
+const vlm = defineCollection({
+  loader: glob({ base: './src/content/vlm', pattern: '**/*.{md,mdx}' }),
+  schema: z.object({
+    ...shared,
+    area: z.enum(['基础', '模型', '能力', '方法', '研究']),
+    level: z.enum(['Core', 'Important', 'Advanced', 'Frontier']),
+    order: z.number().nonnegative(),
+    related: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { writing, notes, projects, research, experience, vlm };

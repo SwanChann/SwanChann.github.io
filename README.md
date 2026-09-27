@@ -55,6 +55,7 @@ Astro 类型与内容检查
 | Projects | `src/content/projects/` | 问题、架构、实现、结果与教训 | `startDate`, `endDate`, `github`, `demo`, `paper` |
 | Research | `src/content/research/` | 方向、问题、论文、实验、想法 | `date`, `topic` |
 | Experience | `src/content/experience/` | 真实遇到并解决的问题 | `date`, `category` |
+| VLM | `src/content/vlm/` | VLM 知识专题与资料索引 | `area`, `level`, `order`, `related` |
 
 所有 collection 共享：
 
@@ -66,6 +67,14 @@ Astro 类型与内容检查
 - `updated`, `aliases`（可选）
 
 完整 schema 在 `src/content.config.ts`。模板在 `docs/content-templates/`，不会被 Astro 当作正式内容发布。
+
+## VLM Knowledge Hub
+
+`/vlm/` 是总导航页：系统链、领域卡片和三条学习路径从 `vlm` collection 及少量导航数据生成。20 个独立 Markdown 专题/资料页在 `src/content/vlm/`，其中视觉能力另有 4 个二级专题；页面共用站点配色、排版、目录、前后页与相关专题导航。`/vlm/my-research/` 把个人观察、假设和实验结果分开记录，当前没有可复算的个人实验结果。
+
+新增专题从 `docs/content-templates/vlm.md` 复制。`area` 决定首页分组，`order` 决定学习顺序，`level` 表示学习优先级，`related` 填其他专题文件名（不带扩展名）；`draft: true` 在生产构建中不生成路由。新增概念同步更新 Glossary，新增论文同步更新 Sources 与 [覆盖矩阵](docs/VLM_KNOWLEDGE_COVERAGE.md)。VLM 专题进入 Pagefind 和 sitemap；RSS 仍只收录 Writing。
+
+构建后可运行 `python scripts/check-vlm-links.py --base /` 检查专题路由、内部链接和锚点。模拟 GitHub Pages 项目子路径时，设置 `BASE_PATH=/personal-site` 构建，再运行 `python scripts/check-vlm-links.py --base /personal-site/`。
 
 ## Digital Garden 状态
 

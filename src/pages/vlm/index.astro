@@ -1,0 +1,101 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { entrySlug, withBase } from '../../utils/paths';
+
+const entries = (await getCollection('vlm', ({ data }) => import.meta.env.DEV || !data.draft))
+  .sort((a, b) => a.data.order - b.data.order);
+const areas = ['基础', '模型', '能力', '方法', '研究'] as const;
+const bySlug = new Map(entries.map((entry) => [entrySlug(entry.id), entry]));
+const href = (slug: string) => withBase(`/vlm/${slug}/`);
+const paths = [
+  { title: 'A · 第一次系统学习', slugs: ['foundations', 'architecture', 'training', 'capabilities', 'evaluation', 'research-paradigms'] },
+  { title: 'B · 研究视觉能力', slugs: ['visual-representation', 'capabilities', 'perception-reasoning', 'failure-modes', 'evaluation', 'inference'] },
+  { title: 'C · 准备提出研究问题', slugs: ['research-paradigms', 'evaluation', 'failure-modes', 'research-question', 'paper-reading'] },
+];
+const system = [
+  ['图像 / 视频与预处理', 'architecture', 'resolution'],
+  ['视觉编码器', 'architecture', 'vision-encoder'],
+  ['视觉表征与 token', 'visual-representation', ''],
+  ['连接器与融合', 'architecture', 'connector-and-fusion'],
+  ['语言模型与生成', 'foundations', ''],
+  ['输出与行动', 'research-paradigms', ''],
+] as const;
+const capabilityGroups = [
+  { title: '看见什么', items: [['识别与属性', 'visual-perception'], ['计数与比较', 'visual-perception'], ['OCR 与文档', 'text-grounding'], ['定位与 grounding', 'text-grounding']] },
+  { title: '关系与空间', items: [['对象关系', 'spatial-3d'], ['左右、朝向与旋转', 'spatial-3d'], ['深度与 3D', 'spatial-3d'], ['多图与视频', 'temporal-reasoning']] },
+  { title: '使用证据', items: [['视觉推理', 'perception-reasoning'], ['解释是否忠实', 'perception-reasoning'], ['稳定偏差', 'failure-modes'], ['能力剖面', 'evaluation']] },
+] as const;
+const researchAxes = [
+  ['Architecture', 'architecture'], ['Data', 'training'], ['Pretraining', 'training'], ['Post-training', 'training'],
+  ['Benchmark', 'evaluation'], ['Diagnosis', 'research-paradigms'], ['Interpretability', 'research-paradigms'],
+  ['Robustness', 'failure-modes'], ['Bias', 'failure-modes'], ['Grounding', 'text-grounding'],
+  ['Spatial', 'spatial-3d'], ['Inference-time', 'inference'], ['Training-free', 'inference'],
+  ['Video', 'frontiers'], ['Multimodal Agents', 'frontiers'], ['GUI Agents', 'frontiers'],
+  ['Embodied / VLA', 'frontiers'], ['Unified Multimodal', 'frontiers'],
+] as const;
+---
+
+<BaseLayout title="VLM Knowledge Hub" description="视觉语言模型的知识地图、学习路径与研究方法导航。">
+  <div class="page-shell vlm-home">
+    <header class="page-header">
+      <p class="eyebrow">Research knowledge hub</p>
+      <h1>VLM 知识地图</h1>
+      <p>从模型怎样接收图像，到视觉能力如何被测量，再到怎样提出可验证的研究问题。选择一条路径进入，每页只回答一个主问题。</p>
+    </header>
+
+    <section aria-labelledby="vlm-definition">
+      <h2 id="vlm-definition">先分清名称</h2>
+      <p><strong>VLM</strong> 是视觉与语言模型的宽泛叫法，包含图文表征模型和生成模型；<strong>MLLM</strong> 通常指以大语言模型为核心的多模态生成系统。“多模态模型”范围更广，可处理音频、视频或动作。社区用法并不完全统一；详见<a href={href('foundations')}>基础与发展逻辑</a>和<a href={href('glossary')}>术语库</a>。</p>
+    </section>
+
+    <section aria-labelledby="vlm-system">
+      <h2 id="vlm-system">一张图看系统</h2>
+      <ol class="vlm-system-map">
+        {system.map(([label, slug, anchor]) => <li><a href={anchor ? `${href(slug)}#${anchor}` : href(slug)}>{label}<span aria-hidden="true">↗</span></a></li>)}
+      </ol>
+    </section>
+
+    <section aria-labelledby="vlm-topics">
+      <h2 id="vlm-topics">知识领域</h2>
+      {areas.map((area) => (
+        <div class="vlm-area">
+          <h3>{area}</h3>
+          <div class="vlm-card-grid">
+            {entries.filter((entry) => entry.data.area === area).map((entry) => (
+              <a class="vlm-card" href={href(entrySlug(entry.id))}>
+                <span class="vlm-card-meta">{entry.data.level} · {String(entry.data.order).padStart(2, '0')}</span>
+                <strong>{entry.data.title}</strong>
+                <span>{entry.data.description}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <section aria-labelledby="vlm-capabilities">
+      <h2 id="vlm-capabilities">能力不是一个分数</h2>
+      <p>下图按问题类型组织，类别可重叠，也不是唯一学术 taxonomy。点击概念进入解释与评测方法。</p>
+      <div class="vlm-path-grid">
+        {capabilityGroups.map((group) => <div class="vlm-path"><h3>{group.title}</h3><ul>{group.items.map(([label, slug]) => <li><a href={href(slug)}>{label}</a></li>)}</ul></div>)}
+      </div>
+    </section>
+
+    <section aria-labelledby="vlm-paths">
+      <h2 id="vlm-paths">三条学习路径</h2>
+      <div class="vlm-path-grid">
+        {paths.map((path) => <div class="vlm-path"><h3>{path.title}</h3><ol>{path.slugs.map((slug) => {
+          const entry = bySlug.get(slug);
+          return entry && <li><a href={href(slug)}>{entry.data.title}</a></li>;
+        })}</ol></div>)}
+      </div>
+    </section>
+
+    <section aria-labelledby="vlm-research-map">
+      <h2 id="vlm-research-map">从哪里进入研究</h2>
+      <p>从模型构建、测量与诊断，到推理时方法和行动闭环。每个词都指向其解释位置；观察到异常时，从<a href={href('research-question')}>研究问题方法页</a>开始。</p>
+      <nav class="vlm-term-map" aria-label="VLM 研究方向">{researchAxes.map(([label, slug]) => <a href={href(slug)}>{label}</a>)}</nav>
+    </section>
+  </div>
+</BaseLayout>
