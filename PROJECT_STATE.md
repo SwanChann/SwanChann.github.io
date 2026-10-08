@@ -1,12 +1,12 @@
 # Project State
 
-- last_verified: 2026-09-28
+- last_verified: 2026-10-08
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
-- active_workstream: VLM Knowledge Hub integrated locally
-- current_milestone: VLM navigation, 20 topic/source pages, coverage matrix, and static build verified locally
-- current_task: Maintain the published VLM Knowledge Hub and add evidence-backed topics as research progresses.
-- status: published and live-verified
+- active_workstream: Improve explanations throughout the complete VLM Knowledge Hub from reader feedback
+- current_milestone: All 20 content pages and the navigation page expanded with concrete examples, concept steps, and comprehension checks
+- current_task: Publish the locally verified complete teaching-depth revision and check all live VLM routes.
+- status: all content updated and locally verified; publication pending
 
 ## Milestones
 
@@ -21,9 +21,14 @@
 9. [verified] Converted the complete public interface and all sample content to Chinese, removed any language-switching scope, and published the verified build.
 10. [verified] Reconstructed all eight projects in the supplied 102-task CSV from local Codex conversations and project evidence, added one chronological multi-Part Chinese Writing article per project, and published the complete Writing layer.
 11. [published and live-verified] Added an Astro Content Collection based VLM Knowledge Hub with a map page, 19 knowledge pages plus one source index, cross-links, glossary, independent personal research observations, coverage matrix, and link checks. Published from commit `fc37fa0` through GitHub Pages run `36333636814`.
+12. [locally verified; publication pending] Expanded all 20 VLM content pages and the index with concrete teaching examples, intermediate steps, and comprehension checks; added examples and reading links to all 40 glossary entries and problem-guided source reading routes.
 
 ## Verified Facts
 
+- On 2026-10-08 all 20 files under `src/content/vlm/` and the VLM index were updated. Foundations and architecture trace one cat image through pixels, features, matching and generation; other pages explain their concepts through cats, arrows, tables, videos, interaction tasks or an explicitly fictional paper. Example configurations and scores are marked as teaching assumptions, not actual experiments.
+- The current root build passed Astro check with 0 errors, 0 warnings and 0 hints, generated 85 pages, and indexed 36 public pages with Pagefind. The VLM checker found 20 detail routes and 827 valid internal links including fragment targets. A simulated `/personal-site/` build also passed and its checker found the same 827 valid links.
+- Headless Edge checked document and table bounds for the index plus all 20 VLM detail pages at 500px: no document overflow or table escaping its viewport. Screenshots of the index and glossary were visually inspected. VLM table cells now keep a minimum readable width so English terms are not split into isolated letters; wider tables use the existing horizontal scroll container.
+- The existing personal research observation remains unverified: no source image, complete model response or reproducible experiment was added in this revision. Publication and live checks for this revision are still pending.
 - On 2026-09-28 the VLM Knowledge Hub was implemented in the existing `F:\codespace\PersonalWeb` Astro repository; the conversation started in `F:\codespace\VLM`, which contains the prior Markdown and chat workbook rather than site source.
 - The new `/vlm/` index is a navigation page; `src/content/vlm/` contains 20 Markdown entries, including four secondary visual-capability pages. The personal research page labels its directional observation unverified because the original image and model output are unavailable.
 - Local Astro check reported 0 errors, 0 warnings, and 0 hints. A root and simulated `/personal-site/` build each generated 81 pages; Pagefind indexed 34 public content pages. The VLM link checker found 20 detail routes and 583 valid VLM internal links in each base path.

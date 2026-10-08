@@ -9,8 +9,8 @@ const areas = ['基础', '模型', '能力', '方法', '研究'] as const;
 const bySlug = new Map(entries.map((entry) => [entrySlug(entry.id), entry]));
 const href = (slug: string) => withBase(`/vlm/${slug}/`);
 const paths = [
-  { title: 'A · 第一次系统学习', slugs: ['foundations', 'architecture', 'training', 'capabilities', 'evaluation', 'research-paradigms'] },
-  { title: 'B · 研究视觉能力', slugs: ['visual-representation', 'capabilities', 'perception-reasoning', 'failure-modes', 'evaluation', 'inference'] },
+  { title: 'A · 第一次系统学习', slugs: ['foundations', 'architecture', 'visual-representation', 'training', 'capabilities', 'evaluation'] },
+  { title: 'B · 逐项理解视觉能力', slugs: ['capabilities', 'visual-perception', 'text-grounding', 'spatial-3d', 'temporal-reasoning', 'perception-reasoning', 'failure-modes', 'inference'] },
   { title: 'C · 准备提出研究问题', slugs: ['research-paradigms', 'evaluation', 'failure-modes', 'research-question', 'paper-reading'] },
 ];
 const system = [
@@ -41,8 +41,14 @@ const researchAxes = [
     <header class="page-header">
       <p class="eyebrow">Research knowledge hub</p>
       <h1>VLM 知识地图</h1>
-      <p>从模型怎样接收图像，到视觉能力如何被测量，再到怎样提出可验证的研究问题。选择一条路径进入，每页只回答一个主问题。</p>
+      <p>从一张小猫图片怎样变成“猫”标签和文字答案开始，再理解不同视觉能力、测量与研究方法。每页先讲具体例子，逐步说明概念，再用对照和自检检查理解。</p>
     </header>
+
+    <section aria-labelledby="vlm-how-to-read">
+      <h2 id="vlm-how-to-read">怎样开始读</h2>
+      <p>第一次从<a href={href('foundations')}>基础与发展逻辑</a>开始，带着“猫图里的数值怎样成为答案”读，再用<a href={href('architecture')}>架构页</a>追踪每个模块的输入和输出。正文中的数字注明为教学例子时，只用来理解计算，不代表实际模型实验。</p>
+      <p>遇到术语时先看本页的例子，再用<a href={href('glossary')}>术语库</a>查含义与展开入口。读完试着回答自检；如果只能复述名词，回到对应步骤。准备读论文时，再从<a href={href('sources')}>资料索引</a>选择与当前问题对应的原文。</p>
+    </section>
 
     <section aria-labelledby="vlm-definition">
       <h2 id="vlm-definition">先分清名称</h2>
