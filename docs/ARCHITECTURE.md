@@ -58,6 +58,8 @@ Astro 文件路由生成：
 
 VLM 有独立知识导航而不是时间线索引：`src/pages/vlm/index.astro` 从 collection 读取专题卡片，`src/pages/vlm/[...slug].astro` 渲染 Markdown、目录、前后页和 `related` 链接。导航路径和系统链是少量稳定的学习路线数据；专题清单不硬编码在页面。Markdown 正文使用同级相对链接，Astro 构建后的根路径和 Pages 子路径均由 `scripts/check-vlm-links.py` 验证。VLM 暂不并入全站按日期排序的 `ContentRecord`，也不进入 Writing RSS；Pagefind 直接索引其详情正文。
 
+总导航的阅读地图分模型基础、视觉能力和研究方法三条主线。概念插图保存在 `public/images/vlm/`，正文用带图注的 HTML figure 引用 `../../images/vlm/`，使根部署与项目子路径部署均能解析；样式限定在 `.vlm-detail .prose` 内。`scripts/check-vlm-rendering.py` 检查构建后的20个正文，排除代码块后检测残留的 `**`，同时验证图片路径、alt 和尺寸。中文紧接以括号结尾的加粗词组时，需保留闭合标记后的空格，遵守 [CommonMark 的 emphasis 规则](https://spec.commonmark.org/0.31.2/#emphasis-and-strong-emphasis)。这项检查验证 HTML 结构与资源路径，不能代替浏览器视觉核对。
+
 ## Search
 
 `npm run build` 先运行 Astro，再运行：

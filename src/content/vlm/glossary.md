@@ -5,13 +5,14 @@ area: 基础
 level: Important
 order: 14
 related: [foundations, architecture, evaluation]
+updated: 2026-10-11
 ---
 
-## 使用方式
+## 定义范围
 
 这里记录本模块的**工作定义**。社区用法可能不统一；阅读论文时以作者明确给出的操作定义为准。名称相近不代表功能相同。
 
-## 第一次遇到这些词，按什么顺序理解
+## 术语的概念依赖
 
 先理解 **pixel、feature、vector**：像素是图片输入的颜色数值；特征是模型计算结果；向量是一组有顺序的数值，用来表达特征。接着才读 encoder、visual token 与 connector：分别是计算视觉特征的模块、特征序列中的位置、以及让后续模型接收视觉信息的连接部分。
 
@@ -38,7 +39,7 @@ related: [foundations, architecture, evaluation]
 | Native multimodal | 作者用来描述较统一的多模态建模设计；不是统一认证标准。 | 看作者实际训练与模块，而不是从名称猜内部结构。见[前沿](../frontiers/)。 |
 | Unified multimodal | 理解与生成等多种模态任务由较统一模型处理的方向；需看具体实现。 | 同系统看猫图和生成猫图，可仍有不同视觉路径。见[前沿](../frontiers/)。 |
 
-## 能力词为什么不能互换
+## 能力术语的边界
 
 认出“猫”是 recognition；找到猫框是 localization；将“戴红项圈的猫”对应到某一框是 grounding。这三项可以分别正确或错误。读到标牌字符是 OCR，知道这些字属于哪个按钮还需要位置与结构。
 
@@ -74,7 +75,7 @@ related: [foundations, architecture, evaluation]
 | Test-time scaling | 推理时增加采样、推理步骤或工具预算。 | 一次改五次采样或多次工具读取，还应记录成本。见[推理时干预](../inference/)。 |
 | Training-free | 当前方法不更新目标模型权重，不等于没有外部模型或计算开销。 | 本方法不更新目标权重，可仍调用已训练OCR。见[推理时干预](../inference/)。 |
 
-## 测量词怎样与一次实验对应
+## 测量与研究术语的联系
 
 一份 dataset 是样本，benchmark 还要包括任务和评分协议。10题答对8题给出 accuracy=80%；找目标时 precision 检查报告的是否正确，recall 检查真实目标漏掉多少。IoU 检查位置区域的重叠比例；这些指标详见[评测](../evaluation/)。
 
@@ -93,10 +94,10 @@ related: [foundations, architecture, evaluation]
 | Agent | 能根据观察作决策、调用工具或行动并利用反馈的系统。 | 看屏幕、点击、再读反馈决定下一步。见[前沿](../frontiers/)。 |
 | VLA | Vision-Language-Action 模型，将视觉与语言输入连接到行动输出。 | 视觉和“移动碗”的语言目标输入，输出机器人动作。见[前沿](../frontiers/)。 |
 
-## 学完怎样使用术语
+## 术语使用检验
 
 自检：看到“视觉token”应能说出它来自什么、包含什么形式的数值；看到“training-free”应能指出哪些权重没有更新；看到“bias”应能问出样本分布是否平衡。能做这些具体判断，再使用术语。
 
-## 关联与判断
+## 判断要点
 
 术语背后的实际差异见[架构](../architecture/)、[能力地图](../capabilities/)和[评测](../evaluation/)。读论文时遇到不同用法，优先记录论文自己的定义和输出协议。

@@ -442,6 +442,10 @@ video {
 .prose td { padding: 0.55rem 0.75rem; border: 1px solid var(--border); text-align: left; }
 .vlm-detail .prose th,
 .vlm-detail .prose td { min-width: 8rem; overflow-wrap: normal; }
+.vlm-detail .prose .vlm-figure { margin: 1.75rem 0; padding: 0.8rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.vlm-detail .prose .vlm-figure img { width: 100%; height: auto; border-radius: calc(var(--radius) / 2); }
+.vlm-detail .prose .vlm-figure figcaption { margin-top: 0.75rem; font-family: var(--font-sans); font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); }
+.vlm-detail .prose .vlm-figure-portrait { max-width: 32rem; margin-inline: auto; }
 .prose hr { margin-block: 2.5rem; border: 0; border-top: 1px solid var(--border); }
 
 .toc {

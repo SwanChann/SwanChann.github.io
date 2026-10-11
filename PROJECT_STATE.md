@@ -1,12 +1,12 @@
 # Project State
 
-- last_verified: 2026-10-08
+- last_verified: 2026-10-11
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
-- active_workstream: Improve explanations throughout the complete VLM Knowledge Hub from reader feedback
-- current_milestone: All 20 content pages and the navigation page expanded with concrete examples, concept steps, and comprehension checks
-- current_task: Complete; the full teaching-depth revision is published and all VLM routes have been live-verified.
-- status: published and live-verified
+- active_workstream: Refine the complete VLM Knowledge Hub presentation, teaching illustrations and Markdown rendering
+- current_milestone: Formal reading map, concept-focused chapter openings, verified AI illustrations and correct bold rendering across all VLM pages
+- current_task: Publish the locally verified 2026-10-11 revision and verify the deployed text and image assets.
+- status: locally_verified; publication pending for the 2026-10-11 revision
 
 ## Milestones
 
@@ -22,8 +22,16 @@
 10. [verified] Reconstructed all eight projects in the supplied 102-task CSV from local Codex conversations and project evidence, added one chronological multi-Part Chinese Writing article per project, and published the complete Writing layer.
 11. [published and live-verified] Added an Astro Content Collection based VLM Knowledge Hub with a map page, 19 knowledge pages plus one source index, cross-links, glossary, independent personal research observations, coverage matrix, and link checks. Published from commit `fc37fa0` through GitHub Pages run `36333636814`.
 12. [published and live-verified] Expanded all 20 VLM content pages and the index with concrete teaching examples, intermediate steps, and comprehension checks; added examples and reading links to all 40 glossary entries and problem-guided source reading routes. Content commit `ef0f62d` deployed successfully through GitHub Pages run `37720199435`; all 21 live routes matched the updated local content.
+13. [locally verified; publication pending] Refined all 20 VLM pages and navigation with a formal reading map and concept-focused openings; generated and manually inspected four AI teaching illustrations for nine concept placements; fixed 32 failed strong-emphasis pairs across 11 pages and added a built-output regression checker.
 
 ## Verified Facts
+
+- On 2026-10-11 the VLM index was reorganized around three formal reading-map tracks. All 20 detail Markdown files were updated with consistent chapter headings; foundations and architecture introduce their scope before using the cat example within the relevant concept. Detailed explanations and comprehension exercises were retained.
+- Four illustrations were generated with the built-in image_gen tool and inspected manually. WebP assets under `public/images/vlm/` total 223,248 bytes; complete prompts are recorded in `docs/vlm-image-prompts.json`. The nine placements explain representation, object/attribute binding, spatial transformations and temporal occlusion. Captions distinguish concept graphics from true model activations, exact transformed image pairs and measured video data.
+- A baseline built-HTML audit found 64 literal bold delimiters (32 failed pairs) across 11 detail pages. Source spacing corrections resolved their CommonMark delimiter-boundary failures. The new `scripts/check-vlm-rendering.py` checks actual article text outside code and verifies image paths, alt and dimensions: 20 pages, 210 strong elements, nine image placements, four distinct images, zero errors.
+- Root and simulated `/personal-site/` builds passed Astro check (47 files, zero errors/warnings/hints), generated 85 pages and indexed 36 public pages. The existing upstream Vite unused-import warning remains. Both VLM link checks found 826 valid internal links and zero errors, and both rendering checks passed.
+- Headless Edge checked all 21 VLM routes at 1440px and 500px (42 page/viewport checks): zero document overflow, broken illustration loads or weak computed strong font weights. Screenshots of the navigation at both widths, the architecture illustration, corrected evaluation prose and temporal illustration were visually inspected.
+- This revision changes teaching presentation and rendering, not the literature evidence or the status of personal research observations. The frontier literature verification date remains 2026-10-08; personal observations remain unverified.
 
 - On 2026-10-08 all 20 files under `src/content/vlm/` and the VLM index were updated. Foundations and architecture trace one cat image through pixels, features, matching and generation; other pages explain their concepts through cats, arrows, tables, videos, interaction tasks or an explicitly fictional paper. Example configurations and scores are marked as teaching assumptions, not actual experiments.
 - The current root build passed Astro check with 0 errors, 0 warnings and 0 hints, generated 85 pages, and indexed 36 public pages with Pagefind. The VLM checker found 20 detail routes and 827 valid internal links including fragment targets. A simulated `/personal-site/` build also passed and its checker found the same 827 valid links.

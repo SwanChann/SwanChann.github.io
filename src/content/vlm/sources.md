@@ -5,15 +5,16 @@ area: 研究
 level: Important
 order: 16
 related: [paper-reading, frontiers, evaluation]
+updated: 2026-10-11
 ---
 
 ## 使用规则
 
 优先读原论文、会议页面或官方技术报告。这里保存的是**出处与研究问题**；论文报告的结果未由本站独立复现。随着新版本出现，应记录版本和阅读日期，不静默覆盖旧结论。
 
-## 怎样把索引变成学习路线
+## 资料阅读路线
 
-不要第一次就通读所有论文。先带着一个已经懂的例子找证据：猫图怎样被切成图块、怎样与文字匹配、怎样接到语言模型。下面三条路线各有一个可以验证理解的问题。
+资料按模型基础、能力测量和原因解释组织。阅读目标是把专题中的概念对应到原论文的实际设计、实验和结论，而不是仅记录方法名称。以下三条路线分别给出阅读顺序与核查问题。
 
 ### 路线一：从像素到问答
 
@@ -33,7 +34,7 @@ related: [paper-reading, frontiers, evaluation]
 
 前沿材料如 OpenVLA、Janus-Pro 和 V-JEPA 2 可在对应概念之后读：它们分别增加行动、图像生成或未来预测的要求。不要因为名字含 multimodal，就用同一个问答总分比较所有系统。
 
-## 一条引用应该支持多大的主张
+## 引用主张与证据范围
 
 “论文提出一种 Q-Former 连接方案”是设计事实；“在它的实验中改善了任务表现”是作者结果；“这种连接永远优于其他方案”是更强的推广，前两项不自动支持第三项。记录论文版本、评测条件和结论边界，必要时同时保留反例。
 
@@ -77,7 +78,7 @@ related: [paper-reading, frontiers, evaluation]
 | [OpenVLA: An Open-Source Vision-Language-Action Model](https://arxiv.org/abs/2406.09246) | Moo Jin Kim 等，2024，arXiv；[项目](https://openvla.github.io/) | 视觉与指令怎样接到动作，机器人任务怎样评测？ |
 | [V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning](https://arxiv.org/abs/2506.09985) | Mido Assran 等，2025，arXiv | 预测对象是图像还是特征，行动条件规划需要什么额外训练？ |
 
-## 关联与判断
+## 判断要点
 
 自检：一本索引列出许多论文，是否说明所有论文都支持同一个观点？不是。为选中的一篇写明它支持哪个具体句子、最强证据在哪、还有什么没有排除，再将阅读卡链接到知识专题。
 

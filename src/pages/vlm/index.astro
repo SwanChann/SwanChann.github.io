@@ -9,10 +9,11 @@ const areas = ['基础', '模型', '能力', '方法', '研究'] as const;
 const bySlug = new Map(entries.map((entry) => [entrySlug(entry.id), entry]));
 const href = (slug: string) => withBase(`/vlm/${slug}/`);
 const paths = [
-  { title: 'A · 第一次系统学习', slugs: ['foundations', 'architecture', 'visual-representation', 'training', 'capabilities', 'evaluation'] },
-  { title: 'B · 逐项理解视觉能力', slugs: ['capabilities', 'visual-perception', 'text-grounding', 'spatial-3d', 'temporal-reasoning', 'perception-reasoning', 'failure-modes', 'inference'] },
-  { title: 'C · 准备提出研究问题', slugs: ['research-paradigms', 'evaluation', 'failure-modes', 'research-question', 'paper-reading'] },
+  { title: '模型基础与发展逻辑', objective: '理解输入、表征、模型结构与训练目标之间的联系。', slugs: ['foundations', 'architecture', 'visual-representation', 'training'] },
+  { title: '视觉能力与错误分析', objective: '建立能力分类，区分任务证据、错误表现与原因假设。', slugs: ['capabilities', 'visual-perception', 'text-grounding', 'spatial-3d', 'temporal-reasoning', 'perception-reasoning', 'failure-modes', 'inference'] },
+  { title: '研究方法与论文阅读', objective: '从测量和对照形成研究问题，判断论文的贡献及证据边界。', slugs: ['evaluation', 'research-paradigms', 'research-question', 'paper-reading', 'frontiers', 'sources'] },
 ];
+const levelNames = { Core: '核心', Important: '重要', Advanced: '进阶', Frontier: '前沿' };
 const system = [
   ['图像 / 视频与预处理', 'architecture', 'resolution'],
   ['视觉编码器', 'architecture', 'vision-encoder'],
@@ -39,38 +40,45 @@ const researchAxes = [
 <BaseLayout title="VLM Knowledge Hub" description="视觉语言模型的知识地图、学习路径与研究方法导航。">
   <div class="page-shell vlm-home">
     <header class="page-header">
-      <p class="eyebrow">Research knowledge hub</p>
+      <p class="eyebrow">视觉语言模型 · 研究知识库</p>
       <h1>VLM 知识地图</h1>
-      <p>从一张小猫图片怎样变成“猫”标签和文字答案开始，再理解不同视觉能力、测量与研究方法。每页先讲具体例子，逐步说明概念，再用对照和自检检查理解。</p>
+      <p>以模型结构、视觉能力和研究方法为主线，建立理解视觉语言模型的认知框架：模型如何处理视觉信息，能力如何被测量，研究结论需要什么证据。</p>
     </header>
 
-    <section aria-labelledby="vlm-how-to-read">
-      <h2 id="vlm-how-to-read">怎样开始读</h2>
-      <p>第一次从<a href={href('foundations')}>基础与发展逻辑</a>开始，带着“猫图里的数值怎样成为答案”读，再用<a href={href('architecture')}>架构页</a>追踪每个模块的输入和输出。正文中的数字注明为教学例子时，只用来理解计算，不代表实际模型实验。</p>
-      <p>遇到术语时先看本页的例子，再用<a href={href('glossary')}>术语库</a>查含义与展开入口。读完试着回答自检；如果只能复述名词，回到对应步骤。准备读论文时，再从<a href={href('sources')}>资料索引</a>选择与当前问题对应的原文。</p>
+    <section aria-labelledby="vlm-reading-map">
+      <h2 id="vlm-reading-map">阅读地图</h2>
+      <p>三条主线按概念依赖组织：模型基础提供结构与训练背景，视觉能力提供任务与错误分类，研究方法提供测量、验证与文献分析工具。系统阅读可依次推进，专题查阅可从相应主线进入。</p>
+      <div class="vlm-path-grid">
+        {paths.map((path, index) => <div class="vlm-path"><p class="vlm-card-meta">主线 {index + 1}</p><h3>{path.title}</h3><p>{path.objective}</p><ol>{path.slugs.map((slug) => {
+          const entry = bySlug.get(slug);
+          return entry && <li><a href={href(slug)}>{entry.data.title}</a></li>;
+        })}</ol></div>)}
+      </div>
+      <p class="vlm-reading-support">辅助入口：<a href={href('glossary')}>术语库</a>用于核对定义；<a href={href('sources')}>资料索引</a>连接原论文；<a href={href('my-research')}>个人研究记录</a>保存观察与待验证假设。各专题在概念内部使用例子与图解，并在末尾给出判断要点。</p>
     </section>
 
     <section aria-labelledby="vlm-definition">
-      <h2 id="vlm-definition">先分清名称</h2>
+      <h2 id="vlm-definition">模型范围与术语边界</h2>
       <p><strong>VLM</strong> 是视觉与语言模型的宽泛叫法，包含图文表征模型和生成模型；<strong>MLLM</strong> 通常指以大语言模型为核心的多模态生成系统。“多模态模型”范围更广，可处理音频、视频或动作。社区用法并不完全统一；详见<a href={href('foundations')}>基础与发展逻辑</a>和<a href={href('glossary')}>术语库</a>。</p>
     </section>
 
     <section aria-labelledby="vlm-system">
-      <h2 id="vlm-system">一张图看系统</h2>
+      <h2 id="vlm-system">模型信息流</h2>
+      <p>生成式 VLM 的常见信息路径如下。具体模块与连接方式随模型而异，各环节的输入输出在对应专题展开。</p>
       <ol class="vlm-system-map">
         {system.map(([label, slug, anchor]) => <li><a href={anchor ? `${href(slug)}#${anchor}` : href(slug)}>{label}<span aria-hidden="true">↗</span></a></li>)}
       </ol>
     </section>
 
     <section aria-labelledby="vlm-topics">
-      <h2 id="vlm-topics">知识领域</h2>
+      <h2 id="vlm-topics">专题目录</h2>
       {areas.map((area) => (
         <div class="vlm-area">
           <h3>{area}</h3>
           <div class="vlm-card-grid">
             {entries.filter((entry) => entry.data.area === area).map((entry) => (
               <a class="vlm-card" href={href(entrySlug(entry.id))}>
-                <span class="vlm-card-meta">{entry.data.level} · {String(entry.data.order).padStart(2, '0')}</span>
+                <span class="vlm-card-meta">{levelNames[entry.data.level]} · {String(entry.data.order).padStart(2, '0')}</span>
                 <strong>{entry.data.title}</strong>
                 <span>{entry.data.description}</span>
               </a>
@@ -81,26 +89,16 @@ const researchAxes = [
     </section>
 
     <section aria-labelledby="vlm-capabilities">
-      <h2 id="vlm-capabilities">能力不是一个分数</h2>
-      <p>下图按问题类型组织，类别可重叠，也不是唯一学术 taxonomy。点击概念进入解释与评测方法。</p>
+      <h2 id="vlm-capabilities">视觉能力结构</h2>
+      <p>按任务所需的主要信息组织能力：对象与属性、关系与空间、证据使用。类别可以重叠，不代表唯一的学术分类体系；每个入口连接概念解释与测量方法。</p>
       <div class="vlm-path-grid">
         {capabilityGroups.map((group) => <div class="vlm-path"><h3>{group.title}</h3><ul>{group.items.map(([label, slug]) => <li><a href={href(slug)}>{label}</a></li>)}</ul></div>)}
       </div>
     </section>
 
-    <section aria-labelledby="vlm-paths">
-      <h2 id="vlm-paths">三条学习路径</h2>
-      <div class="vlm-path-grid">
-        {paths.map((path) => <div class="vlm-path"><h3>{path.title}</h3><ol>{path.slugs.map((slug) => {
-          const entry = bySlug.get(slug);
-          return entry && <li><a href={href(slug)}>{entry.data.title}</a></li>;
-        })}</ol></div>)}
-      </div>
-    </section>
-
     <section aria-labelledby="vlm-research-map">
-      <h2 id="vlm-research-map">从哪里进入研究</h2>
-      <p>从模型构建、测量与诊断，到推理时方法和行动闭环。每个词都指向其解释位置；观察到异常时，从<a href={href('research-question')}>研究问题方法页</a>开始。</p>
+      <h2 id="vlm-research-map">研究范式与干预位置</h2>
+      <p>研究可以改变模型、数据、训练或运行过程，也可以贡献测量、规律和机制解释。不同贡献需要不同证据；各方向的验证要求见<a href={href('research-paradigms')}>研究范式</a>，问题形成见<a href={href('research-question')}>研究问题</a>。</p>
       <nav class="vlm-term-map" aria-label="VLM 研究方向">{researchAxes.map(([label, slug]) => <a href={href(slug)}>{label}</a>)}</nav>
     </section>
   </div>

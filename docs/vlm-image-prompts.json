@@ -1,0 +1,37 @@
+{
+  "scope": "VLM teaching illustrations",
+  "images": [
+    {
+      "name": "visual-scene",
+      "asset": "public/images/vlm/visual-scene.webp",
+      "mode": "built-in image_gen",
+      "date": "2026-10-11",
+      "prompt": "Use case: scientific-educational. Asset type: inline teaching photograph for a Chinese VLM knowledge website, not a hero banner. Generate one wide, photorealistic tabletop still life, straight-on slightly elevated camera. Neutral warm-white studio background and pale wooden surface. Exactly two ceramic mugs: a red mug clearly on the viewer's left and a blue mug clearly on the viewer's right. One closed tan cardboard box behind the mugs, taller than them and clearly visible. One small yellow ball near the lower center, in front of the box, separated from both mugs. Mug handles visible, objects fully inside frame, ample separation. Natural soft shadows, clear colors and clean boundaries so the image helps explain object recognition, attribute binding, counting, grounding, and depth cues. No cats, people, words, letters, numbers, grids, arrows, bounding boxes, charts, logos or watermark. Landscape 3:2 composition. This is a synthetic educational scene, not experimental evidence.",
+      "review": "Manually inspected for the intended teaching relationships; conceptual illustration, not model output or evaluation evidence."
+    },
+    {
+      "name": "representation",
+      "asset": "public/images/vlm/representation.webp",
+      "mode": "built-in image_gen",
+      "date": "2026-10-11",
+      "prompt": "Use case: scientific-educational. Asset type: educational concept illustration embedded beside a VLM architecture explanation. A polished four-panel 2 by 2 infographic on off-white background, teal/slate accent palette, flat technical illustration. Panels labeled ONLY with large simple A, B, C, D letters in their top left. A: one recognizable red ceramic mug on a pale table shown as a small realistic image, B: a close-up of that same mug image decomposed into large colored square pixels, C: the same whole mug image with a regular square patch grid overlay, D: rows of small colored rectangular cells representing a sequence of continuous numerical feature vectors, clearly an abstract matrix, not another picture. Ensure all panels visually distinct, panel spacing generous, graphics large enough on mobile. No text other than A B C D, no digits, no formulas, no arrows between pixels and one fixed semantic dimension, no brain icon, no outcome scores, no watermark. Square canvas. This image illustrates changes in representation form, not actual encoder activations or exact patch counts.",
+      "review": "Manually inspected for the intended teaching relationships; conceptual illustration, not model output or evaluation evidence."
+    },
+    {
+      "name": "spatial",
+      "asset": "public/images/vlm/spatial.webp",
+      "mode": "built-in image_gen",
+      "date": "2026-10-11",
+      "prompt": "Use case: scientific-educational. Asset type: concept illustration for image-coordinate equivariance and invariance. Create a crisp two-by-two educational comparison on an off-white background, large panels and clean geometric shapes, teal/slate palette. Label the four panels ONLY A, B, C, D in their upper left. Panel A upper left: one thick teal diagonal arrow with tail at upper left and a single triangular arrowhead at lower right, pointing down-right. Panel B upper right: exact horizontal mirror of A, with tail upper right and arrowhead lower left, pointing down-left. Panel C lower left: a simple red ceramic mug with its handle clearly on the right. Panel D lower right: same red mug with handle clearly on the left, horizontally mirrored. Do not add any other arrows, axes, words, digits, tick marks, cat icons or mathematical formulas. White gaps separating panels, flat precise illustration with slight soft shading on mugs. Each arrow has exactly one head. Square composition. This supports the external caption: direction changes under horizontal mirror, object category remains mug.",
+      "review": "Manually inspected for the intended teaching relationships; conceptual illustration, not model output or evaluation evidence."
+    },
+    {
+      "name": "temporal",
+      "asset": "public/images/vlm/temporal.webp",
+      "mode": "built-in image_gen",
+      "date": "2026-10-11",
+      "prompt": "Use case: scientific-educational. Asset type: inline VLM temporal perception and occlusion illustration. Four vertically stacked wide storyboard panels, a single fixed side-view camera, off-white and slate studio backdrop, pale floor. Each panel has exactly one large tan opaque box in exactly the same central position. One small vivid yellow ball moves monotonically from far left to far right behind the box. Panel 1: ball fully visible far left of box. Panel 2: ball just left of box, closer to its left edge, fully visible. Panel 3: ball entirely occluded behind opaque box and invisible; do NOT draw ghost/dotted ball, no other ball anywhere. Panel 4: ball fully visible to right of box. Label panels only 1, 2, 3, 4 in upper left. No movement arrows, no hands, no duplicate balls, no words, no timestamps or watermark. Simple polished 3D classroom illustration, vertical composition. Frame 3 intentionally lacks visible evidence of the ball; the example demonstrates that temporal identity/continuity is an inference, not direct visibility.",
+      "review": "Manually inspected for the intended teaching relationships; conceptual illustration, not model output or evaluation evidence."
+    }
+  ]
+}

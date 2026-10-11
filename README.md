@@ -74,9 +74,11 @@ Astro 类型与内容检查
 
 新增专题从 `docs/content-templates/vlm.md` 复制。`area` 决定首页分组，`order` 决定学习顺序，`level` 表示学习优先级，`related` 填其他专题文件名（不带扩展名）；`draft: true` 在生产构建中不生成路由。新增概念同步更新 Glossary，新增论文同步更新 Sources 与 [覆盖矩阵](docs/VLM_KNOWLEDGE_COVERAGE.md)。VLM 专题进入 Pagefind 和 sitemap；RSS 仍只收录 Writing。
 
-全部 VLM 内容采用具体例子逐步解释：先说明输入和任务是什么，展开每个概念、处理步骤与输出，再给术语速查和汇总图表。猫图串联基础、架构、表征、训练与物体能力；箭头、表格、视频和交互任务展开空间、诊断与研究方法。20 个内容页均有具体情境、例子或阅读练习，并有自检；术语库的40个原有条目补上实例与展开链接，资料索引提供按问题组织的阅读路线。示例数字标明教学设定，不能用术语链代替讲解，也不能将“概念已出现”等同于“概念已讲清”。
+总导航以“阅读地图”组织模型基础、视觉能力、研究方法三条主线。全部20个内容页以范围和概念框架建立上下文，在对应概念内部使用图片、箭头、表格、视频或交互例子，逐步解释输入、处理、输出与研究判断。术语库的40个原有条目提供实例与展开链接，资料索引提供按问题组织的阅读路线。示例数字标明教学设定，不能用术语链代替讲解，也不能将“概念已出现”等同于“概念已讲清”。
 
-构建后可运行 `python scripts/check-vlm-links.py --base /` 检查专题路由、内部链接和锚点。模拟 GitHub Pages 项目子路径时，设置 `BASE_PATH=/personal-site` 构建，再运行 `python scripts/check-vlm-links.py --base /personal-site/`。
+4张 AI 教学插图保存在 `public/images/vlm/`，用于9处概念讲解；图注明确区分示意图、模型真实激活、严格变换对和真实视频数据。生成模式与完整提示词记录在 [vlm-image-prompts.json](docs/vlm-image-prompts.json)。插图使用 WebP、描述性 alt、固定宽高和延迟加载。
+
+构建后运行 `python scripts/check-vlm-links.py --base /` 检查专题路由、内部链接和锚点，并运行 `python scripts/check-vlm-rendering.py --base /` 检查正文是否残留加粗标记、图片是否存在及 alt/宽高是否完整。模拟 GitHub Pages 项目子路径时，设置 `BASE_PATH=/personal-site` 构建，再将两项检查的 `--base` 改为 `/personal-site/`。
 
 ## Digital Garden 状态
 
