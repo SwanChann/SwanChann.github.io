@@ -1,0 +1,157 @@
+{
+  "commit": "a183c36d9f65733d111ae321cae6fa0e627710f8",
+  "pages": [
+    {
+      "route": "/vlm/",
+      "status": 200,
+      "sha256": "c10d10ffe11e72d26794e086a56edd655c8960333b0e41def9b918e027832577",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/architecture/",
+      "status": 200,
+      "sha256": "bf6ab4cf833ecf690cd95b69d475f7514c3b2a165f26d81c21e3c55bb2d12ab6",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/capabilities/",
+      "status": 200,
+      "sha256": "ee3e5653707ed09d2ccca2c5707d45ee3e17319861c5e03ae2c59dca627e13e3",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/evaluation/",
+      "status": 200,
+      "sha256": "65b26523ebfb2369e101c47f032e99e47bdfbe03d88e12c5aeae0061dff53bdc",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/failure-modes/",
+      "status": 200,
+      "sha256": "9766043ea8f5457e22d79571b2ca8fd252f505610768b5a199186a5e04c1d743",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/foundations/",
+      "status": 200,
+      "sha256": "95cd84b7c010e7533fb0d49e0caa690464ee3ba8cedcebab44d31cd2f0b9cc85",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/frontiers/",
+      "status": 200,
+      "sha256": "9e085112bc483e6c4244f9abb9828fffc67e6602d0ecbc4b4317a6928586d5e0",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/glossary/",
+      "status": 200,
+      "sha256": "7750d9321456334c9975561ce077f4e1d951665d1fd65724aafd2fc3a757a2b5",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/inference/",
+      "status": 200,
+      "sha256": "f16d381f2acc03b92f75a480dff36506cc87d6ff4ee50e8815c6c79c5401ea2f",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/my-research/",
+      "status": 200,
+      "sha256": "8be29e63d6b523d1d08340ef65fa3296dee907a8b2397422fc5ecdf1e6c3483d",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/paper-reading/",
+      "status": 200,
+      "sha256": "9dba03c595b10ff2d446cedc8cd12796e62f8a09aada0a70690b9b47b951cba8",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/perception-reasoning/",
+      "status": 200,
+      "sha256": "9658b820dc6354a1308cd2ec3f1df0ef048f44009bda6391fe4fbb55d9861f34",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/research-paradigms/",
+      "status": 200,
+      "sha256": "0a62b253704443600625f274c6ea2576677ea57062b8259edbe66de0ea687894",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/research-question/",
+      "status": 200,
+      "sha256": "553e55fa45f7fff2e3c5385a60f41a9ee4a85669d5ab7c2125f5aaa33cf34900",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/sources/",
+      "status": 200,
+      "sha256": "95efa67b9d25909803f6f7b5f6cef52ecce44e2b9d6d7fc884f9ab4c575438a3",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/spatial-3d/",
+      "status": 200,
+      "sha256": "00fc159e7c0095c85dd246e8c7eed8100e1765dc883c31be46755e4872c37089",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/temporal-reasoning/",
+      "status": 200,
+      "sha256": "324eca81a5b3857f943920ab04bc5b4b713bdc6ad7cf3875d92967595b121ef1",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/text-grounding/",
+      "status": 200,
+      "sha256": "febb417c802f0d483204c1353e046ba49c14e95694f589b97f58ce4dc543fe69",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/training/",
+      "status": 200,
+      "sha256": "248793218638fae5cd9ffc15472c8e67d87a6217b223d209f44666b0e7ad9a62",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/visual-perception/",
+      "status": 200,
+      "sha256": "3511854e5c5a3bca7688395f4cde57b40df03041157c3cee0b857306a3da7df1",
+      "literal_bold_markers": 0
+    },
+    {
+      "route": "/vlm/visual-representation/",
+      "status": 200,
+      "sha256": "f77d6a4c838c24af95da538501080f1c339278ce2d737bdb1baf66e5201b75cc",
+      "literal_bold_markers": 0
+    }
+  ],
+  "images": [
+    {
+      "route": "/images/vlm/representation.webp",
+      "status": 200,
+      "bytes": 55730,
+      "sha256": "2c72c2c063854df81b4ba6c683a2f7adff2285cf5970e7d356c0c2b05c390d00"
+    },
+    {
+      "route": "/images/vlm/spatial.webp",
+      "status": 200,
+      "bytes": 39104,
+      "sha256": "71eb5cd09345b93e758ad799008720097a751cc86e6c1ddcb3ba11afd93f6d48"
+    },
+    {
+      "route": "/images/vlm/temporal.webp",
+      "status": 200,
+      "bytes": 33666,
+      "sha256": "f6732f6f0dc56039e3f0586e9c2b47c8bb027070a22a31ce548e523ac74b13c1"
+    },
+    {
+      "route": "/images/vlm/visual-scene.webp",
+      "status": 200,
+      "bytes": 94748,
+      "sha256": "289af0d25ada795ea54a75982825d943217481fca7e3874e64ae4e7bd48eed38"
+    }
+  ]
+}
