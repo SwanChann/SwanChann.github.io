@@ -1,11 +1,11 @@
 # Project State
 
-- last_verified: 2026-10-11
+- last_verified: 2026-11-04
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
-- active_workstream: Refine the complete VLM Knowledge Hub presentation, teaching illustrations and Markdown rendering
-- current_milestone: Formal reading map, concept-focused chapter openings, verified AI illustrations and correct bold rendering across all VLM pages
-- current_task: Completed the 2026-10-11 presentation, illustration and rendering revision; publication and live asset/content verification passed.
+- active_workstream: Publish SuperMimic terrain-tracking research reflections and matching reading cards
+- current_milestone: Evidence-bounded SuperMimic article and 16 matching Markdown-rendered PNG pages published
+- current_task: Completed the 2026-11-04 article and download publication; Astro deployment and live article/asset checks passed.
 - status: published_and_live_verified
 
 ## Milestones
@@ -24,7 +24,11 @@
 12. [published and live-verified] Expanded all 20 VLM content pages and the index with concrete teaching examples, intermediate steps, and comprehension checks; added examples and reading links to all 40 glossary entries and problem-guided source reading routes. Content commit `ef0f62d` deployed successfully through GitHub Pages run `37720199435`; all 21 live routes matched the updated local content.
 13. [published and live-verified] Refined all 20 VLM pages and navigation with a formal reading map and concept-focused openings; generated and manually inspected four AI teaching illustrations for nine concept placements; fixed 32 failed strong-emphasis pairs across 11 pages and added a built-output regression checker. Content commit `a183c36` deployed through GitHub Pages run `38128789592`; all 21 live routes matched local visible text and all four live image files matched local bytes.
 
+14. [published and live-verified] Published the SuperMimic terrain-tracking research reflection in Writing and a 16-page 1080x1440 PNG download, with identical article body content and a separate experimental result summary. Content commit `8e91b39`, successful Astro deployment run `41770025028`. This is a publication deliverable, not a new robotics experiment.
+
 ## Verified Facts
+
+- On 2026-11-04 the new article and its PNG ZIP, Markdown, result summary and measured-result extract returned HTTP 200. The downloadable ZIP contained all 16 pages and matched the local deliverable. Browser checks at 1440px and 390px found no horizontal overflow; all article sections were preserved in card rendering. The production build generated 90 pages and Pagefind indexed 37 public content pages. A parallel legacy Jekyll build failed; the configured Astro deployment succeeded and live content was verified. No hosting configuration was changed.
 
 - On 2026-10-11 the VLM index was reorganized around three formal reading-map tracks. All 20 detail Markdown files were updated with consistent chapter headings; foundations and architecture introduce their scope before using the cat example within the relevant concept. Detailed explanations and comprehension exercises were retained.
 - Four illustrations were generated with the built-in image_gen tool and inspected manually. WebP assets under `public/images/vlm/` total 223,248 bytes; complete prompts are recorded in `docs/vlm-image-prompts.json`. The nine placements explain representation, object/attribute binding, spatial transformations and temporal occlusion. Captions distinguish concept graphics from true model activations, exact transformed image pairs and measured video data.
