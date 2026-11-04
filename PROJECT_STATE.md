@@ -5,7 +5,7 @@
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: Publish SuperMimic terrain-tracking research reflections and matching reading cards
 - current_milestone: Evidence-bounded SuperMimic article and 16 matching Markdown-rendered PNG pages published
-- current_task: Completed the 2026-11-04 article and download publication; Astro deployment and live article/asset checks passed.
+- current_task: Completed the user-requested narrative rewrite of the SuperMimic article and all 16 cards; the revised article and downloads are live and verified.
 - status: published_and_live_verified
 
 ## Milestones
@@ -27,6 +27,8 @@
 14. [published and live-verified] Published the SuperMimic terrain-tracking research reflection in Writing and a 16-page 1080x1440 PNG download, with identical article body content and a separate experimental result summary. Content commit `8e91b39`, successful Astro deployment run `41770025028`. This is a publication deliverable, not a new robotics experiment.
 
 ## Verified Facts
+
+- On 2026-11-04 the SuperMimic article was revised to lead with completed work, explain terms in the implementation sequence, and expand foot-trajectory/IK processing. The evaluation-reminder page was removed; the detailed result summary remains linked. All 16 cards were regenerated in the existing design. Content commit `48f67e1`, successful Astro deployment run `41774804679`; live article and ZIP/Markdown/preview matched the revision. This revises milestone 14 rather than adding a research milestone.
 
 - On 2026-11-04 the new article and its PNG ZIP, Markdown, result summary and measured-result extract returned HTTP 200. The downloadable ZIP contained all 16 pages and matched the local deliverable. Browser checks at 1440px and 390px found no horizontal overflow; all article sections were preserved in card rendering. The production build generated 90 pages and Pagefind indexed 37 public content pages. A parallel legacy Jekyll build failed; the configured Astro deployment succeeded and live content was verified. No hosting configuration was changed.
 
