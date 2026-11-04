@@ -4,9 +4,9 @@
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: Publish SuperMimic terrain-tracking research reflections and matching reading cards
-- current_milestone: Evidence-bounded SuperMimic article and 16 matching Markdown-rendered PNG pages published
-- current_task: Completed the user-requested narrative rewrite of the SuperMimic article and all 16 cards; the revised article and downloads are live and verified.
-- status: published_and_live_verified
+- current_milestone: Revised SuperMimic article with 15 Simplified Chinese reading cards
+- current_task: Update article and matching downloads from the corrected copy; remove the final reading/resources card and renumber to 15 pages.
+- status: source_updated_for_publication
 
 ## Milestones
 
@@ -27,6 +27,8 @@
 14. [published and live-verified] Published the SuperMimic terrain-tracking research reflection in Writing and a 16-page 1080x1440 PNG download, with identical article body content and a separate experimental result summary. Content commit `8e91b39`, successful Astro deployment run `41770025028`. This is a publication deliverable, not a new robotics experiment.
 
 ## Verified Facts
+
+- On 2026-11-04 the corrected SuperMimic copy replaced the article and downloadable Markdown. The final reading/resources section was removed; the download links remain. The PNG archive and preview now contain 15 pages, numbered 01–15, rendered at 1080×1440 with Noto Sans CJK SC. Single PNG files are also provided. This is an editorial update, not a new robotics experiment.
 
 - On 2026-11-04 the SuperMimic article was revised to lead with completed work, explain terms in the implementation sequence, and expand foot-trajectory/IK processing. The evaluation-reminder page was removed; the detailed result summary remains linked. All 16 cards were regenerated in the existing design. Content commit `48f67e1`, successful Astro deployment run `41774804679`; live article and ZIP/Markdown/preview matched the revision. This revises milestone 14 rather than adding a research milestone.
 
