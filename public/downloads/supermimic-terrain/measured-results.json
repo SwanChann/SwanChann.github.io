@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-04",
+  "new_experiments_run_for_article": false,
+  "seven_4cm": {
+    "ckpt": "multistairs1_0296000",
+    "clip": "stairs04x07_fast_v3",
+    "steps": 1927,
+    "frames": 1928,
+    "completed": true,
+    "fall": false,
+    "n_abort_steps": 0,
+    "track_rmse": 0.1877999487788913,
+    "root_position_rmse_m": 0.14328198474480192,
+    "support_contact_frames_per_height": {
+      "0.04": 380,
+      "0.08": 247,
+      "0.12": 811,
+      "0.16": 997,
+      "0.2": 621,
+      "0.24": 121,
+      "0.28": 102
+    },
+    "knee_peak_1khz": 14.297468881275673,
+    "vel_check_1khz": false,
+    "joint_limit_hit_steps": 171
+  },
+  "four_8cm_without_online_wm": {
+    "ckpt": "multistairs3b_0297500",
+    "clip": "stairs08x04_footplan_clear",
+    "steps": 1927,
+    "frames": 1928,
+    "completed": true,
+    "fall": false,
+    "n_abort_steps": 1,
+    "track_rmse": 0.159886585040215,
+    "root_position_rmse_m": 0.2689806541459061,
+    "support_contact_frames_per_height": {
+      "0.08": 519,
+      "0.16": 725,
+      "0.24": 563,
+      "0.32": 293
+    },
+    "knee_peak_1khz": 16.624457903974477,
+    "vel_check_1khz": false,
+    "joint_limit_hit_steps": 161
+  },
+  "four_8cm_with_online_wm": {
+    "ckpt": "multistairs3b_0297500",
+    "clip": "stairs08x04_footplan_clear",
+    "steps": 1927,
+    "frames": 1928,
+    "completed": true,
+    "fall": false,
+    "n_abort_steps": 0,
+    "track_rmse": 0.1581516003270186,
+    "root_position_rmse_m": 0.3005265251417369,
+    "support_contact_frames_per_height": {
+      "0.08": 519,
+      "0.16": 489,
+      "0.24": 634,
+      "0.32": 656
+    },
+    "knee_peak_1khz": 16.1589080098852,
+    "vel_check_1khz": false,
+    "joint_limit_hit_steps": 145
+  },
+  "verification04": {
+    "deterministic_passes": 3,
+    "deterministic_runs": 3,
+    "grid_passes": 2,
+    "grid_runs": 6
+  },
+  "verification08": {
+    "nominal_passes": 3,
+    "nominal_runs": 3,
+    "trajectories_bit_identical": true,
+    "grid_passes": 0,
+    "grid_runs": 6,
+    "strict1khz_pass": false,
+    "strict1khz_abort_steps": 1,
+    "knee_peak_1khz_rad_s": 16.1589080098852,
+    "nonfoot_contact_samples": 453,
+    "joint_limit_near_or_hit_steps": 145,
+    "scope": "Deterministic nominal repeatability, not population success probability"
+  }
+}
