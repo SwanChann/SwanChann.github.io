@@ -5,8 +5,8 @@
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: Curate user-supplied ChatGPT research discussions into public knowledge
 - current_milestone: Publish 16 curated articles with source boundaries and a reading map
-- current_task: Local check/build, root and subpath links, privacy audit and 60 browser checks passed; publication pending.
-- status: in_progress
+- current_task: Published 16 curated articles; workflow, 23 live routes, four assets and live search verified.
+- status: verified
 
 ## Milestones
 
@@ -30,9 +30,11 @@
 
 16. [verified] Replaced six public sample entries and About copy; published five paper notes and one research synthesis from accessible saved discussions; added daily archive, detail routes, RSS and draft generator. Code commit dd74a1a deployed in successful workflow 42462504599; 16 live pages and three assets matched local output.
 
-17. [in_progress] Curated the supplied partial ChatGPT backup into 16 articles and a four-topic reading structure; primary references and source dispositions recorded. Local validation passed; publication pending.
+17. [verified] Published the supplied partial ChatGPT backup as 16 curated articles with a four-topic reading structure and complete source disposition. Content commit eee67f4 deployed in successful workflow 42464537073; 23 live routes, four assets and live search verified.
 
 ## Verified Facts
+
+- Content commit eee67f470ec44bce0bad21657e66d48a94f155db passed build and deploy in workflow 42464537073. Twenty-three live routes returned HTTP 200 and matched normalized local main content; CSS, two search scripts and RSS matched local bytes. Live Pagefind finds the new stair, logit and Flow Matching articles, excludes the draft sample, and the homepage links the reading guide.
 
 - Chat curation validation: Astro check passed (52 files, zero errors/warnings/hints); root and subpath builds generated 119 pages and indexed 59 articles. Each base passed 5,782 internal references. Browser checks passed for 20 routes at 1440, 390 and 320px (60 checks); new terms are searchable and drafts excluded. Guide desktop and stair-research mobile screenshots were inspected. The 16 new articles passed a targeted privacy/encoding audit; this does not validate proposed research experiments. Evidence: docs/chat-curation-verification-2026-11-08.json.
 
@@ -134,5 +136,5 @@
 
 ## Next Step And User Decision
 
-- Next step: Validate and publish the curated discussion batch. AI daily remains available for separately researched dated issues; no recurring automation is configured.
+- Next step: No required work remains for this supplied archive. AI daily remains available for separately researched dated issues; no recurring automation is configured.
 - User decision: none needed for the supplied archive. Additional original messages or experiment artifacts would be required to resolve the explicitly marked evidence gaps.

@@ -747,6 +747,192 @@
     "stair research mobile"
   ],
   "publication": {
-    "status": "pending"
+    "status": "verified",
+    "commit": "eee67f470ec44bce0bad21657e66d48a94f155db",
+    "workflow_run": 42464537073,
+    "workflow_conclusion": "success",
+    "routes": [
+      {
+        "route": "/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "6efc37ce47487e4347cbbb5af250b3459f6f91f2f75086e3174b0b7adcb60367"
+      },
+      {
+        "route": "/start-here/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "28f3259397f13bf83fc86fbaf559f346d77e7c6e7d796097736f5973e1d57671"
+      },
+      {
+        "route": "/notes/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "2f75f1b489afb77f03a816ac7f22842d43dd09f71f49266fb18fd4b5e7962097"
+      },
+      {
+        "route": "/research/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "f519176b6aba5dc07b8ff7df68d5a9f9708d6d75c898a0e4f087eb42cddf65e1"
+      },
+      {
+        "route": "/writing/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "bc6a404b92b87d56a45011cec9b51ff854ee4ccf3a573198da7c8d1ada63e064"
+      },
+      {
+        "route": "/experience/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "6221bd3eb36e0230f19a5f7407c1de9eefc3f4286e62152c4a831475c6b38994"
+      },
+      {
+        "route": "/tags/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "b7d6f214d20a671b244a64a66c0370171e99919004f55a6e924e7694fea6e083"
+      },
+      {
+        "route": "/notes/diffusion-policy-test-time-compute/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "6c8cfed8bf869d417ade27d13813a30eb2ed4bc24b3ce37353eb595d739d997d"
+      },
+      {
+        "route": "/notes/diffusion-latent-flow-matching/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "2e3b0fb416e06b1d7e0b3dbb669b7e5ab3cb7e22a870602ca5054395600cf02c"
+      },
+      {
+        "route": "/notes/foundation-policy-world-models/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "a9a0e7f628de801ae79ffbb14bec765f0d110e0b7c77eba7201caade96a981ef"
+      },
+      {
+        "route": "/notes/logits-rewards-decisions/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "5a2dea939812380508d176150490efc14947b96e18e521a2de0e5278e091a6bb"
+      },
+      {
+        "route": "/notes/agent-harness-boundaries/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "6b7d4d752adae00a61f665d760cf7daa147b1e49f2e93a4802f940390b7d3c88"
+      },
+      {
+        "route": "/notes/adaptive-retrieval-routing/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "65df97a7557b5fa7a5750de4566bdee9426fce3b1288f24ca3f772ee2b1d66e0"
+      },
+      {
+        "route": "/notes/evaluation-protocol-ablation/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "fb74054b0d4b8db0356b426549a294a2257352ce9ffc39387709691227b5c0e1"
+      },
+      {
+        "route": "/notes/inference-concurrency-memory/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "4063c49fb6d8bbc953a4b68ccd2dcc91126fe055aab1945608dae181fe3a0522"
+      },
+      {
+        "route": "/notes/model-deployment-contracts/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "9fe189ce9478e6126e571ea0cbbe33b749d197a4abcb091375f93ada9a945d52"
+      },
+      {
+        "route": "/notes/literature-search-coverage/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "9338ab750172bd35a7853fdc5b0a72a50d9ff18901bb687b68e28740188b5c81"
+      },
+      {
+        "route": "/research/navigation-candidate-decisions/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "11ef379b09de7a810d5d448e073b07f815e4d6bd1e336dc28a6a79cc3edcbe08"
+      },
+      {
+        "route": "/research/perceptive-stair-locomotion/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "5ecfc54fcd382aa7b49a5bc03098d28772be190304a7068bc7416b2f89b12083"
+      },
+      {
+        "route": "/research/vlm-evidence-tool-routing/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "60f70bf733ad362f5cec7100a19a15a0cafb08cd6dd1f06c6dd24700b0daab0d"
+      },
+      {
+        "route": "/writing/ai-collaboration-and-learning/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "bac0d6fb5f7f36a04f4bca82282021056d1c6c567ea4514d7d30b4175f1aa727"
+      },
+      {
+        "route": "/experience/research-diagrams-as-interfaces/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "77c0f9a293a909cb37eeb8e6dfeadc1be7c5b3ba08f79afb25ac4958e08f5f2c"
+      },
+      {
+        "route": "/writing/research-discussions-reading-guide/",
+        "status": 200,
+        "main_matches": true,
+        "live_main_sha256": "384c9e5e0a36dd83dfb8766427a2775dcb4d7f60bca637580ebf6c76fdfbb573"
+      }
+    ],
+    "assets": [
+      {
+        "route": "/_astro/_slug_.eCQwqUe1.css",
+        "status": 200,
+        "matches": true,
+        "sha256": "9d2e8332ac6cb768986f75edc68d700e5775c563ca4c318b0186dc2d71684151"
+      },
+      {
+        "route": "/pagefind/pagefind.js",
+        "status": 200,
+        "matches": true,
+        "sha256": "252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009"
+      },
+      {
+        "route": "/pagefind/pagefind-component-ui.js",
+        "status": 200,
+        "matches": true,
+        "sha256": "958620129dd14bd851805daeb12ce708bd63b9287325d1d5ae6f73a04d1723f8"
+      },
+      {
+        "route": "/rss.xml",
+        "status": 200,
+        "matches": true,
+        "sha256": "8f368ffbbe81e2782b725eab2530564104f4a3abc22375aa870889db7257769d"
+      }
+    ],
+    "liveSearch": {
+      "镂空": [
+        "/research/perceptive-stair-locomotion/",
+        "/writing/research-discussions-reading-guide/"
+      ],
+      "Softmax": [
+        "/notes/logits-rewards-decisions/",
+        "/vlm/foundations/"
+      ],
+      "Flow Matching": [
+        "/notes/diffusion-latent-flow-matching/",
+        "/notes/diffusion-policy-test-time-compute/",
+        "/writing/research-discussions-reading-guide/"
+      ],
+      "草稿内容示例": []
+    },
+    "homepageGuide": 1
   }
 }
