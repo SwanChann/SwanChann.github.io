@@ -5,15 +5,15 @@
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: Refine public article copy and topic navigation
 - current_milestone: Present articles by topic without editorial-process introductions
-- current_task: Public copy and classification labels verified locally; publication pending.
-- status: in_progress
+- current_task: Public copy and article categories published; 42 live routes, RSS, Pagefind and 15 browser checks verified.
+- status: verified
 
 ## Public Copy Revision 2026-11-08
 
 - Public navigation, homepage and /start-here/ use 文章分类; route paths remain stable.
 - Article introductions, summaries and topic index describe subject matter directly; editorial-process narratives were removed. External paper citations and unverified-research limitations remain intact.
 - Verified: Astro check (52 files, zero errors/warnings/hints), production build (119 pages, 59 search entries), 5,782 internal links, all generated HTML scanned for obsolete wording, all changed articles retain external citations, and 15 desktop/mobile route checks with updated search titles.
-- Publication: pending.
+- Publication: commit b3b283264a4d41a8bd9f17bbfa3625ddd2cc9db0, successful GitHub Pages run 42465384194. All 42 changed/index live routes match local main content; RSS matches after substituting the configured production origin, and Pagefind script matches bytes. Fifteen live route/viewport checks and updated search-title checks passed.
 
 ## Milestones
 
