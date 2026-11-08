@@ -558,6 +558,108 @@
     "Existing upstream Vite unused-import warning."
   ],
   "publication": {
-    "status": "pending"
+    "status": "verified",
+    "commit": "dd74a1ada72e259acd56b193a401d7c5a61ecd65",
+    "workflow_run": 42462504599,
+    "workflow_conclusion": "success",
+    "routes": [
+      {
+        "route": "/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/daily/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/about/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/links/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/projects/personal-research-os/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/projects/power-grid-vlm/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/projects/quadruped-visual-navigation/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/research/embodied-navigation/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/research/multimodal-overthinking/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/notes/personal-website-as-knowledge-base/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/experience/building-a-markdown-first-personal-website/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/notes/deer-early-exit/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/notes/sketch-of-thought/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/notes/answer-convergence/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/notes/dtsr-thought-sufficiency/",
+        "status": 200,
+        "main_matches": true
+      },
+      {
+        "route": "/notes/refrain-reflective-redundancy/",
+        "status": 200,
+        "main_matches": true
+      }
+    ],
+    "assets": [
+      {
+        "route": "/daily/rss.xml",
+        "status": 200,
+        "matches": true
+      },
+      {
+        "route": "/pagefind/pagefind.js",
+        "status": 200,
+        "matches": true
+      },
+      {
+        "route": "/pagefind/pagefind-component-ui.js",
+        "status": 200,
+        "matches": true
+      }
+    ]
   }
 }

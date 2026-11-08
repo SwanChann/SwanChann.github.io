@@ -5,8 +5,8 @@
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: Replace public placeholders, curate saved academic discussions, and add an AI daily archive
 - current_milestone: Evidence-bounded content refresh and static AI daily collection
-- current_task: Local content, browser and daily lifecycle checks passed; publishing and live comparison pending.
-- status: in_progress
+- current_task: Published the accessible content batch and daily column; workflow and live comparisons passed. Full web ChatGPT history remains unavailable.
+- status: verified
 
 ## Milestones
 
@@ -28,9 +28,12 @@
 
 15. [verified] Implemented and published the reading redesign, topic guide and responsive article outline. Passed root/subpath builds, 40 browser route/viewport checks and final live page/asset comparisons; final code commit `5bae284`, successful Astro workflow `42460846625`.
 
-16. [in_progress] Replace six public sample entries and About copy; publish five paper notes and one research synthesis from saved discussions; add daily archive, detail routes, RSS and draft generator.
+16. [verified] Replaced six public sample entries and About copy; published five paper notes and one research synthesis from accessible saved discussions; added daily archive, detail routes, RSS and draft generator. Code commit dd74a1a deployed in successful workflow 42462504599; 16 live pages and three assets matched local output.
 
 ## Verified Facts
+
+- Content commit dd74a1ada72e259acd56b193a401d7c5a61ecd65 completed build/deploy in workflow 42462504599. Sixteen changed live routes returned HTTP 200 and matched normalized local main content; daily RSS and two search scripts matched bytes. Only documentation and removal of one trailing blank line follow the deployed revision.
+
 
 - The 2026-11-08 content refresh replaces six public placeholders and About copy, removes unknown identity links, and adds five paper notes plus one research synthesis. Primary paper sources were opened; SoT uses v4 consistently. Complete web ChatGPT history is unavailable.
 - Local Astro check passed for 52 files. Final root build has 97 HTML pages and 43 indexed articles; 4,247 internal references passed. A subpath build with temporary daily fixtures passed 4,341 references, date sorting, RSS, detail/tag routes and draft exclusion. Generator default draft and overwrite refusal passed. All fixtures were removed before the final root build.
@@ -125,5 +128,5 @@
 
 ## Next Step And User Decision
 
-- Next step: Publish the verified content and compare live pages and daily RSS.
+- Next step: First daily issue can be authored with new:daily. Additional discussion coverage requires a supplied ChatGPT export or saved transcript; no daily automation is enabled.
 - User decision: no decision needed for the accessible batch. Additional web ChatGPT history requires a user-provided export or saved transcript; daily automation is not configured by this reservation of a column.
