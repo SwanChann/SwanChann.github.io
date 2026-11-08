@@ -8,6 +8,13 @@ export const topics = [
     knowledgeHub: true,
   },
   {
+    id: 'generative-models',
+    title: '生成模型与推理',
+    description: '厘清扩散、世界模型、奖励与推理预算，连接概念和实验。',
+    tags: ['生成模型', '扩散模型', '推理效率'],
+    knowledgeHub: false,
+  },
+  {
     id: 'embodied-ai',
     title: '具身智能与导航',
     description: '机器人如何理解环境，以及研究如何走向可验证的实践。',

@@ -1,0 +1,752 @@
+{
+  "date": "2026-11-08",
+  "scope": "16 curated articles; source disposition for 102 partial conversations; four tag-selected reading topics",
+  "source": {
+    "conversations": 102,
+    "messages": 1067,
+    "omission_flags": 290,
+    "curated": 56,
+    "existing_only": 9,
+    "excluded": 37,
+    "raw_chats_published": false
+  },
+  "check": {
+    "files": 52,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "builds": {
+    "root": {
+      "html_pages": 119,
+      "indexed_articles": 59,
+      "internal_links": 5782,
+      "link_errors": 0
+    },
+    "subpath": {
+      "base": "/personal-site/",
+      "html_pages": 119,
+      "indexed_articles": 59,
+      "internal_links": 5782,
+      "link_errors": 0
+    }
+  },
+  "browser": {
+    "checks": [
+      {
+        "width": 1440,
+        "route": "/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/start-here/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/research/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/diffusion-policy-test-time-compute/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/diffusion-latent-flow-matching/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/foundation-policy-world-models/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/logits-rewards-decisions/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/agent-harness-boundaries/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/adaptive-retrieval-routing/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/evaluation-protocol-ablation/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/inference-concurrency-memory/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/model-deployment-contracts/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/notes/literature-search-coverage/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/research/navigation-candidate-decisions/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/research/perceptive-stair-locomotion/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/research/vlm-evidence-tool-routing/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/writing/ai-collaboration-and-learning/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/experience/research-diagrams-as-interfaces/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 1440,
+        "route": "/writing/research-discussions-reading-guide/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/start-here/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/research/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/diffusion-policy-test-time-compute/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/diffusion-latent-flow-matching/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/foundation-policy-world-models/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/logits-rewards-decisions/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/agent-harness-boundaries/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/adaptive-retrieval-routing/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/evaluation-protocol-ablation/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/inference-concurrency-memory/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/model-deployment-contracts/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/notes/literature-search-coverage/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/research/navigation-candidate-decisions/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/research/perceptive-stair-locomotion/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/research/vlm-evidence-tool-routing/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/writing/ai-collaboration-and-learning/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/experience/research-diagrams-as-interfaces/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 390,
+        "route": "/writing/research-discussions-reading-guide/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/start-here/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/research/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/diffusion-policy-test-time-compute/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/diffusion-latent-flow-matching/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/foundation-policy-world-models/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/logits-rewards-decisions/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/agent-harness-boundaries/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/adaptive-retrieval-routing/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/evaluation-protocol-ablation/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/inference-concurrency-memory/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/model-deployment-contracts/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/notes/literature-search-coverage/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/research/navigation-candidate-decisions/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/research/perceptive-stair-locomotion/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/research/vlm-evidence-tool-routing/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/writing/ai-collaboration-and-learning/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/experience/research-diagrams-as-interfaces/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      },
+      {
+        "width": 320,
+        "route": "/writing/research-discussions-reading-guide/",
+        "status": 200,
+        "overflow": false,
+        "h1": 1,
+        "literalBold": false,
+        "replacementCharacter": false,
+        "rawPrivateLinks": false,
+        "missingImages": 0
+      }
+    ],
+    "errors": [],
+    "search": {
+      "镂空": {
+        "count": 2,
+        "urls": [
+          "/research/perceptive-stair-locomotion/",
+          "/writing/research-discussions-reading-guide/"
+        ]
+      },
+      "Harness": {
+        "count": 6,
+        "urls": [
+          "/notes/agent-harness-boundaries/",
+          "/research/vlm-evidence-tool-routing/",
+          "/writing/ai-collaboration-and-learning/",
+          "/writing/research-discussions-reading-guide/",
+          "/research/robotics-navigation-research-program/",
+          "/writing/robotics-research-debates-2026/"
+        ]
+      },
+      "Softmax": {
+        "count": 2,
+        "urls": [
+          "/notes/logits-rewards-decisions/",
+          "/vlm/foundations/"
+        ]
+      },
+      "Flow Matching": {
+        "count": 3,
+        "urls": [
+          "/notes/diffusion-latent-flow-matching/",
+          "/notes/diffusion-policy-test-time-compute/",
+          "/writing/research-discussions-reading-guide/"
+        ]
+      },
+      "草稿内容示例": {
+        "count": 0,
+        "urls": []
+      }
+    },
+    "homepageGuide": 1
+  },
+  "content_audit": {
+    "articles": 16,
+    "privacy_scan_passed": true,
+    "draft_exclusion_passed": true,
+    "new_experimental_results": false
+  },
+  "visual_review": [
+    "reading guide desktop",
+    "stair research mobile"
+  ],
+  "publication": {
+    "status": "pending"
+  }
+}

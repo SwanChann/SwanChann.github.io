@@ -101,7 +101,7 @@ GitHub Pages 的 `build_type` 为 `workflow`，由这条 Astro 工作流发布�
 - `src/config/site.ts`：姓名、站点文案、身份链接、预留 profile。
 - `src/config/giscus.ts`：评论参数；四个标识不全时完全禁用。
 - `src/data/now.ts`：首页 Now 数据。
-- `src/data/topics.ts`：主题名称、说明及匹配标签；首页显示主题入口，`/start-here/` 从公开 Content Collections 自动选择文章，按 featured 优先排列并保留组内时间顺序。VLM 基础阅读入口按 Core 和 order 自动生成。
+- `src/data/topics.ts`：视觉语言模型、生成模型与推理、具身智能与导航、AI 与科研工作流四个主题的名称、说明及匹配标签；首页显示主题入口，`/start-here/` 从公开 Content Collections 自动选择文章，按 featured 优先排列并保留组内时间顺序。VLM 基础阅读入口按 Core 和 order 自动生成。
 - `.env.example`：本地或非 GitHub 环境的公开 origin / base 示例，不含 secret。
 - `src/styles/global.css`：light/dark/system tokens、纯色阅读布局、排版、可访问性和响应式规则。
 - `public/images/star-sea-background.webp`：历史装饰背景资源，保留文件但已不再被 `BaseLayout` 引用或预加载。

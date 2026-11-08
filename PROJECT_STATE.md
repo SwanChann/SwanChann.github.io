@@ -3,10 +3,10 @@
 - last_verified: 2026-11-08
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
-- active_workstream: Replace public placeholders, curate saved academic discussions, and add an AI daily archive
-- current_milestone: Evidence-bounded content refresh and static AI daily collection
-- current_task: Published the accessible content batch and daily column; workflow and live comparisons passed. Full web ChatGPT history remains unavailable.
-- status: verified
+- active_workstream: Curate user-supplied ChatGPT research discussions into public knowledge
+- current_milestone: Publish 16 curated articles with source boundaries and a reading map
+- current_task: Local check/build, root and subpath links, privacy audit and 60 browser checks passed; publication pending.
+- status: in_progress
 
 ## Milestones
 
@@ -30,7 +30,13 @@
 
 16. [verified] Replaced six public sample entries and About copy; published five paper notes and one research synthesis from accessible saved discussions; added daily archive, detail routes, RSS and draft generator. Code commit dd74a1a deployed in successful workflow 42462504599; 16 live pages and three assets matched local output.
 
+17. [in_progress] Curated the supplied partial ChatGPT backup into 16 articles and a four-topic reading structure; primary references and source dispositions recorded. Local validation passed; publication pending.
+
 ## Verified Facts
+
+- Chat curation validation: Astro check passed (52 files, zero errors/warnings/hints); root and subpath builds generated 119 pages and indexed 59 articles. Each base passed 5,782 internal references. Browser checks passed for 20 routes at 1440, 390 and 320px (60 checks); new terms are searchable and drafts excluded. Guide desktop and stair-research mobile screenshots were inspected. The 16 new articles passed a targeted privacy/encoding audit; this does not validate proposed research experiments. Evidence: docs/chat-curation-verification-2026-11-08.json.
+
+- The supplied 2026-11-08 ZIP index has 102 conversations, 1,067 visible messages and 290 omission flags. It is a search-derived partial backup, not complete ChatGPT account history. All 102 source IDs have an editorial disposition in docs/chat-curation-2026-11-08.md; raw chats remain private.
 
 - Content commit dd74a1ada72e259acd56b193a401d7c5a61ecd65 completed build/deploy in workflow 42462504599. Sixteen changed live routes returned HTTP 200 and matched normalized local main content; daily RSS and two search scripts matched bytes. Only documentation and removal of one trailing blank line follow the deployed revision.
 
@@ -121,12 +127,12 @@
 
 - CSDN URL and email are unknown and removed from public configuration. Custom domain and Giscus remain unconfigured.
 - Astro build emits one upstream Vite unused-import warning from Astro's `remotePattern.js`; it does not originate in project code and does not affect the successful static build.
-- Complete browser-based ChatGPT history is unavailable; the user confirmed most discussions are on the web and no local export location is known. This batch covers accessible saved research discussions only.
+- A partial browser-chat backup is now available and curated. Complete account history, missing assistant answers, original figures and attachments remain unavailable; the new articles distinguish sourced explanation from recovered conversation and experimental results.
 - Six public sample entries and About have been replaced with evidence-bounded content. Historical project state is explicitly dated; this revision does not re-run research experiments. AI daily has no published issue or scheduled automation yet.
 - The two power-grid tasks without creation dates can only be placed by experiment phase, not by an exact day.
 - The hotspot-tracking project remains an Inbox item with no completed paper analysis; its article records that boundary rather than supplying a retrospective result.
 
 ## Next Step And User Decision
 
-- Next step: First daily issue can be authored with new:daily. Additional discussion coverage requires a supplied ChatGPT export or saved transcript; no daily automation is enabled.
-- User decision: no decision needed for the accessible batch. Additional web ChatGPT history requires a user-provided export or saved transcript; daily automation is not configured by this reservation of a column.
+- Next step: Validate and publish the curated discussion batch. AI daily remains available for separately researched dated issues; no recurring automation is configured.
+- User decision: none needed for the supplied archive. Additional original messages or experiment artifacts would be required to resolve the explicitly marked evidence gaps.
