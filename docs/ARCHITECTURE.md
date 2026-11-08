@@ -36,6 +36,8 @@ getCollection()
 
 `ContentRecord` 是跨 collection 展示模型，只保留卡片、Tag 和 Related Content 需要的字段。正文仍由 Astro `render(entry)` 直接渲染，不复制到第二套数据源。
 
+日期相同的条目使用稳定的 ID 次序（跨 collection 时包含 collection 名），避免 Windows 与 Linux 文件遍历顺序改变首页列表、主题导读和文章前后页。
+
 ## Routing
 
 Astro 文件路由生成：
@@ -88,6 +90,8 @@ Pagefind 扫描最终 HTML，将索引和 UI bundle 写入 `dist/pagefind/`。�
 4. 本地无配置时使用安全 placeholder origin 和 `/`。
 
 `.github/workflows/deploy.yml` 使用官方 Pages artifact 流程；build 和 deploy 分开，deploy job 拥有 `pages: write` 与 OIDC 所需权限。
+
+GitHub Pages 的 `build_type` 为 `workflow`，由这条 Astro 工作流发布。不要切回分支根目录的 legacy/Jekyll 模式，否则它会错误地把 `.astro` frontmatter 当作 YAML 解析。该设置在 2026-11-08 的改版发布中核对并修正。
 
 ## Configuration
 

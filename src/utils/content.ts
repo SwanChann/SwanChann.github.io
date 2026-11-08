@@ -87,18 +87,25 @@ export function contentDate(data: SharedData): Date | undefined {
   return data.updated ?? data.date ?? data.startDate;
 }
 
+// Glob traversal order differs across operating systems. Keep equal-date entries
+// (and their previous/next links) stable in local and production builds.
+function compareKeys(a: string, b: string): number {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
 export function sortByRecent<T extends AnyContentEntry>(entries: T[]): T[] {
   return [...entries].sort((a, b) => {
     const first = contentDate(a.data as SharedData)?.getTime() ?? 0;
     const second = contentDate(b.data as SharedData)?.getTime() ?? 0;
-    return second - first;
+    return second - first || compareKeys(a.id, b.id);
   });
 }
 
 export function sortProjects<T extends CollectionEntry<'projects'>>(entries: T[]): T[] {
   return [...entries].sort((a, b) => {
     if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
-    return (b.data.startDate?.getTime() ?? 0) - (a.data.startDate?.getTime() ?? 0);
+    return (b.data.startDate?.getTime() ?? 0) - (a.data.startDate?.getTime() ?? 0)
+      || compareKeys(a.id, b.id);
   });
 }
 
@@ -136,7 +143,7 @@ export async function getAllVisibleContent(): Promise<ContentRecord[]> {
   return groups.flat().sort((a, b) => {
     const first = (a.updated ?? a.date)?.getTime() ?? 0;
     const second = (b.updated ?? b.date)?.getTime() ?? 0;
-    return second - first;
+    return second - first || compareKeys(`${a.collection}/${a.id}`, `${b.collection}/${b.id}`);
   });
 }
 
