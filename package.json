@@ -13,7 +13,8 @@
     "new:note": "node scripts/new-content.mjs notes",
     "new:project": "node scripts/new-content.mjs projects",
     "new:research": "node scripts/new-content.mjs research",
-    "new:experience": "node scripts/new-content.mjs experience"
+    "new:experience": "node scripts/new-content.mjs experience",
+    "new:daily": "node scripts/new-content.mjs daily"
   },
   "dependencies": {
     "@astrojs/mdx": "4.3.9",

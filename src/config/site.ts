@@ -20,16 +20,6 @@ export const siteConfig = {
       label: 'GitHub',
       href: 'https://github.com/SwanChann',
     },
-    {
-      label: 'CSDN',
-      href: 'https://blog.csdn.net/YOUR_CSDN_USERNAME',
-      placeholder: true,
-    },
-    {
-      label: '邮箱',
-      href: 'mailto:YOUR_EMAIL@example.com',
-      placeholder: true,
-    },
   ] satisfies SocialLink[],
   optionalProfiles: {
     googleScholar: '',

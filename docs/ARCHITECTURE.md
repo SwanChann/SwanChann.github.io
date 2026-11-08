@@ -11,7 +11,7 @@
 
 ## Content Model
 
-`src/content.config.ts` 使用 Astro 5 Content Layer API 和 `glob()` loader 定义六个 collection：
+`src/content.config.ts` 使用 Astro 5 Content Layer API 和 `glob()` loader 定义七个 collection：
 
 - `writing`：完整观点和长文。
 - `notes`：低门槛知识单元，有有限的 `type` 枚举。
@@ -19,6 +19,7 @@
 - `research`：按 `topic` 组织的研究问题、证据、实验和想法。
 - `experience`：按 `category` 组织的已解决实践问题。
 - `vlm`：按 `area`, `level`, `order` 组织的专题和资料索引，`related` 显式连接专题。
+- `daily`：AI 日报，复用 dated schema；按 `date` 归档，`updated` 只记录修订。
 
 共享 schema 提供 `title`, `description`, `updated`, `tags`, `status`, `draft`, `featured`, `aliases`。内容模型是稳定接口；修改它时需同步模板、样例、页面和 README。
 
@@ -50,6 +51,7 @@ Astro 文件路由生成：
 /research/            /research/[...slug]/
 /vlm/                 /vlm/[...slug]/
 /experience/          /experience/[...slug]/
+/daily/               /daily/[...slug]/       /daily/rss.xml
 /tags/                /tags/[tag]/
 /about/               /links/
 /start-here/
@@ -78,6 +80,7 @@ Pagefind 扫描最终 HTML，将索引和 UI bundle 写入 `dist/pagefind/`。�
 - `src/components/SEO.astro` 统一生成 title、description、canonical、Open Graph、Twitter Card 和 article 时间。
 - canonical origin 来自 Astro `site`；GitHub Actions 可通过 `SITE_URL` repository variable 覆盖。
 - `src/pages/rss.xml.ts` 生成公开 Writing feed。
+- `src/pages/daily/rss.xml.ts` 生成独立日报 feed；空栏目输出零条 item。日报沿用生产 draft 过滤，进入标签、关联内容、Pagefind 和 sitemap。空栏目页面明确显示首期未发布，不生成虚构新闻。
 - `@astrojs/sitemap` 根据生产路由生成 sitemap，并自然排除未生成的 draft 路由。
 
 ## Deployment
@@ -123,7 +126,7 @@ GitHub Pages 的 `build_type` 为 `workflow`，由这条 Astro 工作流发布�
 - 阅读布局参考 Eugene Yan 的主题组织和 Lil’Log 的克制排版，采用纯色背景、低对比分隔线及系统字体。首页先提供阅读入口与最新文章，将个人近况置后；不使用示例项目作为首页精选内容。
 - 列表标题先于说明和日期等元数据；`CollectionList` 支持完整卡片与 compact 列表，调用方可指定二级或三级标题。
 - TOC 使用 Astro 渲染得到的 headings；desktop sticky 且独立滚动，窄屏在正文前显示原生折叠块，默认关闭。两个视图通过 CSS 互斥显示，均排除在 Pagefind 主体之外，不增加客户端脚本。
-- 首页与页脚仅显示已配置的身份链接；占位信息保留在配置和链接页，避免把未知账号作为有效入口。
+- 首页、页脚及链接页仅显示已确认的身份链接；未知邮箱与 CSDN 已从配置移除。可选 profile 和 Giscus 仍安全关闭。
 - 系统字体保证离线可用和中英文覆盖，不依赖第三方字体 CDN。
 - 不实现复杂 backlinks、知识图谱、analytics、CMS 或同步；这些属于未来独立决策。
 

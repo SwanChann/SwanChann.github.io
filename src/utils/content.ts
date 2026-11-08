@@ -7,6 +7,7 @@ export const contentCollections = [
   'projects',
   'research',
   'experience',
+  'daily',
 ] as const;
 
 export type ContentCollection = (typeof contentCollections)[number];
@@ -50,6 +51,7 @@ export const collectionLabels: Record<ContentCollection, string> = {
   projects: '项目',
   research: '研究',
   experience: '经验',
+  daily: 'AI 日报',
 };
 
 const subtypeLabels: Record<string, string> = {

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CollectionList from '../../components/CollectionList.astro';
+import { getVisibleEntries, sortByRecent, toContentRecord } from '../../utils/content';
+import { withBase } from '../../utils/paths';
+
+// Archive by issue date, so a correction does not move an old issue to the top.
+const entries = sortByRecent(await getVisibleEntries('daily'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const months = [...new Set(entries.map((entry) => entry.data.date.toISOString().slice(0, 7)))];
+---
+
+<BaseLayout title="AI 日报" description="按日期整理 AI 论文、模型、工具与开源进展，连接原始来源和研究问题。">
+  <div class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">持续观察</p>
+      <h1>AI 日报</h1>
+      <p>关注值得读原文的进展：发生了什么、证据是什么，以及它与视觉语言模型、机器人和科研工具有什么关系。</p>
+      <a href={withBase('/daily/rss.xml')}>订阅日报 RSS →</a>
+    </header>
+    {entries.length === 0 ? (
+      <section class="home-section">
+        <h2>首期尚未发布</h2>
+        <p>这里将按日期归档经过核验的日报。每期保留原始来源，并区分发布方的报告、独立证据与个人判断。</p>
+      </section>
+    ) : months.map((month) => (
+      <section class="home-section" aria-label={`${month} 日报`}>
+        <h2>{month}</h2>
+        <CollectionList items={entries.filter((entry) => entry.data.date.toISOString().startsWith(month)).map((entry) => toContentRecord('daily', entry))} compact headingLevel={3} />
+      </section>
+    ))}
+  </div>
+</BaseLayout>

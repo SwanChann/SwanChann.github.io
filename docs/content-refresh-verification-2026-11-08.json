@@ -1,0 +1,563 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/daily/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/links/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/projects/personal-research-os/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/projects/power-grid-vlm/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/projects/quadruped-visual-navigation/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/research/embodied-navigation/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/research/multimodal-overthinking/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/notes/personal-website-as-knowledge-base/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/experience/building-a-markdown-first-personal-website/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/notes/deer-early-exit/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/notes/sketch-of-thought/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/notes/answer-convergence/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/notes/dtsr-thought-sufficiency/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1440,
+      "route": "/notes/refrain-reflective-redundancy/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/daily/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/links/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/projects/personal-research-os/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/projects/power-grid-vlm/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/projects/quadruped-visual-navigation/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/research/embodied-navigation/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/research/multimodal-overthinking/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/notes/personal-website-as-knowledge-base/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/experience/building-a-markdown-first-personal-website/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/notes/deer-early-exit/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/notes/sketch-of-thought/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/notes/answer-convergence/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/notes/dtsr-thought-sufficiency/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 1024,
+      "route": "/notes/refrain-reflective-redundancy/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/daily/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/links/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/projects/personal-research-os/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/projects/power-grid-vlm/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/projects/quadruped-visual-navigation/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/research/embodied-navigation/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/research/multimodal-overthinking/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/notes/personal-website-as-knowledge-base/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/experience/building-a-markdown-first-personal-website/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/notes/deer-early-exit/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/notes/sketch-of-thought/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/notes/answer-convergence/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/notes/dtsr-thought-sufficiency/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 390,
+      "route": "/notes/refrain-reflective-redundancy/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/daily/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/links/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/projects/personal-research-os/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/projects/power-grid-vlm/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/projects/quadruped-visual-navigation/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/research/embodied-navigation/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/research/multimodal-overthinking/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/notes/personal-website-as-knowledge-base/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/experience/building-a-markdown-first-personal-website/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/notes/deer-early-exit/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/notes/sketch-of-thought/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/notes/answer-convergence/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/notes/dtsr-thought-sufficiency/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    },
+    {
+      "width": 320,
+      "route": "/notes/refrain-reflective-redundancy/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "placeholders": false
+    }
+  ],
+  "errors": [],
+  "search": {
+    "DEER": 2,
+    "DTSR": 2,
+    "REFRAIN": 2,
+    "qa-daily-hidden": 0,
+    "草稿内容示例": 0
+  },
+  "mobileDailyNav": true,
+  "date": "2026-11-08",
+  "typecheck": {
+    "files": 52,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "root_build": {
+    "html_pages": 97,
+    "indexed_pages": 43,
+    "internal_links": 4247,
+    "link_errors": 0
+  },
+  "subpath_fixture_build": {
+    "base": "/personal-site/",
+    "html_pages": 101,
+    "internal_links": 4341,
+    "link_errors": 0,
+    "issue_date_sort": true,
+    "independent_rss": true,
+    "draft_exclusion": true,
+    "details_and_tags": true
+  },
+  "generator": {
+    "defaults_to_draft": true,
+    "same_day_overwrite_refused": true
+  },
+  "visual_review": [
+    "research desktop",
+    "daily desktop"
+  ],
+  "known_build_messages": [
+    "Astro reports the intentionally empty daily collection until the first draft or issue exists.",
+    "Existing upstream Vite unused-import warning."
+  ],
+  "publication": {
+    "status": "pending"
+  }
+}

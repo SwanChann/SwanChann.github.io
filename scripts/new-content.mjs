@@ -5,10 +5,10 @@ import process from 'node:process';
 
 const collection = process.argv[2];
 const title = process.argv.slice(3).join(' ').trim();
-const allowed = new Set(['writing', 'notes', 'projects', 'research', 'experience']);
+const allowed = new Set(['writing', 'notes', 'projects', 'research', 'experience', 'daily']);
 
 if (!allowed.has(collection) || !title) {
-  console.error('Usage: npm run new:note -- "Title" (or new:writing, new:project, new:research, new:experience)');
+  console.error('Usage: npm run new:note -- "Title" (or new:writing, new:project, new:research, new:experience, new:daily)');
   process.exit(1);
 }
 
@@ -26,7 +26,7 @@ if (!slug) {
 
 const date = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' });
 const targetDirectory = path.join(process.cwd(), 'src', 'content', collection);
-const target = path.join(targetDirectory, `${slug}.md`);
+const target = path.join(targetDirectory, `${collection === 'daily' ? date : slug}.md`);
 
 try {
   await access(target, constants.F_OK);
@@ -50,9 +50,13 @@ const frontmatter = {
   projects: `${shared}\nstartDate: ${date}`,
   research: `${shared}\ndate: ${date}\ntopic: ""`,
   experience: `${shared}\ndate: ${date}\ncategory: workflow`,
+  daily: `${shared}\ndate: ${date}`,
 }[collection];
 
-const content = `---\n${frontmatter}\n---\n\nStart writing here.\n`;
+const body = collection === 'daily'
+  ? '## 今日关注\n\n## 论文与模型\n\n## 工具与开源\n\n## 与研究的关联\n\n## 来源与核验\n\n<!-- 逐项记录事件日期、原始链接、已核实事实、个人判断与局限。核验后再改 draft: false；无重要进展无需凑数。 -->'
+  : 'Start writing here.';
+const content = `---\n${frontmatter}\n---\n\n${body}\n`;
 await mkdir(targetDirectory, { recursive: true });
 await writeFile(target, content, { encoding: 'utf8', flag: 'wx' });
 console.log(`Created ${path.relative(process.cwd(), target)}`);

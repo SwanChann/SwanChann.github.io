@@ -78,4 +78,9 @@ const vlm = defineCollection({
   }),
 });
 
-export const collections = { writing, notes, projects, research, experience, vlm };
+const daily = defineCollection({
+  loader: glob({ base: './src/content/daily', pattern: '**/*.{md,mdx}' }),
+  schema: z.object(dated),
+});
+
+export const collections = { writing, notes, projects, research, experience, vlm, daily };

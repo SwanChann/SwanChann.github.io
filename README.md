@@ -2,7 +2,7 @@
 
 这是一个可长期维护的 **Personal Web + Digital Garden + Research / Engineering Notebook**。内容以 Markdown / MDX 为主库，Astro 在构建时自动生成页面、标签、关联内容、RSS、Sitemap 和 Pagefind 全文索引；不需要数据库、后台或手工登记文章。
 
-`writing` 已收录根据本地任务台账、Codex 对话和项目证据整理的中文专题；其他 collection 中尚未替换的页面仍明确标注为示例或占位。个人链接也只公开已经确认的项目，待补项保持可见占位或关闭状态。
+公开内容包括根据本地任务台账、讨论记录和项目证据整理的中文专题。原有六篇公开占位页已改写为项目索引、研究记录和建站经验；未确认的邮箱与 CSDN 链接不再公开。教学假设与研究设想仍保留明确标注，草稿示例只用于本地验证。
 
 ## 技术栈
 
@@ -56,6 +56,7 @@ Astro 类型与内容检查
 | Research | `src/content/research/` | 方向、问题、论文、实验、想法 | `date`, `topic` |
 | Experience | `src/content/experience/` | 真实遇到并解决的问题 | `date`, `category` |
 | VLM | `src/content/vlm/` | VLM 知识专题与资料索引 | `area`, `level`, `order`, `related` |
+| Daily | `src/content/daily/` | AI 日报，按发布日期归档 | `date` |
 
 所有 collection 共享：
 
@@ -72,7 +73,7 @@ Astro 类型与内容检查
 
 网站采用以阅读为中心的纯色布局：参考 [Eugene Yan](https://eugeneyan.com/) 的主题导读与栏目分工，以及 [Lil’Log](https://lilianweng.github.io/) 的简洁文章列表、正文宽度与标题层次。浅色以白底为主，深色以炭灰为主；保留系统字体、搜索和主题切换。
 
-首页按“个人介绍 → 主题导读 → 最近文章 → 此刻”组织。`/start-here/` 提供视觉语言模型、具身智能与导航、AI 与科研工作流三个入口；主题定义在 `src/data/topics.ts`，文章通过 collection 的公开条目及 tags 自动匹配，精选内容优先，不维护硬编码文章清单。笔记、研究、经验和标签可从导读及首页下方进入。
+首页按“个人介绍 → 主题导读 → 最近文章 → AI 日报 → 此刻”组织。`/start-here/` 提供视觉语言模型、具身智能与导航、AI 与科研工作流三个入口；主题定义在 `src/data/topics.ts`，文章通过 collection 的公开条目及 tags 自动匹配，精选内容优先，不维护硬编码文章清单。笔记、研究、经验和标签可从导读及首页下方进入。
 
 文章页采用独立正文栏和桌面侧栏目录；窄屏目录默认折叠。VLM 首页先展示阅读路线与按领域分组的专题索引，再提供术语范围、模型信息流和研究方向。旧星海背景图片保留在仓库中，但不再加载或预加载。内容 schema 和已有 URL 保持不变。
 
@@ -80,7 +81,7 @@ Astro 类型与内容检查
 
 `/vlm/` 是总导航页：系统链、领域卡片和三条学习路径从 `vlm` collection 及少量导航数据生成。20 个独立 Markdown 专题/资料页在 `src/content/vlm/`，其中视觉能力另有 4 个二级专题；页面共用站点配色、排版、目录、前后页与相关专题导航。`/vlm/my-research/` 把个人观察、假设和实验结果分开记录，当前没有可复算的个人实验结果。
 
-新增专题从 `docs/content-templates/vlm.md` 复制。`area` 决定首页分组，`order` 决定学习顺序，`level` 表示学习优先级，`related` 填其他专题文件名（不带扩展名）；`draft: true` 在生产构建中不生成路由。新增概念同步更新 Glossary，新增论文同步更新 Sources 与 [覆盖矩阵](docs/VLM_KNOWLEDGE_COVERAGE.md)。VLM 专题进入 Pagefind 和 sitemap；RSS 仍只收录 Writing。
+新增专题从 `docs/content-templates/vlm.md` 复制。`area` 决定首页分组，`order` 决定学习顺序，`level` 表示学习优先级，`related` 填其他专题文件名（不带扩展名）；`draft: true` 在生产构建中不生成路由。新增概念同步更新 Glossary，新增论文同步更新 Sources 与 [覆盖矩阵](docs/VLM_KNOWLEDGE_COVERAGE.md)。VLM 专题进入 Pagefind 和 sitemap；主 RSS 仍只收录 Writing，AI 日报有独立 RSS。
 
 总导航以“阅读地图”组织模型基础、视觉能力、研究方法三条主线。全部20个内容页以范围和概念框架建立上下文，在对应概念内部使用图片、箭头、表格、视频或交互例子，逐步解释输入、处理、输出与研究判断。术语库的40个原有条目提供实例与展开链接，资料索引提供按问题组织的阅读路线。示例数字标明教学设定，不能用术语链代替讲解，也不能将“概念已出现”等同于“概念已讲清”。
 
@@ -96,6 +97,18 @@ Astro 类型与内容检查
 - `evergreen`：需要长期维护的核心知识页。
 
 状态只表达内容成熟度，不代表事实可信度或研究质量。研究结论仍需单独给出数据、方法和证据。
+
+## AI 日报与讨论整理
+
+AI 日报入口是 `/daily/`，首页和主导航均可进入；独立订阅源为 `/daily/rss.xml`。使用：
+
+```bash
+npm run new:daily -- "AI 日报｜当日重点"
+```
+
+命令按上海时区生成 `src/content/daily/YYYY-MM-DD.md`，默认草稿且拒绝覆盖同日文件。每条新闻记录事件日期、一手链接、事实、个人解读和局限；审核后改为 `draft: false` 并正常构建发布。归档按 `date` 排序，旧期修订仅更新 `updated`。目前首期未发布，也没有定时自动发布任务。完整维护约定见 [本轮内容记录](docs/content-refresh-2026-11-08.md)。
+
+本轮新增的五篇论文笔记与一篇研究总览来自可访问的本地讨论材料，未声称读取全部网页端 ChatGPT 历史。方法依据链接到原论文，个人想法明确标为待验证。
 
 ## 添加 Writing
 
@@ -269,6 +282,7 @@ Giscus 只预留给 Writing。默认配置为空，不加载脚本、不显示�
 ## RSS 与 Sitemap
 
 - Writing RSS：`/rss.xml`
+- AI 日报 RSS：`/daily/rss.xml`
 - Sitemap index：构建输出中的 `/sitemap-index.xml`
 
 两者只包含生产环境实际发布的内容。Sitemap 由 `@astrojs/sitemap` 根据最终 `site` 和 `base` 生成。

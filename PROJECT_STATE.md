@@ -3,10 +3,10 @@
 - last_verified: 2026-11-08
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
-- active_workstream: Refine the site's reading experience using Eugene Yan and Lil'Log as design references
-- current_milestone: Topic-led homepage, reading guide, quiet typography and responsive article navigation
-- current_task: Completed and published the reading redesign; final live pages and assets match the verified local build.
-- status: verified
+- active_workstream: Replace public placeholders, curate saved academic discussions, and add an AI daily archive
+- current_milestone: Evidence-bounded content refresh and static AI daily collection
+- current_task: Local content, browser and daily lifecycle checks passed; publishing and live comparison pending.
+- status: in_progress
 
 ## Milestones
 
@@ -28,7 +28,14 @@
 
 15. [verified] Implemented and published the reading redesign, topic guide and responsive article outline. Passed root/subpath builds, 40 browser route/viewport checks and final live page/asset comparisons; final code commit `5bae284`, successful Astro workflow `42460846625`.
 
+16. [in_progress] Replace six public sample entries and About copy; publish five paper notes and one research synthesis from saved discussions; add daily archive, detail routes, RSS and draft generator.
+
 ## Verified Facts
+
+- The 2026-11-08 content refresh replaces six public placeholders and About copy, removes unknown identity links, and adds five paper notes plus one research synthesis. Primary paper sources were opened; SoT uses v4 consistently. Complete web ChatGPT history is unavailable.
+- Local Astro check passed for 52 files. Final root build has 97 HTML pages and 43 indexed articles; 4,247 internal references passed. A subpath build with temporary daily fixtures passed 4,341 references, date sorting, RSS, detail/tag routes and draft exclusion. Generator default draft and overwrite refusal passed. All fixtures were removed before the final root build.
+- Browser QA passed 16 routes at 1440, 1024, 390 and 320px (64 checks); search finds the new notes and excludes drafts. Daily mobile navigation works. Desktop research and daily screenshots were inspected. Evidence: docs/content-refresh-verification-2026-11-08.json. Empty daily collection messages are expected until content exists; no fake issue or automation was added.
+
 
 - On 2026-11-08 the user selected Eugene Yan and Lil'Log as the two references and authorized implementation without another scoring round. The redesign adds `/start-here/`, matches existing content by topic tags, prioritizes reading entry points and recent writing on the homepage, and replaces the decorative background with solid light/dark surfaces. Existing content schemas, article URLs, scientific claims and downloads are unchanged.
 - The local checkout was five commits behind the remote. Fast-forwarded from `5ed7509` to `a6a822c` before publication, preserving the latest SuperMimic article and all 15 downloadable cards. The unrelated untracked task CSV was left untouched.
@@ -109,14 +116,14 @@
 
 ## Risks And Unknowns
 
-- CSDN URL, email, custom domain, and Giscus IDs are unknown and must remain placeholders or disabled. The GitHub account and public site URL have been verified separately.
+- CSDN URL and email are unknown and removed from public configuration. Custom domain and Giscus remain unconfigured.
 - Astro build emits one upstream Vite unused-import warning from Astro's `remotePattern.js`; it does not originate in project code and does not affect the successful static build.
-- CSDN and email still use visibly labeled placeholders; Giscus remains safely disabled because no repository/category IDs have been configured.
-- Notes, Projects, Research, Experience, and the About biography still include explicit sample or placeholder content; Writing contains evidence-bounded personal retrospectives and research reflections.
+- Complete browser-based ChatGPT history is unavailable; the user confirmed most discussions are on the web and no local export location is known. This batch covers accessible saved research discussions only.
+- Six public sample entries and About have been replaced with evidence-bounded content. Historical project state is explicitly dated; this revision does not re-run research experiments. AI daily has no published issue or scheduled automation yet.
 - The two power-grid tasks without creation dates can only be placed by experiment phase, not by an exact day.
 - The hotspot-tracking project remains an Inbox item with no completed paper analysis; its article records that boundary rather than supplying a retrospective result.
 
 ## Next Step And User Decision
 
-- Next step: The redesign is live and verified. Use reader feedback on typography and navigation for subsequent refinements; replacement of remaining sample content is a separate task.
-- User decision: none required to complete this revision. A custom domain and Giscus remain optional and unconfigured.
+- Next step: Publish the verified content and compare live pages and daily RSS.
+- User decision: no decision needed for the accessible batch. Additional web ChatGPT history requires a user-provided export or saved transcript; daily automation is not configured by this reservation of a column.

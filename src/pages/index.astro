@@ -9,6 +9,9 @@ import { withBase } from '../utils/paths';
 
 const writing = sortByRecent(await getVisibleEntries('writing'));
 const latestWriting = writing.slice(0, 5).map((entry) => toContentRecord('writing', entry));
+const latestDaily = sortByRecent(await getVisibleEntries('daily'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3)
+  .map((entry) => toContentRecord('daily', entry));
 const profiles = siteConfig.socialLinks.filter((link) => !('placeholder' in link && link.placeholder));
 ---
 
@@ -48,6 +51,16 @@ const profiles = siteConfig.socialLinks.filter((link) => !('placeholder' in link
         <a href={withBase('/writing/')}>全部文章 <span aria-hidden="true">→</span></a>
       </div>
       <CollectionList items={latestWriting} compact headingLevel={3} />
+    </section>
+
+    <section class="home-section" aria-labelledby="daily-heading">
+      <div class="section-heading">
+        <h2 id="daily-heading">AI 日报</h2>
+        <a href={withBase('/daily/')}>按日期阅读 <span aria-hidden="true">→</span></a>
+      </div>
+      <p>跟踪 AI 论文、模型与工具进展，保留原始来源、研究关联和仍需验证的问题。</p>
+      {latestDaily.length > 0 ? <CollectionList items={latestDaily} compact headingLevel={3} />
+        : <p class="section-note">栏目已开放，首期日报尚未发布。</p>}
     </section>
 
     <section class="home-section now-section" aria-labelledby="now-heading">
