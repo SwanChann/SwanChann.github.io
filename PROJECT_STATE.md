@@ -137,7 +137,7 @@
 - CSDN URL and email are unknown and removed from public configuration. Custom domain and Giscus remain unconfigured.
 - Astro build emits one upstream Vite unused-import warning from Astro's `remotePattern.js`; it does not originate in project code and does not affect the successful static build.
 - A partial browser-chat backup is now available and curated. Complete account history, missing assistant answers, original figures and attachments remain unavailable; the new articles distinguish sourced explanation from recovered conversation and experimental results.
-- Six public sample entries and About have been replaced with evidence-bounded content. Historical project state is explicitly dated; this revision does not re-run research experiments. AI daily has no published issue or scheduled automation yet.
+- Six public sample entries and About have been replaced with evidence-bounded content. Historical project state is explicitly dated; this revision does not re-run research experiments. AI daily now includes the 2026-11-08 pilot issue; no scheduled automation is configured.
 - The two power-grid tasks without creation dates can only be placed by experiment phase, not by an exact day.
 - The hotspot-tracking project remains an Inbox item with no completed paper analysis; its article records that boundary rather than supplying a retrospective result.
 
@@ -145,3 +145,8 @@
 
 - Next step: No required work remains for this supplied archive. AI daily remains available for separately researched dated issues; no recurring automation is configured.
 - User decision: none needed for the supplied archive. Additional original messages or experiment artifacts would be required to resolve the explicitly marked evidence gaps.
+
+## AI Daily Pilot — 2026-11-08
+
+- Added one researched issue in the existing Daily collection, with source/event dates, evidence limits and an original SVG concept diagram. WildAWM is explicitly labeled an October research revisit.
+- No application code, schema, dependency, deployment workflow, credentials or recurring publication settings were changed.

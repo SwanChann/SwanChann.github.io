@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">从单轮回答到任务闭环</title><desc id="desc">理解目标、观察与执行、核验结果，通过反馈循环修正。长期记忆和可验证环境提供支撑。这是一幅概念示意图，不是模型架构或实验结果。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0 0L7 3L0 6" fill="none" stroke="#697b79" stroke-width="1.6"/></marker></defs>
+<rect width="1200" height="680" rx="24" fill="#f4f6f5"/>
+<g font-family="system-ui, sans-serif" fill="#182b2b">
+<text x="64" y="66" font-size="22" letter-spacing="3" fill="#49736c">AI DAILY / 2026.11.08</text>
+<text x="64" y="128" font-size="42" font-weight="700">从单轮回答到任务闭环</text>
+<text x="64" y="174" font-size="23" fill="#536563">看见变化，核验结果，再继续。</text>
+<g stroke="#b9cdca" stroke-width="2" fill="#fff"><rect x="64" y="240" width="310" height="160" rx="18"/><rect x="445" y="240" width="310" height="160" rx="18"/><rect x="826" y="240" width="310" height="160" rx="18"/></g>
+<g font-size="20" fill="#49736c"><text x="90" y="278">01 / GOAL</text><text x="471" y="278">02 / ACTION</text><text x="852" y="278">03 / CHECK</text></g>
+<g font-size="31" font-weight="650"><text x="90" y="325">理解目标</text><text x="471" y="325">观察与执行</text><text x="852" y="325">核验结果</text></g>
+<g font-size="21" fill="#536563"><text x="90" y="369">保留约束，识别变化</text><text x="471" y="369">看反馈，调整下一步</text><text x="852" y="369">确认完成，而非只输出</text></g>
+<g fill="none" stroke="#697b79" stroke-width="3" marker-end="url(#arrow)"><path d="M383 320H432"/><path d="M764 320H813"/><path d="M982 414V466H219V417"/></g>
+<rect x="470" y="444" width="260" height="42" rx="21" fill="#f4f6f5"/><text x="600" y="474" font-size="22" text-anchor="middle" fill="#49736c">反馈 → 修正</text>
+<rect x="64" y="525" width="1072" height="76" rx="16" fill="#dfeae7"/><text x="600" y="573" font-size="26" text-anchor="middle">支撑条件：长期记忆 · 可执行环境 · 可验证的成功标准</text>
+<text x="64" y="645" font-size="18" fill="#536563">原创概念示意，非真实模型架构或实验数据</text>
+</g></svg>
