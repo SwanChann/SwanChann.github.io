@@ -19,13 +19,13 @@ const groups = topics.map((topic) => ({
 }));
 ---
 
-<BaseLayout title="从这里开始" description="按视觉语言模型、生成模型与推理、具身智能及科研工作流，找到适合自己的阅读入口。">
+<BaseLayout title="文章分类" description="按视觉语言模型、生成模型与推理、具身智能及科研工作流分类浏览文章。">
   <div class="page-shell guide-page">
     <header class="page-header">
-      <p class="eyebrow">阅读导览</p>
-      <h1>从这里开始</h1>
-      <p>不必从最新一篇读起。选一个关心的问题，从基础知识走向研究与实践。</p>
-      <nav class="page-jump-links" aria-label="阅读主题">
+      <p class="eyebrow">知识专题</p>
+      <h1>文章分类</h1>
+      <p>按研究主题分类，汇集基础知识、论文笔记与实践经验。</p>
+      <nav class="page-jump-links" aria-label="文章主题分类">
         {topics.map((topic) => <a href={`#${topic.id}`}>{topic.title}</a>)}
       </nav>
     </header>

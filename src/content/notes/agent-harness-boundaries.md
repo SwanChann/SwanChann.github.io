@@ -6,9 +6,10 @@ type: concept
 tags: [AI Agent, AI 工作流, VLM]
 status: growing
 draft: false
+updated: 2026-11-08
 ---
 
-源于模型与 Harness 的区别、Agent 与 Pipeline 层级的讨论。这里给出用于分析系统的工作定义，不把术语当成统一行业标准。
+模型、Agent、Harness 与工作流描述系统的不同层次。以下采用便于分析职责与接口的工作定义；这些术语尚无统一行业标准。
 
 ## 从一个具体动作看边界
 

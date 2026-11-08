@@ -6,9 +6,10 @@ type: paper
 tags: [VLM, 推理效率, 过度思考, 评测]
 status: growing
 draft: false
+updated: 2026-11-08
 ---
 
-整理自此前保存的论文讨论；2026 年 11 月 8 日核对 EMNLP 2025 论文。
+本文介绍 EMNLP 2025 的 Answer Convergence 方法，重点区分答案收敛与答案正确。
 
 ## ACR 测量什么
 

@@ -6,9 +6,10 @@ type: paper
 tags: [VLM, 推理效率, 过度思考]
 status: growing
 draft: false
+updated: 2026-11-08
 ---
 
-整理自已保存的论文分析；2026 年 11 月 8 日核对 ACL 2026 原论文。
+本文介绍 ACL 2026 的 REFRAIN 方法，分析反思冗余与减少无效计算的条件。
 
 ## 从反思到冗余
 

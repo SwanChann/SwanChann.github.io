@@ -6,9 +6,10 @@ type: concept
 tags: [生成模型, 具身智能, 多模态]
 status: growing
 draft: false
+updated: 2026-11-08
 ---
 
-源于 foundation model、base model、视频预测和空间智能的讨论。本文整理概念关系，不评价某个未复现系统的能力。
+基础模型、策略和世界模型对应不同的分类维度。判断一个模型的作用，应先明确它的输入、输出、训练目标和系统位置。
 
 ## 四个问题对应四个维度
 

@@ -3,10 +3,17 @@
 - last_verified: 2026-11-08
 - durable_goal: Build a maintainable Markdown-first, static-first personal web, digital garden, and research/engineering notebook that can be maintained primarily through content files for at least five years.
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
-- active_workstream: Curate user-supplied ChatGPT research discussions into public knowledge
-- current_milestone: Publish 16 curated articles with source boundaries and a reading map
-- current_task: Published 16 curated articles; workflow, 23 live routes, four assets and live search verified.
-- status: verified
+- active_workstream: Refine public article copy and topic navigation
+- current_milestone: Present articles by topic without editorial-process introductions
+- current_task: Public copy and classification labels verified locally; publication pending.
+- status: in_progress
+
+## Public Copy Revision 2026-11-08
+
+- Public navigation, homepage and /start-here/ use 文章分类; route paths remain stable.
+- Article introductions, summaries and topic index describe subject matter directly; editorial-process narratives were removed. External paper citations and unverified-research limitations remain intact.
+- Verified: Astro check (52 files, zero errors/warnings/hints), production build (119 pages, 59 search entries), 5,782 internal links, all generated HTML scanned for obsolete wording, all changed articles retain external citations, and 15 desktop/mobile route checks with updated search titles.
+- Publication: pending.
 
 ## Milestones
 
