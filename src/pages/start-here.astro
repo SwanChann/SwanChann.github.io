@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import CollectionList from '../components/CollectionList.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { topics } from '../data/topics';
+import { getAllVisibleContent } from '../utils/content';
+import { entrySlug, withBase } from '../utils/paths';
+
+const [content, vlm] = await Promise.all([
+  getAllVisibleContent(),
+  getCollection('vlm', ({ data }) => import.meta.env.DEV || !data.draft),
+]);
+const foundations = vlm.filter((entry) => entry.data.level === 'Core')
+  .sort((a, b) => a.data.order - b.data.order).slice(0, 4);
+const groups = topics.map((topic) => ({
+  ...topic,
+  items: content.filter((item) => item.tags.some((tag) => (topic.tags as readonly string[]).includes(tag)))
+    .sort((a, b) => Number(b.featured) - Number(a.featured)),
+}));
+---
+
+<BaseLayout title="从这里开始" description="按视觉语言模型、具身智能与科研工作流，找到适合自己的阅读入口。">
+  <div class="page-shell guide-page">
+    <header class="page-header">
+      <p class="eyebrow">阅读导览</p>
+      <h1>从这里开始</h1>
+      <p>不必从最新一篇读起。选一个关心的问题，从基础知识走向研究与实践。</p>
+      <nav class="page-jump-links" aria-label="阅读主题">
+        {topics.map((topic) => <a href={`#${topic.id}`}>{topic.title}</a>)}
+      </nav>
+    </header>
+    {groups.map((group, index) => (
+      <section class="guide-section" aria-labelledby={group.id}>
+        <p class="eyebrow">主题 0{index + 1}</p>
+        <h2 id={group.id}>{group.title}</h2>
+        <p class="section-description">{group.description}</p>
+        {group.knowledgeHub && vlm.length > 0 && (
+          <aside class="guide-hub" aria-label="系统学习入口">
+            <a class="guide-hub-title" href={withBase('/vlm/')}>VLM 知识地图 <span aria-hidden="true">→</span></a>
+            <p>{vlm.length} 个专题，沿模型基础、视觉能力与研究方法三条主线展开。</p>
+            <ul>{foundations.map((entry) => <li><a href={withBase(`/vlm/${entrySlug(entry.id)}/`)}>{entry.data.title}</a></li>)}</ul>
+          </aside>
+        )}
+        <CollectionList items={group.items} compact headingLevel={3} showCollection />
+      </section>
+    ))}
+    <nav class="browse-links" aria-label="更多阅读方式">
+      <span>也可以按栏目浏览</span>
+      <a href={withBase('/notes/')}>笔记</a>
+      <a href={withBase('/research/')}>研究</a>
+      <a href={withBase('/experience/')}>经验</a>
+      <a href={withBase('/tags/')}>标签</a>
+      <a href={withBase('/search/')}>搜索</a>
+    </nav>
+  </div>
+</BaseLayout>

@@ -43,6 +43,12 @@ const researchAxes = [
       <p class="eyebrow">视觉语言模型 · 研究知识库</p>
       <h1>VLM 知识地图</h1>
       <p>以模型结构、视觉能力和研究方法为主线，建立理解视觉语言模型的认知框架：模型如何处理视觉信息，能力如何被测量，研究结论需要什么证据。</p>
+      <nav class="page-jump-links" aria-label="知识地图导航">
+        <a href="#vlm-reading-map">阅读路线</a>
+        <a href="#vlm-topics">全部专题 · {entries.length}</a>
+        <a href={href('glossary')}>术语库</a>
+        <a href={href('sources')}>资料索引</a>
+      </nav>
     </header>
 
     <section aria-labelledby="vlm-reading-map">
@@ -55,19 +61,6 @@ const researchAxes = [
         })}</ol></div>)}
       </div>
       <p class="vlm-reading-support">辅助入口：<a href={href('glossary')}>术语库</a>用于核对定义；<a href={href('sources')}>资料索引</a>连接原论文；<a href={href('my-research')}>个人研究记录</a>保存观察与待验证假设。各专题在概念内部使用例子与图解，并在末尾给出判断要点。</p>
-    </section>
-
-    <section aria-labelledby="vlm-definition">
-      <h2 id="vlm-definition">模型范围与术语边界</h2>
-      <p><strong>VLM</strong> 是视觉与语言模型的宽泛叫法，包含图文表征模型和生成模型；<strong>MLLM</strong> 通常指以大语言模型为核心的多模态生成系统。“多模态模型”范围更广，可处理音频、视频或动作。社区用法并不完全统一；详见<a href={href('foundations')}>基础与发展逻辑</a>和<a href={href('glossary')}>术语库</a>。</p>
-    </section>
-
-    <section aria-labelledby="vlm-system">
-      <h2 id="vlm-system">模型信息流</h2>
-      <p>生成式 VLM 的常见信息路径如下。具体模块与连接方式随模型而异，各环节的输入输出在对应专题展开。</p>
-      <ol class="vlm-system-map">
-        {system.map(([label, slug, anchor]) => <li><a href={anchor ? `${href(slug)}#${anchor}` : href(slug)}>{label}<span aria-hidden="true">↗</span></a></li>)}
-      </ol>
     </section>
 
     <section aria-labelledby="vlm-topics">
@@ -86,6 +79,19 @@ const researchAxes = [
           </div>
         </div>
       ))}
+    </section>
+
+    <section aria-labelledby="vlm-definition">
+      <h2 id="vlm-definition">模型范围与术语边界</h2>
+      <p><strong>VLM</strong> 是视觉与语言模型的宽泛叫法，包含图文表征模型和生成模型；<strong>MLLM</strong> 通常指以大语言模型为核心的多模态生成系统。“多模态模型”范围更广，可处理音频、视频或动作。社区用法并不完全统一；详见<a href={href('foundations')}>基础与发展逻辑</a>和<a href={href('glossary')}>术语库</a>。</p>
+    </section>
+
+    <section aria-labelledby="vlm-system">
+      <h2 id="vlm-system">模型信息流</h2>
+      <p>生成式 VLM 的常见信息路径如下。具体模块与连接方式随模型而异，各环节的输入输出在对应专题展开。</p>
+      <ol class="vlm-system-map">
+        {system.map(([label, slug, anchor]) => <li><a href={anchor ? `${href(slug)}#${anchor}` : href(slug)}>{label}<span aria-hidden="true">↗</span></a></li>)}
+      </ol>
     </section>
 
     <section aria-labelledby="vlm-capabilities">

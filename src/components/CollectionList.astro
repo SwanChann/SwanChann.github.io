@@ -5,14 +5,17 @@ import ContentCard from './ContentCard.astro';
 type Props = {
   items: ContentRecord[];
   emptyMessage?: string;
+  compact?: boolean;
+  headingLevel?: 2 | 3;
+  showCollection?: boolean;
 };
 
-const { items, emptyMessage = '暂无已发布内容。' } = Astro.props;
+const { items, emptyMessage = '暂无已发布内容。', compact = false, headingLevel = 2, showCollection = false } = Astro.props;
 ---
 
 {items.length > 0 ? (
-  <div class="card-list">
-    {items.map((item) => <ContentCard item={item} />)}
+  <div class:list={['card-list', { compact }]}>
+    {items.map((item) => <ContentCard item={item} headingLevel={headingLevel} showTags={!compact} showCollection={showCollection} />)}
   </div>
 ) : (
   <p class="empty-state">{emptyMessage}</p>

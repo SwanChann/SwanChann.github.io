@@ -17,7 +17,6 @@ type Props = {
 };
 
 const props = Astro.props;
-const backgroundImage = withBase('/images/star-sea-background.webp');
 ---
 
 <!doctype html>
@@ -26,10 +25,9 @@ const backgroundImage = withBase('/images/star-sea-background.webp');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#111312" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1d1e20" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
-    <link rel="preload" href={backgroundImage} as="image" type="image/webp" />
     <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} 文章`} href={withBase('/rss.xml')} />
     <SEO {...props} />
     <slot name="head" />
@@ -42,7 +40,7 @@ const backgroundImage = withBase('/images/star-sea-background.webp');
       })();
     </script>
   </head>
-  <body style={`--site-background-image: url("${backgroundImage}")`}>
+  <body>
     <a class="skip-link" href="#main-content">跳到主要内容</a>
     <Header />
     <main id="main-content">

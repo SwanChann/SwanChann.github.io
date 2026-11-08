@@ -3,6 +3,8 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import TableOfContents from '../../components/TableOfContents.astro';
 import { entrySlug, withBase } from '../../utils/paths';
+import { estimateReadingTime } from '../../utils/content';
+import { formatDate } from '../../utils/dates';
 
 export async function getStaticPaths() {
   const entries = await getCollection('vlm', ({ data }) => import.meta.env.DEV || !data.draft);
@@ -32,6 +34,10 @@ const levelNames = { Core: '核心', Important: '重要', Advanced: '进阶', Fr
         <div class="article-kicker"><span>{entry.data.area}</span><span>{levelNames[entry.data.level]}</span>{entry.data.draft && <span class="draft-label">草稿 · 仅本地可见</span>}</div>
         <h1 data-pagefind-meta="title">{entry.data.title}</h1>
         <p class="article-description">{entry.data.description}</p>
+        <div class="article-dates">
+          {entry.data.updated && <span>更新于 <time datetime={entry.data.updated.toISOString()}>{formatDate(entry.data.updated)}</time></span>}
+          <span>约 {estimateReadingTime(entry.body ?? '')} 分钟</span>
+        </div>
       </header>
       <div class="article-grid">
         <div class="prose"><Content /></div>

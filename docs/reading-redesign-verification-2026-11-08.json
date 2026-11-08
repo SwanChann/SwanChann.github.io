@@ -1,0 +1,416 @@
+{
+  "date": "2026-11-08",
+  "base_revision": "a6a822cbfeec2056c1f8c64bfdf7c823347cdfdb",
+  "references": [
+    "https://eugeneyan.com/",
+    "https://lilianweng.github.io/"
+  ],
+  "builds": [
+    {
+      "base": "/",
+      "astro_errors": 0,
+      "astro_warnings": 0,
+      "pages": 91,
+      "indexed_pages": 37,
+      "internal_links": 3484,
+      "link_errors": 0,
+      "draft_leaks": 0,
+      "vlm_link_errors": 0,
+      "vlm_rendering_errors": 0
+    },
+    {
+      "base": "/personal-site/",
+      "astro_errors": 0,
+      "astro_warnings": 0,
+      "pages": 91,
+      "indexed_pages": 37,
+      "internal_links": 3484,
+      "link_errors": 0,
+      "draft_leaks": 0,
+      "vlm_link_errors": 0,
+      "vlm_rendering_errors": 0
+    }
+  ],
+  "browser": {
+    "checks": [
+      {
+        "width": 1440,
+        "route": "/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/start-here/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/writing/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/vlm/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/vlm/architecture/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/vlm/glossary/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/writing/ai-workflow-research/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/writing/supermimic-terrain-tracking-reflections/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/projects/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1440,
+        "route": "/search/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/start-here/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/writing/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/vlm/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/vlm/architecture/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/vlm/glossary/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/writing/ai-workflow-research/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/writing/supermimic-terrain-tracking-reflections/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/projects/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 768,
+        "route": "/search/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/start-here/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/writing/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/vlm/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/vlm/architecture/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/vlm/glossary/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/writing/ai-workflow-research/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/writing/supermimic-terrain-tracking-reflections/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/projects/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 390,
+        "route": "/search/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/start-here/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/writing/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/vlm/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/vlm/architecture/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/vlm/glossary/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/writing/ai-workflow-research/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/writing/supermimic-terrain-tracking-reflections/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/projects/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 320,
+        "route": "/search/",
+        "status": 200,
+        "overflow": false,
+        "brokenImages": [],
+        "h1": 1,
+        "background": "rgb(255, 255, 255)"
+      }
+    ],
+    "errors": [],
+    "mobileMenu": true,
+    "tocExpand": true,
+    "persistedTheme": true,
+    "searchText": "找到 29 个 视觉 的相关结果"
+  },
+  "visual_review": [
+    "home-desktop.png",
+    "home-mobile.png",
+    "home-dark.png",
+    "guide-desktop.png",
+    "vlm-desktop.png",
+    "article-desktop.png",
+    "article-mobile.png"
+  ],
+  "visual_artifacts": "Saved in the current Codex visualization workspace, not deployed.",
+  "publication": {
+    "status": "pending"
+  }
+}

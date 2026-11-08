@@ -50,6 +50,7 @@ Astro 文件路由生成：
 /experience/          /experience/[...slug]/
 /tags/                /tags/[tag]/
 /about/               /links/
+/start-here/
 /search/              /rss.xml
 /404.html
 ```
@@ -93,9 +94,10 @@ Pagefind 扫描最终 HTML，将索引和 UI bundle 写入 `dist/pagefind/`。�
 - `src/config/site.ts`：姓名、站点文案、身份链接、预留 profile。
 - `src/config/giscus.ts`：评论参数；四个标识不全时完全禁用。
 - `src/data/now.ts`：首页 Now 数据。
+- `src/data/topics.ts`：主题名称、说明及匹配标签；首页显示主题入口，`/start-here/` 从公开 Content Collections 自动选择文章，按 featured 优先排列并保留组内时间顺序。VLM 基础阅读入口按 Core 和 order 自动生成。
 - `.env.example`：本地或非 GitHub 环境的公开 origin / base 示例，不含 secret。
-- `src/styles/global.css`：light/dark/system tokens、星海背景遮罩、排版、布局、可访问性和响应式规则。
-- `public/images/star-sea-background.webp`：全站装饰背景；`BaseLayout` 通过 `withBase()` 生成兼容 GitHub Pages 子路径的 URL 并预加载。
+- `src/styles/global.css`：light/dark/system tokens、纯色阅读布局、排版、可访问性和响应式规则。
+- `public/images/star-sea-background.webp`：历史装饰背景资源，保留文件但已不再被 `BaseLayout` 引用或预加载。
 
 ## Related Content
 
@@ -114,8 +116,10 @@ Pagefind 扫描最终 HTML，将索引和 UI bundle 写入 `dist/pagefind/`。�
 - 不引入 React / Vue / Svelte；页面保持 Astro 静态 HTML。
 - 浏览器 JavaScript 仅用于 theme、Pagefind 和启用后的 Giscus。
 - theme 在 `<head>` 中先应用已保存值，减少首屏颜色闪烁；选择支持 `system`, `light`, `dark`。
-- 星海背景使用固定的非交互装饰层；light/dark 分别使用不同遮罩强度，避免背景纹理降低正文可读性。
-- TOC 使用 Astro 渲染得到的 headings；desktop sticky，窄屏回到正文前的折叠块。
+- 阅读布局参考 Eugene Yan 的主题组织和 Lil’Log 的克制排版，采用纯色背景、低对比分隔线及系统字体。首页先提供阅读入口与最新文章，将个人近况置后；不使用示例项目作为首页精选内容。
+- 列表标题先于说明和日期等元数据；`CollectionList` 支持完整卡片与 compact 列表，调用方可指定二级或三级标题。
+- TOC 使用 Astro 渲染得到的 headings；desktop sticky 且独立滚动，窄屏在正文前显示原生折叠块，默认关闭。两个视图通过 CSS 互斥显示，均排除在 Pagefind 主体之外，不增加客户端脚本。
+- 首页与页脚仅显示已配置的身份链接；占位信息保留在配置和链接页，避免把未知账号作为有效入口。
 - 系统字体保证离线可用和中英文覆盖，不依赖第三方字体 CDN。
 - 不实现复杂 backlinks、知识图谱、analytics、CMS 或同步；这些属于未来独立决策。
 

@@ -4,12 +4,10 @@ import { withBase } from '../utils/paths';
 import ThemeToggle from './ThemeToggle.astro';
 
 const navigation = [
+  ['从这里开始', '/start-here/'],
   ['文章', '/writing/'],
-  ['笔记', '/notes/'],
-  ['项目', '/projects/'],
-  ['研究', '/research/'],
   ['VLM 地图', '/vlm/'],
-  ['经验', '/experience/'],
+  ['项目', '/projects/'],
   ['关于', '/about/'],
 ] as const;
 
@@ -23,7 +21,7 @@ const isActive = (path: string) => {
 <header class="site-header" data-pagefind-ignore>
   <div class="header-inner">
     <a class="site-mark" href={withBase('/')} aria-label={`${siteConfig.name} 首页`}>
-      {siteConfig.shortName}
+      {siteConfig.name}
     </a>
 
     <nav class="desktop-nav" aria-label="主要导航">

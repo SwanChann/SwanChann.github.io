@@ -8,14 +8,19 @@ import TagList from './TagList.astro';
 type Props = {
   item: ContentRecord;
   showCollection?: boolean;
+  headingLevel?: 2 | 3;
+  showTags?: boolean;
 };
 
-const { item, showCollection = false } = Astro.props;
+const { item, showCollection = false, headingLevel = 2, showTags = true } = Astro.props;
+const Heading = headingLevel === 3 ? 'h3' : 'h2';
 const date = item.updated ?? item.date;
 const subtype = formatSubtype(item.type ?? item.topic ?? item.category);
 ---
 
 <article class="content-card">
+  <Heading><a href={item.path}>{item.title}</a></Heading>
+  <p>{item.description}</p>
   <div class="card-meta">
     {showCollection && <span>{collectionLabels[item.collection]}</span>}
     {subtype && <span>{subtype}</span>}
@@ -23,7 +28,5 @@ const subtype = formatSubtype(item.type ?? item.topic ?? item.category);
     <StatusBadge status={item.status} />
     {item.draft && <span class="draft-label">草稿</span>}
   </div>
-  <h2><a href={item.path}>{item.title}</a></h2>
-  <p>{item.description}</p>
-  <TagList tags={item.tags} />
+  {showTags && <TagList tags={item.tags} />}
 </article>
