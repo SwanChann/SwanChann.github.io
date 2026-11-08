@@ -407,10 +407,122 @@
     "guide-desktop.png",
     "vlm-desktop.png",
     "article-desktop.png",
-    "article-mobile.png"
+    "article-mobile.png",
+    "home-final.png"
   ],
   "visual_artifacts": "Saved in the current Codex visualization workspace, not deployed.",
   "publication": {
-    "status": "pending"
+    "status": "verified",
+    "commit": "5bae2848b23a82909890fdb20c59983b03faaa63",
+    "workflow_run": 42460846625,
+    "workflow_conclusion": "success",
+    "url": "https://swanchann.github.io",
+    "pages_build_type": "workflow",
+    "routes": [
+      {
+        "route": "/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/start-here/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/writing/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/vlm/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/vlm/architecture/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/vlm/glossary/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/writing/ai-workflow-research/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/writing/supermimic-terrain-tracking-reflections/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/projects/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      },
+      {
+        "route": "/search/",
+        "status": 200,
+        "main_text_matches": true,
+        "new_navigation": true,
+        "no_background": true
+      }
+    ],
+    "assets": [
+      {
+        "route": "/_astro/_slug_.eCQwqUe1.css",
+        "status": 200,
+        "comparison": "exact_bytes",
+        "sha256_matches": true
+      },
+      {
+        "route": "/pagefind/pagefind-component-ui.js",
+        "status": 200,
+        "comparison": "exact_bytes",
+        "sha256_matches": true
+      },
+      {
+        "route": "/pagefind/pagefind.js",
+        "status": 200,
+        "comparison": "exact_bytes",
+        "sha256_matches": true
+      },
+      {
+        "route": "/downloads/supermimic-terrain/article.md",
+        "status": 200,
+        "comparison": "utf8_normalized_line_endings",
+        "sha256_matches": true
+      },
+      {
+        "route": "/downloads/supermimic-terrain/supermimic-terrain-cards.zip",
+        "status": 200,
+        "comparison": "exact_bytes",
+        "sha256_matches": true
+      }
+    ],
+    "ordering_fix": "Equal-date entries use stable content IDs; Windows local and Linux production main content now match on all ten checked routes.",
+    "legacy_publisher": "Replaced legacy/Jekyll Pages source with workflow; the final source push triggered only the intended Astro workflow."
   }
 }

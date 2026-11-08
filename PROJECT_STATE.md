@@ -5,8 +5,8 @@
 - success_criteria: The production build passes; required routes, search, RSS, sitemap, MDX, tags, related content, drafts, theme, optional Giscus, documentation, and GitHub Pages deployment are implemented without a backend or invented personal data.
 - active_workstream: Refine the site's reading experience using Eugene Yan and Lil'Log as design references
 - current_milestone: Topic-led homepage, reading guide, quiet typography and responsive article navigation
-- current_task: All local and subpath checks passed with the latest remote content; publish through GitHub Pages and verify the live revision.
-- status: in_progress
+- current_task: Completed and published the reading redesign; final live pages and assets match the verified local build.
+- status: verified
 
 ## Milestones
 
@@ -26,7 +26,7 @@
 
 14. [published and live-verified] Published the SuperMimic terrain-tracking research reflection in Writing and a 16-page 1080x1440 PNG download, with identical article body content and a separate experimental result summary. Content commit `8e91b39`, successful Astro deployment run `41770025028`. This is a publication deliverable, not a new robotics experiment.
 
-15. [verified] Implemented the reading redesign, topic guide and responsive article outline; passed root/subpath builds, internal-link checks and 40 browser route/viewport checks. Production deployment is pending.
+15. [verified] Implemented and published the reading redesign, topic guide and responsive article outline. Passed root/subpath builds, 40 browser route/viewport checks and final live page/asset comparisons; final code commit `5bae284`, successful Astro workflow `42460846625`.
 
 ## Verified Facts
 
@@ -35,7 +35,7 @@
 - The initial redesign commit `71a8d75` deployed through successful Astro workflow `42460593255`. Live checks exposed different same-date list/pagination ordering between Windows and Linux; `src/utils/content.ts` now resolves date ties with stable content IDs. The SuperMimic downloadable Markdown differs only in checkout line endings, so publication checks normalize those for text downloads while hashing binary and shared code assets exactly.
 - The repository still had Pages `build_type: legacy`, triggering an additional Jekyll run that failed while parsing Astro frontmatter. Switched Pages to `build_type: workflow` and re-read the setting successfully; the existing Astro workflow remains the sole intended publisher.
 - Final root and `/personal-site/` builds both passed Astro check (49 files, zero errors/warnings/hints), generated 91 pages and indexed 37 public pages. Each build passed 3,484 internal links and draft-exclusion checks. VLM checks passed 20 routes, 1,153 links, 210 strong elements and nine image placements. The upstream Astro/Vite unused-import warning remains.
-- The final browser pass covered ten routes at 1440, 768, 390 and 320 pixels: no horizontal overflow, missing images after eager decoding, or uncaught browser errors. Mobile navigation, collapsed/expandable TOC and persisted dark/light selection worked; Pagefind returned 29 results for `视觉`. Home, guide, VLM index and article screenshots were inspected. Evidence: `docs/reading-redesign-verification-2026-11-08.json`. Production deployment remains pending.
+- The final browser pass covered ten routes at 1440, 768, 390 and 320 pixels: no horizontal overflow, missing images after eager decoding, or uncaught browser errors. Mobile navigation, collapsed/expandable TOC and persisted dark/light selection worked; Pagefind returned 29 results for `视觉`. Home, guide, VLM index and article screenshots were inspected. Evidence: `docs/reading-redesign-verification-2026-11-08.json`. Final publication checks passed for commit `5bae284` through successful workflow `42460846625`: ten live pages returned HTTP 200 and matched normalized main content; shared CSS, two Pagefind scripts and the card ZIP matched bytes, while downloadable Markdown matched after line-ending normalization.
 
 - On 2026-11-04 the corrected SuperMimic copy replaced the article and downloadable Markdown. The final reading/resources section was removed; the download links remain. The PNG archive and preview now contain 15 pages, numbered 01–15, rendered at 1080×1440 with Noto Sans CJK SC. Single PNG files are also provided. This is an editorial update, not a new robotics experiment.
 
@@ -112,11 +112,11 @@
 - CSDN URL, email, custom domain, and Giscus IDs are unknown and must remain placeholders or disabled. The GitHub account and public site URL have been verified separately.
 - Astro build emits one upstream Vite unused-import warning from Astro's `remotePattern.js`; it does not originate in project code and does not affect the successful static build.
 - CSDN and email still use visibly labeled placeholders; Giscus remains safely disabled because no repository/category IDs have been configured.
-- Notes, Projects, Research, Experience, and the About biography still include explicit sample or placeholder content; the eight Writing entries are now evidence-bounded personal project retrospectives.
+- Notes, Projects, Research, Experience, and the About biography still include explicit sample or placeholder content; Writing contains evidence-bounded personal retrospectives and research reflections.
 - The two power-grid tasks without creation dates can only be placed by experiment phase, not by an exact day.
 - The hotspot-tracking project remains an Inbox item with no completed paper analysis; its article records that boundary rather than supplying a retrospective result.
 
 ## Next Step And User Decision
 
-- Next step: Complete checks against the latest content and publish the reading redesign, then verify the live home, guide, article routes and shared assets.
+- Next step: The redesign is live and verified. Use reader feedback on typography and navigation for subsequent refinements; replacement of remaining sample content is a separate task.
 - User decision: none required to complete this revision. A custom domain and Giscus remain optional and unconfigured.

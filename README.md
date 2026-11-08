@@ -2,7 +2,7 @@
 
 这是一个可长期维护的 **Personal Web + Digital Garden + Research / Engineering Notebook**。内容以 Markdown / MDX 为主库，Astro 在构建时自动生成页面、标签、关联内容、RSS、Sitemap 和 Pagefind 全文索引；不需要数据库、后台或手工登记文章。
 
-`writing` 已收录根据本地任务台账、Codex 对话和项目证据整理的 8 个中文专题；其他 collection 中尚未替换的页面仍明确标注为示例或占位。个人链接也只公开已经确认的项目，待补项保持可见占位或关闭状态。
+`writing` 已收录根据本地任务台账、Codex 对话和项目证据整理的中文专题；其他 collection 中尚未替换的页面仍明确标注为示例或占位。个人链接也只公开已经确认的项目，待补项保持可见占位或关闭状态。
 
 ## 技术栈
 
