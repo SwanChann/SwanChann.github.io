@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<rect width="1200" height="620" fill="#edf2f5"/>
+<rect x="30" y="30" width="1140" height="560" rx="26" fill="#fff"/>
+<g font-family="Noto Sans CJK SC, sans-serif">
+<text x="70" y="92" font-size="21" fill="#39756d">AI DAILY · 2026.11.10</text>
+<text x="70" y="150" font-size="38" font-weight="700" fill="#172e41">从模型到机器人，再到算力与采购</text>
+<text x="70" y="191" font-size="20" fill="#526273">本期新闻阅读图 · 各栏目为独立进展，不代表已完成系统集成</text>
+<rect x="70" y="231" width="335" height="253" rx="18" fill="#e6f4ef"/>
+<rect x="432" y="231" width="335" height="253" rx="18" fill="#e9effa"/>
+<rect x="794" y="231" width="335" height="253" rx="18" fill="#fff0dd"/>
+<text x="95" y="279" font-size="27" font-weight="700" fill="#1d6355">01 大模型</text>
+<text x="95" y="325" font-size="20" fill="#203b43">Claude Fable / Mythos 5.2</text>
+<text x="95" y="362" font-size="20" fill="#203b43">Meta Muse Ember</text>
+<text x="95" y="430" font-size="18" fill="#526273">关注：能力、开放范围与成本</text>
+<text x="457" y="279" font-size="27" font-weight="700" fill="#315587">02 具身智能</text>
+<text x="457" y="325" font-size="20" fill="#203b43">NVIDIA GR00T 2 / Isaac</text>
+<text x="457" y="362" font-size="20" fill="#203b43">NXP 机器人平台</text>
+<text x="457" y="430" font-size="18" fill="#526273">关注：代码状态与真实部署</text>
+<text x="819" y="279" font-size="27" font-weight="700" fill="#976027">03 基础设施与应用</text>
+<text x="819" y="325" font-size="20" fill="#203b43">Google TPU 系统</text>
+<text x="819" y="362" font-size="20" fill="#203b43">OpenAI 企业采购</text>
+<text x="819" y="430" font-size="18" fill="#526273">关注：交付规模与落地条件</text>
+<text x="70" y="544" font-size="18" fill="#617384">原创编辑示意图。事实、日期、开放状态和来源以正文为准；不是产品实拍或性能对比。</text>
+</g></svg>
