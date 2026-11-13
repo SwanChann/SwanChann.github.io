@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect width="1440" height="900" fill="#edf3f5"/><rect width="1440" height="14" fill="#12736f"/>
+<g font-family="Noto Sans CJK SC, sans-serif">
+<text x="70" y="108" font-size="56" font-weight="700" fill="#102e3a">AI 发展日报</text>
+<text x="72" y="170" font-size="27" fill="#47616d">2026.11.13 / 新闻主题导览</text>
+<g fill="white"><rect x="70" y="220" width="635" height="245" rx="24"/><rect x="735" y="220" width="635" height="245" rx="24"/><rect x="70" y="490" width="635" height="245" rx="24"/><rect x="735" y="490" width="635" height="245" rx="24"/></g>
+<g font-size="29"><text x="104" y="272" fill="#12736f">01 / 大模型</text><text x="769" y="272" fill="#315da0">02 / 工业 AI</text><text x="104" y="542" fill="#845ba5">03 / AI 产业</text><text x="769" y="542" fill="#9a6632">04 / 治理</text></g>
+<g font-size="40" font-weight="700" fill="#102e3a"><text x="104" y="340">Gemini 4 Hydrogen</text><text x="769" y="340">Claude 制造业插件</text><text x="104" y="610">NVIDIA CEO 交接</text><text x="769" y="610">前沿 AI 诉讼</text></g>
+<g font-size="25" fill="#47616d"><text x="104" y="400">快速执行与多模型协作</text><text x="769" y="400">业务流程与人工审核</text><text x="104" y="670">公司公告与生效日期</text><text x="769" y="670">诉讼请求不等于法院禁令</text></g>
+<text x="72" y="838" font-size="24" fill="#47616d">原创编辑示意图 · 非产品实拍，不代表性能比较</text>
+</g></svg>
