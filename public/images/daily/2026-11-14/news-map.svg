@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080">
+<rect width="1440" height="1080" fill="#edf3f5"/><rect width="1440" height="14" fill="#12736f"/>
+<g font-family="Noto Sans CJK SC, sans-serif">
+<text x="70" y="108" font-size="56" font-weight="700" fill="#102e3a">AI 发展日报</text>
+<text x="72" y="170" font-size="27" fill="#47616d">2026.11.14 / 新闻主题导览</text>
+<g fill="white"><rect x="70" y="220" width="1300" height="140" rx="24"/><rect x="70" y="378" width="1300" height="140" rx="24"/><rect x="70" y="536" width="1300" height="140" rx="24"/><rect x="70" y="694" width="1300" height="140" rx="24"/><rect x="70" y="852" width="1300" height="140" rx="24"/></g>
+<g font-size="28" font-weight="700"><text x="104" y="274" fill="#12736f">01 / 应用 API</text><text x="104" y="432" fill="#315da0">02 / 本地推理</text><text x="104" y="590" fill="#845ba5">03 / 机器人仿真</text><text x="104" y="748" fill="#9a6632">04 / Agent 支付</text><text x="104" y="906" fill="#12736f">05 / 开发工具</text></g>
+<g font-size="36" font-weight="700" fill="#102e3a"><text x="390" y="276">DeepSeek 完整应用 API</text><text x="390" y="434">llama.cpp 与 ggml 1.0</text><text x="390" y="592">Isaac Sim + SimReady 实操教程</text><text x="390" y="750">ChatGPT Wallet 开始推出</text><text x="390" y="908">Codex CLI 0.169.0</text></g>
+<g font-size="25" fill="#47616d"><text x="390" y="325">搜索、文件解析与语音接口</text><text x="390" y="483">接口稳定性承诺与服务端安全修复</text><text x="390" y="641">固定场景中的装配、检查与控制</text><text x="390" y="799">逐笔批准，使用支付 token</text><text x="390" y="957">多侧聊工作区与项目信任边界</text></g>
+<text x="72" y="1044" font-size="24" fill="#47616d">原创编辑示意图 · 非产品实拍，不代表性能比较</text>
+</g></svg>
